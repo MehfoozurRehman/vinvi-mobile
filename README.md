@@ -1,1 +1,0 @@
-# vinvi-mobile
