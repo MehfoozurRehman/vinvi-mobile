@@ -1,6 +1,7 @@
 import 'react-native-gesture-handler';
 import React, {useEffect} from 'react';
 import {View, Text} from 'react-native';
+import RNBootSplash from 'react-native-bootsplash';
 
 import {NavigationContainer} from '@react-navigation/native';
 
@@ -18,7 +19,7 @@ const Stack = createStackNavigator();
 
 export default function App() {
   return (
-    <NavigationContainer>
+    <NavigationContainer onReady={() => RNBootSplash.hide()}>
       <Stack.Navigator>
         <Stack.Screen name="Home" component={HomeScreen} />
       </Stack.Navigator>
