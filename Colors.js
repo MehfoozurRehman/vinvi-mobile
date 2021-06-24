@@ -1,0 +1,8 @@
+module.exports = {
+  PRIMARY: '#151269',
+  SECONDARY: '#113066',
+  THIRD: '#EFEFEF',
+  TEXTCOLOR: '#7A7A7A',
+  LIGHTTEXTCOLOR: '#606060',
+  WHITE: '#FFFFFF',
+};

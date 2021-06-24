@@ -1,28 +1,30 @@
 import 'react-native-gesture-handler';
-import React, {useEffect} from 'react';
-import {View, Text} from 'react-native';
-import RNBootSplash from 'react-native-bootsplash';
-
+import React, {useState} from 'react';
 import {NavigationContainer} from '@react-navigation/native';
+import {DefaultTheme, Provider as PaperProvider} from 'react-native-paper';
+import StackNavigation from './Navigation/StackNavigation';
+import RNBootSplash from 'react-native-bootsplash';
+import {View} from 'react-native';
+import {white, PRIMARY} from './Colors';
 
-import {createStackNavigator} from '@react-navigation/stack';
-
-function HomeScreen() {
-  return (
-    <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
-      <Text>Home Screen</Text>
-    </View>
-  );
-}
-
-const Stack = createStackNavigator();
+const theme = {
+  ...DefaultTheme,
+  roundness: 2,
+  colors: {
+    ...DefaultTheme.colors,
+    primary: PRIMARY,
+    accent: '#222223',
+  },
+};
 
 export default function App() {
   return (
-    <NavigationContainer onReady={() => RNBootSplash.hide()}>
-      <Stack.Navigator>
-        <Stack.Screen name="Home" component={HomeScreen} />
-      </Stack.Navigator>
-    </NavigationContainer>
+    <PaperProvider theme={theme}>
+      <NavigationContainer onReady={() => RNBootSplash.hide()}>
+        <View style={{flex: 1}}>
+          <StackNavigation />
+        </View>
+      </NavigationContainer>
+    </PaperProvider>
   );
 }
