@@ -6,6 +6,7 @@ import LoginScreen from '../Screens/LoginScreen';
 import ForgotPasswordScreen from '../Screens/ForgotPasswordScreen';
 import PhoneVerificationScreen from '../Screens/PhoneVerificationScreen';
 import DashboardScreen from '../Screens/DashboardScreen';
+import AddCardScreen from '../Screens/AddCardScreen';
 
 Stack = createStackNavigator();
 
@@ -29,6 +30,7 @@ export default function StackNavigation() {
         options={{}}
       />
       <Stack.Screen name="Dashboard" component={DashboardScreen} options={{}} />
+      <Stack.Screen name="AddCard" component={AddCardScreen} options={{}} />
     </Stack.Navigator>
   );
 }

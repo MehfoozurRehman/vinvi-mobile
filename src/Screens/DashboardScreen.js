@@ -94,6 +94,12 @@ export default function DashboardScreen({navigation}) {
               paddingTop: 100,
             }}>
             <DashboardStories />
+            <TouchableOpacity
+              onPress={() => {
+                navigation.navigate('AddCard');
+              }}>
+              <Text>Add Card</Text>
+            </TouchableOpacity>
           </View>
         </ImageBackground>
       </ScrollView>
