@@ -5579,7 +5579,7 @@ prompts@^2.0.1, prompts@^2.4.0:
     kleur "^3.0.3"
     sisteransi "^1.0.5"
 
-prop-types@^15.7.2:
+prop-types@^15.5.10, prop-types@^15.7.2:
   version "15.7.2"
   resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.7.2.tgz#52c41e75b8c87e72b9d9360e0206b99dcbffa6c5"
   integrity sha512-8QQikdH7//R2vurIJSutZ1smHYTcLpRWEOlHnzcWHmBYrOGUysKwSsrC89BCiFj3CbrfJ/nXFdJepOVrY1GCHQ==
@@ -5653,6 +5653,11 @@ react-native-codegen@^0.0.6:
     jscodeshift "^0.11.0"
     nullthrows "^1.1.1"
 
+react-native-confirmation-code-field@^7.1.0:
+  version "7.1.0"
+  resolved "https://registry.yarnpkg.com/react-native-confirmation-code-field/-/react-native-confirmation-code-field-7.1.0.tgz#2394e80ad399cbbcfc7f87bb2eb8bc34eaa43a55"
+  integrity sha512-cGE36gnyQR9inqQwHghPhBiMj8PZOmW4n/bUtv+xnDxf4/gTv7ga6v3DSCREfQXRyeCmHZ7iRzj7diJzAgvxFg==
+
 react-native-gesture-handler@^1.10.3:
   version "1.10.3"
   resolved "https://registry.yarnpkg.com/react-native-gesture-handler/-/react-native-gesture-handler-1.10.3.tgz#942bbf2963bbf49fa79593600ee9d7b5dab3cfc0"
@@ -5668,6 +5673,13 @@ react-native-iphone-x-helper@^1.3.0, react-native-iphone-x-helper@^1.3.1:
   version "1.3.1"
   resolved "https://registry.yarnpkg.com/react-native-iphone-x-helper/-/react-native-iphone-x-helper-1.3.1.tgz#20c603e9a0e765fd6f97396638bdeb0e5a60b010"
   integrity sha512-HOf0jzRnq2/aFUcdCJ9w9JGzN3gdEg0zFE4FyYlp4jtidqU03D5X7ZegGKfT1EWteR0gPBGp9ye5T5FvSWi9Yg==
+
+react-native-modalbox@^2.0.2:
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/react-native-modalbox/-/react-native-modalbox-2.0.2.tgz#8a7b3d2e7be79b5d1cb9530b2c6bc535b1bc8c66"
+  integrity sha512-uSuoZ+siPPNqWGyw8NXhA/Aots7mOx2+qijFoeovequY0kczZEPZDd0ARHbzg+1cE3H3AATJEwGdkVA8lUxs0g==
+  dependencies:
+    prop-types "^15.5.10"
 
 react-native-paper@^4.9.2:
   version "4.9.2"
@@ -5699,6 +5711,11 @@ react-native-screens@^3.4.0:
   integrity sha512-cg+q9MRnVdeOcJyvJtqffoXLur/C2wHA/7IO2+FAipzTlgHbbM1mTuSM7qG+SeiQjoIs4mHOEf7A0ziPKW04sA==
   dependencies:
     warn-once "^0.1.0"
+
+react-native-story@^0.1.3:
+  version "0.1.3"
+  resolved "https://registry.yarnpkg.com/react-native-story/-/react-native-story-0.1.3.tgz#5502bdafd7ebf0b4c7fd018dba6c69f21a6e1449"
+  integrity sha512-C+qJWp3mD8ZIxoh+xYBOqxzJgsEpRY1HGVLjmw+i2Vtt7PooDJCLiPRNh2lQ4KZ/UEbKWWoiDES3HoF9+vbqxg==
 
 react-native-svg@^12.1.1:
   version "12.1.1"

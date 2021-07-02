@@ -8,12 +8,7 @@ import {
   TextInput,
   ScrollView,
 } from 'react-native';
-import {
-  SECONDARY,
-  TEXT_COLOR,
-  LIGHT_TEXT_COLOR,
-  WHITE,
-} from '../Constants/Colors';
+import {SECONDARY, WHITE} from '../Constants/Colors';
 import SocialLoginBtn from '../Components/SocialLoginBtn';
 import BtnComponent from '../Components/BtnComponent';
 import {SafeAreaView} from 'react-native-safe-area-context';
@@ -116,7 +111,12 @@ export default function RegisterScreen({navigation}) {
                 placeholder="Confirm Password"
                 inputType="password"
               />
-              <BtnComponent placeholder="Sign Up" />
+              <BtnComponent
+                placeholder="Sign Up"
+                onPress={() => {
+                  navigation.navigate('Dashboard');
+                }}
+              />
               <Text
                 style={{alignSelf: 'center', color: WHITE, marginBottom: 10}}>
                 OR

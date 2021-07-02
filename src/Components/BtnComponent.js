@@ -16,7 +16,7 @@ import {
 } from '../Constants/Colors';
 import Svg, {G, Path} from 'react-native-svg';
 
-export default function BtnComponent({placeholder}) {
+export default function BtnComponent({placeholder, onPress}) {
   return (
     <TouchableOpacity
       style={{
@@ -28,7 +28,8 @@ export default function BtnComponent({placeholder}) {
         alignItems: 'center',
         justifyContent: 'center',
         borderRadius: 5,
-      }}>
+      }}
+      onPress={onPress}>
       <Text style={{color: WHITE, fontSize: 14}}>{placeholder}</Text>
     </TouchableOpacity>
   );

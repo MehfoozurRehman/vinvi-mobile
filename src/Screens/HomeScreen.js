@@ -1,12 +1,6 @@
 import React from 'react';
-import {
-  View,
-  Text,
-  ImageBackground,
-  Image,
-  TouchableOpacity,
-} from 'react-native';
-import {SECONDARY, TEXT_COLOR, WHITE} from '../Constants/Colors';
+import {View, ImageBackground, Image, TouchableOpacity} from 'react-native';
+import {WHITE} from '../Constants/Colors';
 import Heading from '../Components/Heading';
 import Paragraph from '../Components/Paragraph';
 import Svg, {Path} from 'react-native-svg';

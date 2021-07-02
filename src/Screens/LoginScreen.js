@@ -8,12 +8,7 @@ import {
   TextInput,
   ScrollView,
 } from 'react-native';
-import {
-  SECONDARY,
-  TEXT_COLOR,
-  LIGHT_TEXT_COLOR,
-  WHITE,
-} from '../Constants/Colors';
+import {SECONDARY, TEXT_COLOR, WHITE} from '../Constants/Colors';
 import SocialLoginBtn from '../Components/SocialLoginBtn';
 import BtnComponent from '../Components/BtnComponent';
 import {SafeAreaView} from 'react-native-safe-area-context';
@@ -133,7 +128,12 @@ export default function LoginScreen({navigation}) {
                   </Text>
                 </TouchableOpacity>
               </View>
-              <BtnComponent placeholder="Login" />
+              <BtnComponent
+                placeholder="Login"
+                onPress={() => {
+                  navigation.navigate('Dashboard');
+                }}
+              />
               <Text
                 style={{alignSelf: 'center', color: WHITE, marginBottom: 25}}>
                 OR
