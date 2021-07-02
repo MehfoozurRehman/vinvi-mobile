@@ -11,7 +11,7 @@ import Heading from '../Components/Heading';
 import Paragraph from '../Components/Paragraph';
 import Svg, {Path} from 'react-native-svg';
 
-export default function HomeScreen() {
+export default function HomeScreen({navigation}) {
   return (
     <View
       style={{
@@ -33,8 +33,8 @@ export default function HomeScreen() {
             alignItems: 'center',
           }}>
           <Image
-            source={require('../Assets/Vinvi.png')}
-            style={{marginTop: 30, width: 140}}></Image>
+            source={require('../Assets/vinvilogo.png')}
+            style={{marginTop: 30, width: 140, height: 70}}></Image>
           <View style={{width: '100%', paddingHorizontal: 20}}>
             <Heading placeholder="Heading" />
             <Paragraph
@@ -62,6 +62,9 @@ export default function HomeScreen() {
                   display: 'flex',
                   justifyContent: 'center',
                   alignItems: 'flex-end',
+                }}
+                onPress={() => {
+                  navigation.navigate('Register');
                 }}>
                 <Svg
                   xmlns="http://www.w3.org/2000/svg"
