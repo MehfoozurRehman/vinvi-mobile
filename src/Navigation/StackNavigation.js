@@ -12,6 +12,7 @@ import NewPersonalCardScreen2 from '../Screens/NewPersonalCardScreen2';
 import NewPersonalCardScreen3 from '../Screens/NewPersonalCardScreen3';
 import NewPersonalCardScreen4 from '../Screens/NewPersonalCardScreen4';
 import NewBusinessCardScreen from '../Screens/NewBusinessCardScreen';
+import SearchScreen from '../Screens/SearchScreen';
 
 Stack = createStackNavigator();
 
@@ -61,6 +62,7 @@ export default function StackNavigation() {
         component={NewBusinessCardScreen}
         options={{}}
       />
+      <Stack.Screen name="Search" component={SearchScreen} options={{}} />
     </Stack.Navigator>
   );
 }
