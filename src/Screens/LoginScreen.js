@@ -11,59 +11,8 @@ import {
 import {SECONDARY, TEXT_COLOR, WHITE} from '../Constants/Colors';
 import SocialLoginBtn from '../Components/SocialLoginBtn';
 import BtnComponent from '../Components/BtnComponent';
+import OutlinedInputBox from '../Components/OutlinedInputBox';
 import {SafeAreaView} from 'react-native-safe-area-context';
-
-function LoginInputBox({placeholder, inputType}) {
-  const [isfocused, setIsfocused] = useState(false);
-  let secureTextEntry;
-  if (inputType === 'password') {
-    secureTextEntry = true;
-  } else {
-    secureTextEntry = false;
-  }
-  return (
-    <TouchableOpacity
-      activeOpacity={1}
-      style={{
-        width: '100%',
-        backgroundColor: '#EFEFEF',
-        borderRadius: 5,
-        marginVertical: 5,
-        borderWidth: 1,
-        borderColor: SECONDARY,
-      }}>
-      {isfocused ? (
-        <Text
-          style={{
-            width: '100%',
-            paddingHorizontal: 20,
-            paddingTop: 10,
-            fontSize: 12,
-            color: SECONDARY,
-          }}>
-          {placeholder}
-        </Text>
-      ) : null}
-      <TextInput
-        placeholder={placeholder}
-        style={{
-          width: '100%',
-          paddingHorizontal: 20,
-          height: 40,
-          color: SECONDARY,
-        }}
-        type={inputType}
-        secureTextEntry={secureTextEntry}
-        onPressIn={() => {
-          setIsfocused(true);
-        }}
-        onBlur={() => {
-          setIsfocused(false);
-        }}
-      />
-    </TouchableOpacity>
-  );
-}
 
 export default function LoginScreen({navigation}) {
   const [text, setText] = useState('');
@@ -104,8 +53,11 @@ export default function LoginScreen({navigation}) {
                 }}>
                 Login
               </Text>
-              <LoginInputBox placeholder="Phone or Username" inputType="text" />
-              <LoginInputBox placeholder="Password" inputType="password" />
+              <OutlinedInputBox
+                placeholder="Phone or Username"
+                inputType="text"
+              />
+              <OutlinedInputBox placeholder="Password" inputType="password" />
               <View
                 style={{
                   marginTop: 20,
@@ -135,7 +87,11 @@ export default function LoginScreen({navigation}) {
                 }}
               />
               <Text
-                style={{alignSelf: 'center', color: WHITE, marginBottom: 25}}>
+                style={{
+                  alignSelf: 'center',
+                  color: SECONDARY,
+                  marginBottom: 25,
+                }}>
                 OR
               </Text>
               <SocialLoginBtn />

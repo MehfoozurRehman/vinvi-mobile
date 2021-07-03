@@ -23,7 +23,7 @@ export default function BtnComponent({placeholder, onPress}) {
         height: 45,
         width: '100%',
         backgroundColor: SECONDARY,
-        marginVertical: 25,
+        marginVertical: 20,
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',

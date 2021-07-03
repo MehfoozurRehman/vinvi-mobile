@@ -17,19 +17,20 @@ import {
 import BtnComponent from '../Components/BtnComponent';
 import Header from '../Components/Header';
 import OutlinedInputBox from '../Components/OutlinedInputBox';
+import NewCardStepPanel from '../Components/NewCardStepPanel';
 import {SafeAreaView} from 'react-native-safe-area-context';
-import Svg, {Path} from 'react-native-svg';
+import Svg, {G, Circle, Path} from 'react-native-svg';
 
-export default function LoginScreen({navigation}) {
+export default function NewCardScreen({navigation}) {
   return (
-    <SafeAreaView style={{flex: 1}}>
-      <ScrollView style={{flex: 1}}>
+    <SafeAreaView style={{flex: 1, backgroundColor: WHITE}}>
+      <ScrollView style={{flex: 1, backgroundColor: WHITE}}>
         <ImageBackground
-          source={require('../Assets/loginbg.png')}
+          source={require('../Assets/screenbg.png')}
           style={{width: '100%', minHeight: '100%'}}>
           <Header
             navigation={navigation}
-            variant="light"
+            variant="dark"
             // headerIcon={
             //   <Svg
             //     xmlns="http://www.w3.org/2000/svg"
@@ -42,40 +43,34 @@ export default function LoginScreen({navigation}) {
             //     />
             //   </Svg>
             // }
-            headerName=""
+            headerName="New Card"
             onPress={() => {
-              navigation.navigate('Login');
+              navigation.navigate('AddCard');
             }}
+          />
+          <NewCardStepPanel
+            step1={true}
+            step2={false}
+            step3={false}
+            step4={false}
           />
           <View
             style={{
               width: '100%',
-              height: 550,
               padding: 20,
-              paddingTop: 100,
             }}>
-            <Text
-              style={{
-                fontSize: 20,
-                color: SECONDARY,
-                fontWeight: 'bold',
-                marginBottom: 10,
-              }}>
-              Forgot Password
-            </Text>
-            <Text
-              style={{
-                fontSize: 16,
-                color: LIGHT_TEXT_COLOR,
-                marginBottom: 20,
-              }}>
-              Enter you phone number to recover
-            </Text>
-            <OutlinedInputBox placeholder="Phone" inputType="text" />
+            <OutlinedInputBox placeholder="Name" inputType="text" />
+            <OutlinedInputBox placeholder="Occupation" inputType="text" />
+            <OutlinedInputBox placeholder="Phone No" inputType="text" />
+            <OutlinedInputBox placeholder="Email" inputType="text" />
+            <OutlinedInputBox placeholder="Birthday" inputType="text" />
+            <OutlinedInputBox placeholder="Address" inputType="text" />
+            <OutlinedInputBox placeholder="City" inputType="text" />
+            <OutlinedInputBox placeholder="Country" inputType="text" />
             <BtnComponent
-              placeholder="Send Code"
+              placeholder="Next"
               onPress={() => {
-                navigation.navigate('PhoneVerification');
+                navigation.navigate('NewPersonalCard2');
               }}
             />
           </View>

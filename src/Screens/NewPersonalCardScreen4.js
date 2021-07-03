@@ -17,19 +17,20 @@ import {
 import BtnComponent from '../Components/BtnComponent';
 import Header from '../Components/Header';
 import OutlinedInputBox from '../Components/OutlinedInputBox';
+import NewCardStepPanel from '../Components/NewCardStepPanel';
 import {SafeAreaView} from 'react-native-safe-area-context';
-import Svg, {Path} from 'react-native-svg';
+import Svg, {G, Circle, Path} from 'react-native-svg';
 
-export default function LoginScreen({navigation}) {
+export default function NewCardScreen({navigation}) {
   return (
-    <SafeAreaView style={{flex: 1}}>
-      <ScrollView style={{flex: 1}}>
+    <SafeAreaView style={{flex: 1, backgroundColor: WHITE}}>
+      <ScrollView style={{flex: 1, backgroundColor: WHITE}}>
         <ImageBackground
-          source={require('../Assets/loginbg.png')}
+          source={require('../Assets/screenbg.png')}
           style={{width: '100%', minHeight: '100%'}}>
           <Header
             navigation={navigation}
-            variant="light"
+            variant="dark"
             // headerIcon={
             //   <Svg
             //     xmlns="http://www.w3.org/2000/svg"
@@ -42,40 +43,39 @@ export default function LoginScreen({navigation}) {
             //     />
             //   </Svg>
             // }
-            headerName=""
+            headerName="New Card"
             onPress={() => {
-              navigation.navigate('Login');
+              navigation.navigate('NewPersonalCard3');
             }}
+          />
+          <NewCardStepPanel
+            step1={true}
+            step2={true}
+            step3={true}
+            step4={true}
           />
           <View
             style={{
               width: '100%',
-              height: 550,
               padding: 20,
-              paddingTop: 100,
             }}>
-            <Text
-              style={{
-                fontSize: 20,
-                color: SECONDARY,
-                fontWeight: 'bold',
-                marginBottom: 10,
-              }}>
-              Forgot Password
-            </Text>
-            <Text
-              style={{
-                fontSize: 16,
-                color: LIGHT_TEXT_COLOR,
-                marginBottom: 20,
-              }}>
-              Enter you phone number to recover
-            </Text>
-            <OutlinedInputBox placeholder="Phone" inputType="text" />
+            <OutlinedInputBox
+              placeholder="Introductory Message"
+              inputType="text"
+            />
+            <OutlinedInputBox placeholder="QR Code" inputType="text" />
+            <OutlinedInputBox placeholder="Hobbies" inputType="text" />
+            <OutlinedInputBox placeholder="Education" inputType="text" />
+            <OutlinedInputBox placeholder="Interests" inputType="text" />
+            <OutlinedInputBox placeholder="Achievements" inputType="text" />
+            <OutlinedInputBox placeholder="Personal Info" inputType="text" />
+            <OutlinedInputBox placeholder="Skills" inputType="text" />
+            <OutlinedInputBox placeholder="Portfolio" inputType="text" />
+            <OutlinedInputBox placeholder="Job History" inputType="text" />
             <BtnComponent
-              placeholder="Send Code"
+              placeholder="Finish"
               onPress={() => {
-                navigation.navigate('PhoneVerification');
+                navigation.navigate('NewPersonalCard');
               }}
             />
           </View>
