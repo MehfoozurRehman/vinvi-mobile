@@ -27,11 +27,30 @@ export default function SearchIndividualScreen({navigation}) {
     <View
       style={{
         width: '100%',
-        padding: 20,
+        paddingHorizontal: 20,
+        backgroundColor: WHITE,
+        height: '100%',
       }}>
-      <OutlinedInputBox placeholder="Product Shelving" inputType="text" />
+      <Text>Name</Text>
+      <OutlinedInputBox placeholder="" inputType="text" />
+      <View
+        style={{
+          display: 'flex',
+          flexDirection: 'row',
+          justifyContent: 'space-between',
+          alignItems: 'center',
+        }}>
+        <View style={{flex: 1, marginRight: 10}}>
+          <Text>Name</Text>
+          <OutlinedInputBox placeholder="" inputType="text" />
+        </View>
+        <View style={{flex: 1, marginLeft: 10}}>
+          <Text>Name</Text>
+          <OutlinedInputBox placeholder="" inputType="text" />
+        </View>
+      </View>
       <BtnComponent
-        placeholder="Finish"
+        placeholder="Search"
         onPress={() => {
           navigation.navigate('');
         }}

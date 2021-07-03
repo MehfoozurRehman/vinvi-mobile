@@ -28,10 +28,12 @@ export default function SearchBuisnessScreen({navigation}) {
       style={{
         width: '100%',
         padding: 20,
+        backgroundColor: WHITE,
+        height: '100%',
       }}>
       <OutlinedInputBox placeholder="Product Shelving" inputType="text" />
       <BtnComponent
-        placeholder="Finish"
+        placeholder="Search"
         onPress={() => {
           navigation.navigate('');
         }}

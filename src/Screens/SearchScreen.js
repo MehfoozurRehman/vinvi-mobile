@@ -52,7 +52,7 @@ export default function SearchScreen({navigation}) {
           <View
             style={{
               width: '100%',
-              padding: 20,
+              height: 660,
             }}>
             <TopTabsNavigator />
           </View>
