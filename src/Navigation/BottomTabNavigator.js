@@ -9,6 +9,8 @@ import {View, Image, Text, TouchableOpacity} from 'react-native';
 import Svg, {G, Path} from 'react-native-svg';
 import LinearGradient from 'react-native-linear-gradient';
 
+import AddCardScreen from '../Screens/AddCardScreen';
+
 const Tab = createBottomTabNavigator();
 
 export default function BottomTabsNavigator() {
@@ -26,6 +28,8 @@ export default function BottomTabsNavigator() {
           bottom: 20,
           elevation: 0,
           height: 60,
+          borderBottomLeftRadius: 15,
+          borderBottomRightRadius: 15,
         },
       }}>
       <Tab.Screen
@@ -85,7 +89,7 @@ export default function BottomTabsNavigator() {
       />
       <Tab.Screen
         name="AddCard"
-        component={DashboardScreen}
+        component={AddCardScreen}
         options={{
           tabBarIcon: ({focused}) => {
             return (

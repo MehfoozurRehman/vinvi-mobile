@@ -44,7 +44,7 @@ export default function AddCardScreen({navigation}) {
             // }
             headerName="Add Card"
             onPress={() => {
-              navigation.navigate('Dashboard');
+              navigation.navigate('Home');
             }}
           />
           <View
@@ -137,7 +137,7 @@ export default function AddCardScreen({navigation}) {
             <View
               style={{
                 width: '100%',
-                height: '50%',
+                height: '40%',
                 display: 'flex',
                 justifyContent: 'center',
                 alignItems: 'center',
