@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useRef} from 'react';
 import {
   View,
   Text,
@@ -17,10 +17,43 @@ import {
 import BtnComponent from '../Components/BtnComponent';
 import Header from '../Components/Header';
 import OutlinedInputBox from '../Components/OutlinedInputBox';
+import InputBoxWOPlaceholder from '../Components/InputBoxWOPlaceholder';
 import UploadBtn from '../Components/UploadBtn';
 import NewCardStepPanel from '../Components/NewCardStepPanel';
 import {SafeAreaView} from 'react-native-safe-area-context';
 import Svg, {G, Circle, Path} from 'react-native-svg';
+import {Picker} from '@react-native-picker/picker';
+import Slider from '@react-native-community/slider';
+
+function PickerComponent({placeholder, itemValues, itemLabels}) {
+  const [selectedLanguage, setSelectedLanguage] = useState();
+  const pickerRef = useRef();
+
+  function open() {
+    pickerRef.current.focus();
+  }
+
+  function close() {
+    pickerRef.current.blur();
+  }
+
+  return (
+    <>
+      <Text>{placeholder}</Text>
+      <View style={{height: 40, backgroundColor: '#eeeeee', borderRadius: 5}}>
+        <Picker
+          style={{marginTop: -6}}
+          ref={pickerRef}
+          selectedValue={selectedLanguage}
+          onValueChange={(itemValue, itemIndex) =>
+            setSelectedLanguage(itemValue)
+          }>
+          <Picker.Item label={itemLabels} value={itemValues} />
+        </Picker>
+      </View>
+    </>
+  );
+}
 
 export default function SearchIndividualScreen({navigation}) {
   return (
@@ -32,21 +65,92 @@ export default function SearchIndividualScreen({navigation}) {
         height: '100%',
       }}>
       <Text>Name</Text>
-      <OutlinedInputBox placeholder="" inputType="text" />
+      <InputBoxWOPlaceholder />
       <View
         style={{
           display: 'flex',
           flexDirection: 'row',
           justifyContent: 'space-between',
           alignItems: 'center',
+          marginVertical: 10,
         }}>
         <View style={{flex: 1, marginRight: 10}}>
-          <Text>Name</Text>
-          <OutlinedInputBox placeholder="" inputType="text" />
+          <PickerComponent
+            placeholder="Niche"
+            itemLabels={('hello', 'hi')}
+            itemValues={('hello', 'hi')}
+          />
         </View>
         <View style={{flex: 1, marginLeft: 10}}>
-          <Text>Name</Text>
-          <OutlinedInputBox placeholder="" inputType="text" />
+          <PickerComponent
+            placeholder="Area"
+            itemLabels={('hello', 'hi')}
+            itemValues={('hello', 'hi')}
+          />
+        </View>
+      </View>
+      <Text>Name</Text>
+      <View
+        style={{
+          display: 'flex',
+          flexDirection: 'row',
+          alignItems: 'center',
+        }}>
+        <Text style={{color}}>0km</Text>
+        <Slider
+          style={{flex: 1, height: 50}}
+          minimumValue={0}
+          maximumValue={30}
+          minimumTrackTintColor={SECONDARY}
+          maximumTrackTintColor={SECONDARY}
+          thumbTintColor={SECONDARY}
+        />
+        <Text>30km</Text>
+      </View>
+      <View
+        style={{
+          display: 'flex',
+          flexDirection: 'row',
+          justifyContent: 'space-between',
+          alignItems: 'center',
+          marginVertical: 10,
+        }}>
+        <View style={{flex: 1, marginRight: 10}}>
+          <PickerComponent
+            placeholder="Habbits"
+            itemLabels={('hello', 'hi')}
+            itemValues={('hello', 'hi')}
+          />
+        </View>
+        <View style={{flex: 1, marginLeft: 10}}>
+          <PickerComponent
+            placeholder="Education"
+            itemLabels={('hello', 'hi')}
+            itemValues={('hello', 'hi')}
+          />
+        </View>
+      </View>
+      <View
+        style={{
+          display: 'flex',
+          flexDirection: 'row',
+          justifyContent: 'space-between',
+          alignItems: 'center',
+          marginVertical: 10,
+        }}>
+        <View style={{flex: 1, marginRight: 10}}>
+          <PickerComponent
+            placeholder="Interests"
+            itemLabels={('hello', 'hi')}
+            itemValues={('hello', 'hi')}
+          />
+        </View>
+        <View style={{flex: 1, marginLeft: 10}}>
+          <PickerComponent
+            placeholder="Skills"
+            itemLabels={('hello', 'hi')}
+            itemValues={('hello', 'hi')}
+          />
         </View>
       </View>
       <BtnComponent
