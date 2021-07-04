@@ -65,10 +65,9 @@ export default function SearchIndividualScreen({navigation}) {
   return (
     <View
       style={{
-        width: '100%',
         paddingHorizontal: 20,
         backgroundColor: WHITE,
-        height: '100%',
+        paddingBottom: 20,
       }}>
       <Text>Name</Text>
       <InputBoxWOPlaceholder />

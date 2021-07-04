@@ -8,6 +8,7 @@ import {
   TextInput,
   ScrollView,
   Dimensions,
+  SafeAreaView,
 } from 'react-native';
 import {
   SECONDARY,
@@ -18,8 +19,8 @@ import {
 import BtnComponent from '../Components/BtnComponent';
 import Header from '../Components/Header';
 import DashboardStories from '../Components/DashboardStories';
-import {SafeAreaView} from 'react-native-safe-area-context';
 import Svg, {Path} from 'react-native-svg';
+import {Height, Width} from '../Constants/Constants';
 
 function LoginInputBox({placeholder, inputType}) {
   const [isfocused, setIsfocused] = useState(false);
@@ -75,27 +76,26 @@ function LoginInputBox({placeholder, inputType}) {
 
 export default function HomeDashboardScreen({navigation}) {
   return (
-    <SafeAreaView style={{flex: 1}}>
-      <ScrollView style={{flex: 1}}>
-        <ImageBackground
-          source={require('../Assets/dashboardbg.png')}
-          style={{flex: 1, height: Dimensions.get('window').height}}>
-          <Header
-            navigation={navigation}
-            variant="drawer"
-            // onPress={() => {
-            //   navigation.navigate('Login');
-            // }}
-          />
-          <View
-            style={{
-              width: '100%',
-              paddingHorizontal: 20,
-            }}>
-            <DashboardStories />
-          </View>
-        </ImageBackground>
-      </ScrollView>
+    <SafeAreaView style={{height: Height, width: Width}}>
+      <ImageBackground
+        source={require('../Assets/dashboardbg.png')}
+        style={{flex: 1}}>
+        <Header
+          navigation={navigation}
+          variant="drawer"
+          // onPress={() => {
+          //   navigation.navigate('Login');
+          // }}
+        />
+        <View
+          style={{
+            paddingHorizontal: 20,
+            marginTop: -50,
+          }}>
+          <DashboardStories />
+        </View>
+        <ScrollView style={{flex: 1}}></ScrollView>
+      </ImageBackground>
     </SafeAreaView>
   );
 }

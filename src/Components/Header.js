@@ -11,16 +11,10 @@ export default function Header({
   onPress,
 }) {
   let isheaderName;
-  let isheaderIcon;
   if (headerName) {
     isheaderName = true;
   } else {
     isheaderName = false;
-  }
-  if (headerIcon) {
-    isheaderIcon = true;
-  } else {
-    isheaderIcon = false;
   }
   if (variant === 'light') {
     return (
@@ -53,7 +47,7 @@ export default function Header({
             justifyContent: 'space-between',
             alignItems: 'center',
           }}>
-          {isheaderIcon ? {headerIcon} : null}
+          {headerIcon}
           {isheaderName ? (
             <Text style={{marginLeft: 10, fontSize: 20, color: SECONDARY}}>
               {headerName}
@@ -93,7 +87,7 @@ export default function Header({
             justifyContent: 'space-between',
             alignItems: 'center',
           }}>
-          {isheaderIcon ? {headerIcon} : null}
+          {headerIcon}
           {isheaderName ? (
             <Text style={{marginLeft: 10, fontSize: 20, color: WHITE}}>
               {headerName}

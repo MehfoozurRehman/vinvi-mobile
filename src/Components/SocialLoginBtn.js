@@ -28,7 +28,7 @@ export default function SocialLoginBtn() {
           flexDirection: 'row',
           alignItems: 'center',
           paddingHorizontal: 20,
-          marginVertical: 10,
+          marginVertical: 5,
         }}>
         <Svg
           data-name="g+"

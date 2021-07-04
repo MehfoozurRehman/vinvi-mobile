@@ -8,11 +8,12 @@ import {
   TextInput,
   ScrollView,
   Dimensions,
+  SafeAreaView,
 } from 'react-native';
 import {SECONDARY, WHITE} from '../Constants/Colors';
 import SocialLoginBtn from '../Components/SocialLoginBtn';
 import BtnComponent from '../Components/BtnComponent';
-import {SafeAreaView} from 'react-native-safe-area-context';
+import {Height, Width} from '../Constants/Constants';
 
 function RegisterInputBox({placeholder, inputType}) {
   const [isfocused, setIsfocused] = useState(false);
@@ -29,7 +30,7 @@ function RegisterInputBox({placeholder, inputType}) {
         width: '100%',
         backgroundColor: 'rgba(255,255,255,.7)',
         borderRadius: 5,
-        marginVertical: 5,
+        marginVertical: 10,
       }}>
       {isfocused ? (
         <Text
@@ -65,19 +66,18 @@ function RegisterInputBox({placeholder, inputType}) {
 }
 
 export default function RegisterScreen({navigation}) {
-  const [text, setText] = useState('');
   return (
-    <SafeAreaView style={{flex: 1}}>
+    <SafeAreaView style={{height: Height, width: Width}}>
       <ScrollView style={{flex: 1}}>
         <ImageBackground
           source={require('../Assets/registerbg.png')}
-          style={{height: Dimensions.get('window').height}}>
+          style={{flex: 1}}>
           <View
             style={{
               width: '100%',
               height: '100%',
               paddingVertical: 20,
-              paddingHorizontal: 30,
+              paddingHorizontal: 20,
               display: 'flex',
               justifyContent: 'space-evenly',
             }}>
@@ -91,7 +91,7 @@ export default function RegisterScreen({navigation}) {
               }}></Image>
             <Text
               style={{
-                fontSize: 20,
+                fontSize: 30,
                 color: SECONDARY,
                 fontWeight: 'bold',
                 marginBottom: 20,

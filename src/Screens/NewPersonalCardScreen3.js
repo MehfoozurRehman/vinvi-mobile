@@ -24,40 +24,41 @@ import UploadBtn from '../Components/UploadBtn';
 import {SafeAreaView} from 'react-native-safe-area-context';
 import Svg, {G, Circle, Path} from 'react-native-svg';
 import ImagePicker from 'react-native-image-crop-picker';
+import {Height, Width} from '../Constants/Constants';
 
 export default function NewCardScreen({navigation}) {
   return (
-    <SafeAreaView style={{flex: 1, backgroundColor: WHITE}}>
-      <ScrollView style={{flex: 1, backgroundColor: WHITE}}>
-        <ImageBackground
-          source={require('../Assets/screenbg.png')}
-          style={{flex: 1, height: Dimensions.get('window').height}}>
-          <Header
-            navigation={navigation}
-            variant="dark"
-            // headerIcon={
-            //   <Svg
-            //     xmlns="http://www.w3.org/2000/svg"
-            //     width={20.936}
-            //     height={20.828}
-            //     viewBox="0 0 24.936 25.828">
-            //     <Path
-            //       d="M24.557 23.525l-6.147-6.393a10.424 10.424 0 10-7.982 3.724 10.316 10.316 0 005.974-1.887l6.194 6.442a1.36 1.36 0 101.96-1.886zM10.428 2.72a7.708 7.708 0 11-7.712 7.708 7.716 7.716 0 017.712-7.708z"
-            //       fill="#4a5a92"
-            //     />
-            //   </Svg>
-            // }
-            headerName="New Card"
-            onPress={() => {
-              navigation.navigate('NewPersonalCard2');
-            }}
-          />
-          <NewCardStepPanel
-            step1={true}
-            step2={true}
-            step3={true}
-            step4={false}
-          />
+    <SafeAreaView style={{height: Height, width: Width}}>
+      <ImageBackground
+        source={require('../Assets/screenbg.png')}
+        style={{flex: 1}}>
+        <Header
+          navigation={navigation}
+          variant="dark"
+          // headerIcon={
+          //   <Svg
+          //     xmlns="http://www.w3.org/2000/svg"
+          //     width={20.936}
+          //     height={20.828}
+          //     viewBox="0 0 24.936 25.828">
+          //     <Path
+          //       d="M24.557 23.525l-6.147-6.393a10.424 10.424 0 10-7.982 3.724 10.316 10.316 0 005.974-1.887l6.194 6.442a1.36 1.36 0 101.96-1.886zM10.428 2.72a7.708 7.708 0 11-7.712 7.708 7.716 7.716 0 017.712-7.708z"
+          //       fill="#4a5a92"
+          //     />
+          //   </Svg>
+          // }
+          headerName="New Card"
+          onPress={() => {
+            navigation.navigate('NewPersonalCard2');
+          }}
+        />
+        <NewCardStepPanel
+          step1={true}
+          step2={true}
+          step3={true}
+          step4={false}
+        />
+        <ScrollView style={{flex: 1}}>
           <View
             style={{
               width: '100%',
@@ -128,8 +129,8 @@ export default function NewCardScreen({navigation}) {
               }}
             />
           </View>
-        </ImageBackground>
-      </ScrollView>
+        </ScrollView>
+      </ImageBackground>
     </SafeAreaView>
   );
 }

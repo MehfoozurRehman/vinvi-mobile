@@ -35,14 +35,7 @@ export default function HomeScreen({navigation}) {
               harum enim tempore eum error quibusdam labore ipsum recusandae.
               Tenetur recusandae quisquam rerum facilis consectetur dolore sint
               perspiciatis numquam ipsa architecto, sit excepturi provident
-              mollitia culpa ab! Esse omnis qui libero perspiciatis odit
-              temporibus illum! Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-              Sapiente, incidunt iste! Veritatis, eum consectetur. Reiciendis
-              harum enim tempore eum error quibusdam labore ipsum recusandae.
-              Tenetur recusandae quisquam rerum facilis consectetur dolore sint
-              perspiciatis numquam ipsa architecto, sit excepturi provident
-              mollitia culpa ab! Esse omnis qui libero perspiciatis odit
-              temporibus illum!
+              mollitia culpa ab!
               "
           />
           <View
