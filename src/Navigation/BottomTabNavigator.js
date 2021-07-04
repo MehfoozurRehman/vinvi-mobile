@@ -5,6 +5,7 @@ import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import DashboardScreen from '../Screens/HomeDashboardScreen';
 import SavedDashboardScreen from '../Screens/SavedDashboardScreen';
 import ChatsDashboardScreen from '../Screens/ChatsDashboardScreen';
+import AccountDashboardScreen from '../Screens/AccountDashboardScreen';
 
 import {SECONDARY, WHITE} from '../Constants/Colors';
 import {View, Image, Text, TouchableOpacity} from 'react-native';
@@ -152,7 +153,7 @@ export default function BottomTabsNavigator() {
       />
       <Tab.Screen
         name="Account"
-        component={DashboardScreen}
+        component={AccountDashboardScreen}
         options={{
           tabBarIcon: ({focused}) => {
             return (
