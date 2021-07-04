@@ -132,7 +132,7 @@ export default function SearchBuisnessScreen({navigation}) {
       <BtnComponent
         placeholder="Search"
         onPress={() => {
-          navigation.navigate('');
+          navigation.navigate('SearchResult');
         }}
       />
     </View>

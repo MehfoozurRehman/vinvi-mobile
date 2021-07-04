@@ -3,6 +3,8 @@ import React, {Children} from 'react';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 
 import DashboardScreen from '../Screens/HomeDashboardScreen';
+import SavedDashboardScreen from '../Screens/SavedDashboardScreen';
+import ChatsDashboardScreen from '../Screens/ChatsDashboardScreen';
 
 import {SECONDARY, WHITE} from '../Constants/Colors';
 import {View, Image, Text, TouchableOpacity} from 'react-native';
@@ -64,8 +66,8 @@ export default function BottomTabsNavigator() {
         }}
       />
       <Tab.Screen
-        name="Favorit"
-        component={DashboardScreen}
+        name="Saved"
+        component={SavedDashboardScreen}
         options={{
           tabBarIcon: ({focused}) => {
             return (
@@ -124,8 +126,8 @@ export default function BottomTabsNavigator() {
         }}
       />
       <Tab.Screen
-        name="Messenger"
-        component={DashboardScreen}
+        name="Chats"
+        component={ChatsDashboardScreen}
         options={{
           tabBarIcon: ({focused}) => {
             return (

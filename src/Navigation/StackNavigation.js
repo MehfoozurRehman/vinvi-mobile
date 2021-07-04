@@ -13,6 +13,8 @@ import NewPersonalCardScreen3 from '../Screens/NewPersonalCardScreen3';
 import NewPersonalCardScreen4 from '../Screens/NewPersonalCardScreen4';
 import NewBusinessCardScreen from '../Screens/NewBusinessCardScreen';
 import SearchScreen from '../Screens/SearchScreen';
+import SearchResultScreen from '../Screens/SearchResultScreen';
+import MessagesScreen from '../Screens/MessagesScreen';
 
 Stack = createStackNavigator();
 
@@ -63,6 +65,12 @@ export default function StackNavigation() {
         options={{}}
       />
       <Stack.Screen name="Search" component={SearchScreen} options={{}} />
+      <Stack.Screen
+        name="SearchResult"
+        component={SearchResultScreen}
+        options={{}}
+      />
+      <Stack.Screen name="Messages" component={MessagesScreen} options={{}} />
     </Stack.Navigator>
   );
 }

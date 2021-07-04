@@ -1,7 +1,7 @@
 import React from 'react';
-import {TouchableOpacity, View, Text} from 'react-native';
+import {TouchableOpacity, View, Text, Image} from 'react-native';
 import Svg, {Path, G, Rect} from 'react-native-svg';
-import {SECONDARY, WHITE} from '../Constants/Colors';
+import {LIGHT_TEXT_COLOR, SECONDARY, WHITE} from '../Constants/Colors';
 
 export default function Header({
   navigation,
@@ -9,6 +9,9 @@ export default function Header({
   headerName,
   headerIcon,
   onPress,
+  userProfilePicture,
+  userName,
+  userStatus,
 }) {
   let isheaderName;
   if (headerName) {
@@ -160,6 +163,65 @@ export default function Header({
             />
           </Svg>
         </TouchableOpacity>
+      </View>
+    );
+  } else if (variant === 'account') {
+    return (
+      <View
+        style={{
+          display: 'flex',
+          flexDirection: 'row',
+          justifyContent: 'space-between',
+          alignItems: 'center',
+          paddingHorizontal: 20,
+          paddingVertical: 20,
+        }}>
+        <TouchableOpacity onPress={onPress}>
+          <Svg
+            xmlns="http://www.w3.org/2000/svg"
+            width={20.957}
+            height={20.957}
+            viewBox="0 0 17.957 17.957">
+            <Path
+              data-name="Icon material-arrow_back"
+              d="M17.957 7.856H4.3l6.274-6.274L8.979 0 0 8.979l8.979 8.979 1.582-1.582L4.3 10.1h13.657z"
+              fill={SECONDARY}
+            />
+          </Svg>
+        </TouchableOpacity>
+        <View
+          style={{
+            display: 'flex',
+            flexDirection: 'row',
+            justifyContent: 'space-between',
+            alignItems: 'center',
+          }}>
+          <Image source={userProfilePicture} style={{width: 50, height: 50}} />
+          <View style={{marginLeft: 10}}>
+            <Text style={{fontSize: 20, color: SECONDARY, marginBottom: 3}}>
+              {userName}
+            </Text>
+            <View
+              style={{
+                display: 'flex',
+                flexDirection: 'row',
+                alignItems: 'flex-start',
+              }}>
+              <View
+                style={{
+                  backgroundColor: '#02C255',
+                  width: 15,
+                  height: 15,
+                  borderRadius: 15,
+                }}
+              />
+              <Text
+                style={{marginLeft: 10, fontSize: 16, color: LIGHT_TEXT_COLOR}}>
+                {userStatus}
+              </Text>
+            </View>
+          </View>
+        </View>
       </View>
     );
   }
