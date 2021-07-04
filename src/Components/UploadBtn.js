@@ -33,7 +33,7 @@ export default function UploadBtn({svg, placeholder, onPress}) {
           display: 'flex',
           alignItems: 'center',
           backgroundColor: '#A9D6EB',
-          padding: 20,
+          paddingVertical: 40,
           borderRadius: 5,
           marginVertical: 10,
         }}>

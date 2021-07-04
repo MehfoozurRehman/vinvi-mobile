@@ -1,6 +1,7 @@
 import React from 'react';
 import Story from 'react-native-story';
 import {TextInput} from 'react-native';
+import {WHITE} from '../Constants/Colors';
 
 export default function DashboardStories() {
   const stories = [
@@ -28,6 +29,18 @@ export default function DashboardStories() {
       user: 'Cenk Gun',
       avatar: require('../Assets/favpng_professional-avatar-job.png'),
     },
+    {
+      id: '8',
+      source: require('../Assets/pexels-photo-799443.jpeg'),
+      user: 'Cenk Gun',
+      avatar: require('../Assets/favpng_professional-avatar-job.png'),
+    },
+    {
+      id: '10',
+      source: require('../Assets/pexels-photo-799443.jpeg'),
+      user: 'Cenk Gun',
+      avatar: require('../Assets/favpng_professional-avatar-job.png'),
+    },
   ];
   return (
     <Story
@@ -35,7 +48,17 @@ export default function DashboardStories() {
       pressedBorderColor="#ebebeb"
       stories={stories}
       footerComponent={
-        <TextInput placeholder="Send message" placeholderTextColor="white" />
+        <TextInput
+          placeholder="Send message"
+          placeholderTextColor="white"
+          style={{
+            width: '100%',
+            borderWidth: 1,
+            borderColor: WHITE,
+            borderRadius: 50,
+            paddingHorizontal: 20,
+          }}
+        />
       }
     />
   );

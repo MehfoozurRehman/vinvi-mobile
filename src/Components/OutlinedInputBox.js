@@ -66,6 +66,9 @@ export default function LoginInputBox({placeholder, inputType}) {
         onBlur={() => {
           setIsfocused(false);
         }}
+        onFocus={() => {
+          setIsfocused(false);
+        }}
       />
     </TouchableOpacity>
   );

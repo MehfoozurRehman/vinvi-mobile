@@ -7,6 +7,7 @@ import {
   TouchableOpacity,
   TextInput,
   ScrollView,
+  Dimensions,
 } from 'react-native';
 import {
   SECONDARY,
@@ -24,11 +25,11 @@ import Svg, {G, Circle, Path} from 'react-native-svg';
 
 export default function SearchScreen({navigation}) {
   return (
-    <SafeAreaView style={{flex: 1, backgroundColor: WHITE}}>
-      <ScrollView style={{flex: 1, backgroundColor: WHITE}}>
+    <SafeAreaView style={{flex: 1}}>
+      <ScrollView style={{flex: 1}}>
         <ImageBackground
           source={require('../Assets/screenbg.png')}
-          style={{width: '100%', minHeight: '100%'}}>
+          style={{flex: 1, height: Dimensions.get('window').height}}>
           <Header
             navigation={navigation}
             variant="dark"
@@ -52,7 +53,7 @@ export default function SearchScreen({navigation}) {
           <View
             style={{
               width: '100%',
-              height: 660,
+              height: '100%',
             }}>
             <TopTabsNavigator />
           </View>

@@ -7,6 +7,7 @@ import {
   TouchableOpacity,
   TextInput,
   ScrollView,
+  Dimensions,
 } from 'react-native';
 import {
   SECONDARY,
@@ -28,7 +29,7 @@ export default function NewBusinessCardScreen({navigation}) {
       <ScrollView style={{flex: 1, backgroundColor: WHITE}}>
         <ImageBackground
           source={require('../Assets/screenbg.png')}
-          style={{width: '100%', minHeight: '100%'}}>
+          style={{flex: 1, height: Dimensions.get('window').height}}>
           <Header
             navigation={navigation}
             variant="dark"

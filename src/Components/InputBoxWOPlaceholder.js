@@ -20,6 +20,7 @@ export default function InputBoxWOPlaceholder() {
         setFocus(false);
       }}
       style={{
+        marginTop: 5,
         height: 45,
         width: '100%',
         borderColor: SECONDARY,

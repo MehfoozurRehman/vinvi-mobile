@@ -40,7 +40,13 @@ function PickerComponent({placeholder, itemValues, itemLabels}) {
   return (
     <>
       <Text>{placeholder}</Text>
-      <View style={{height: 40, backgroundColor: '#eeeeee', borderRadius: 5}}>
+      <View
+        style={{
+          height: 40,
+          backgroundColor: '#eeeeee',
+          borderRadius: 5,
+          marginTop: 5,
+        }}>
         <Picker
           style={{marginTop: -6}}
           ref={pickerRef}
@@ -89,14 +95,14 @@ export default function SearchIndividualScreen({navigation}) {
           />
         </View>
       </View>
-      <Text>Name</Text>
+      <Text>Radius</Text>
       <View
         style={{
           display: 'flex',
           flexDirection: 'row',
           alignItems: 'center',
         }}>
-        <Text style={{color}}>0km</Text>
+        <Text>0km</Text>
         <Slider
           style={{flex: 1, height: 50}}
           minimumValue={0}

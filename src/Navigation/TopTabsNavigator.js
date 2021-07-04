@@ -19,7 +19,8 @@ export default function TopTabsNavigator() {
           borderWidth: 0,
           elevation: 0,
           marginHorizontal: 20,
-          marginBottom: 40,
+          marginTop: 10,
+          marginBottom: 30,
         },
         bounces: true,
       }}>

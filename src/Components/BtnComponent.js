@@ -20,7 +20,7 @@ export default function BtnComponent({placeholder, onPress}) {
   return (
     <TouchableOpacity
       style={{
-        height: 45,
+        height: 50,
         width: '100%',
         backgroundColor: SECONDARY,
         marginVertical: 20,
