@@ -34,7 +34,7 @@ export default function LoginInputBox({placeholder, inputType}) {
         width: '100%',
         backgroundColor: '#EFEFEF',
         borderRadius: 5,
-        marginVertical: 5,
+        marginVertical: 10,
         borderWidth: borderWidthConst,
         borderColor: SECONDARY,
       }}>

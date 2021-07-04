@@ -29,7 +29,7 @@ export default function HomeScreen({navigation}) {
           <Image
             source={require('../Assets/vinvilogo.png')}
             style={{marginTop: 30, width: 140, height: 70}}></Image>
-          <View style={{width: '100%', paddingHorizontal: 20}}>
+          <View style={{width: '100%', paddingHorizontal: 20, height: '35%'}}>
             <Heading placeholder="Heading" />
             <Paragraph
               placeholder="Lorem ipsum, dolor sit amet consectetur adipisicing elit.
@@ -38,7 +38,14 @@ export default function HomeScreen({navigation}) {
               Tenetur recusandae quisquam rerum facilis consectetur dolore sint
               perspiciatis numquam ipsa architecto, sit excepturi provident
               mollitia culpa ab! Esse omnis qui libero perspiciatis odit
-              temporibus illum!"
+              temporibus illum! Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Sapiente, incidunt iste! Veritatis, eum consectetur. Reiciendis
+              harum enim tempore eum error quibusdam labore ipsum recusandae.
+              Tenetur recusandae quisquam rerum facilis consectetur dolore sint
+              perspiciatis numquam ipsa architecto, sit excepturi provident
+              mollitia culpa ab! Esse omnis qui libero perspiciatis odit
+              temporibus illum!
+              "
             />
             <View
               style={{

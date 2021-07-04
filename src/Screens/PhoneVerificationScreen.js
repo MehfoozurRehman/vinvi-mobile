@@ -7,6 +7,7 @@ import {
   TouchableOpacity,
   TextInput,
   ScrollView,
+  Dimensions,
 } from 'react-native';
 import {
   SECONDARY,
@@ -25,7 +26,7 @@ export default function LoginScreen({navigation}) {
       <ScrollView style={{flex: 1}}>
         <ImageBackground
           source={require('../Assets/loginbg.png')}
-          style={{width: '100%', minHeight: '100%'}}>
+          style={{flex: 1, height: Dimensions.get('window').height}}>
           <Header
             navigation={navigation}
             variant="light"
@@ -49,9 +50,9 @@ export default function LoginScreen({navigation}) {
           <View
             style={{
               width: '100%',
-              height: 550,
-              padding: 20,
-              paddingTop: 100,
+              paddingVertical: 20,
+              paddingHorizontal: 30,
+              paddingTop: 200,
             }}>
             <Text
               style={{

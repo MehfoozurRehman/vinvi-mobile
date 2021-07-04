@@ -7,6 +7,7 @@ import {
   TouchableOpacity,
   TextInput,
   ScrollView,
+  Dimensions,
 } from 'react-native';
 import {SECONDARY, WHITE} from '../Constants/Colors';
 import SocialLoginBtn from '../Components/SocialLoginBtn';
@@ -68,88 +69,81 @@ export default function RegisterScreen({navigation}) {
   return (
     <SafeAreaView style={{flex: 1}}>
       <ScrollView style={{flex: 1}}>
-        <View
-          style={{
-            flex: 1,
-            alignItems: 'center',
-            justifyContent: 'center',
-            width: '100%',
-            backgroundColor: WHITE,
-          }}>
-          <ImageBackground
-            source={require('../Assets/registerbg.png')}
-            style={{width: '100%', height: '100%'}}>
+        <ImageBackground
+          source={require('../Assets/registerbg.png')}
+          style={{height: Dimensions.get('window').height}}>
+          <View
+            style={{
+              width: '100%',
+              height: '100%',
+              paddingVertical: 20,
+              paddingHorizontal: 30,
+              display: 'flex',
+              justifyContent: 'space-evenly',
+            }}>
+            <Image
+              source={require('../Assets/vinvilightlogo.png')}
+              style={{
+                marginVertical: 20,
+                alignSelf: 'center',
+                width: 100,
+                height: 55,
+              }}></Image>
+            <Text
+              style={{
+                fontSize: 20,
+                color: SECONDARY,
+                fontWeight: 'bold',
+                marginBottom: 20,
+              }}>
+              Join Us
+            </Text>
+            <RegisterInputBox
+              placeholder="Phone or Username"
+              inputType="text"
+            />
+            <RegisterInputBox placeholder="Password" inputType="password" />
+            <RegisterInputBox
+              placeholder="Confirm Password"
+              inputType="password"
+            />
+            <BtnComponent
+              placeholder="Sign Up"
+              onPress={() => {
+                navigation.navigate('Dashboard');
+              }}
+            />
+            <Text style={{alignSelf: 'center', color: WHITE, marginBottom: 10}}>
+              OR
+            </Text>
+            <SocialLoginBtn />
             <View
               style={{
-                width: '100%',
-                height: '100%',
-                padding: 20,
+                marginTop: 20,
+                display: 'flex',
+                flexDirection: 'row',
+                justifyContent: 'center',
               }}>
-              <Image
-                source={require('../Assets/vinvilightlogo.png')}
-                style={{
-                  marginVertical: 20,
-                  alignSelf: 'center',
-                  width: 100,
-                  height: 55,
-                }}></Image>
-              <Text
-                style={{
-                  fontSize: 20,
-                  color: SECONDARY,
-                  fontWeight: 'bold',
-                  marginBottom: 20,
-                }}>
-                Join Us
+              <Text style={{color: WHITE, marginBottom: 20}}>
+                Already have an account?
               </Text>
-              <RegisterInputBox
-                placeholder="Phone or Username"
-                inputType="text"
-              />
-              <RegisterInputBox placeholder="Password" inputType="password" />
-              <RegisterInputBox
-                placeholder="Confirm Password"
-                inputType="password"
-              />
-              <BtnComponent
-                placeholder="Sign Up"
+              <TouchableOpacity
+                style={{marginLeft: 10}}
                 onPress={() => {
-                  navigation.navigate('Dashboard');
-                }}
-              />
-              <Text
-                style={{alignSelf: 'center', color: WHITE, marginBottom: 10}}>
-                OR
-              </Text>
-              <SocialLoginBtn />
-              <View
-                style={{
-                  marginTop: 20,
-                  display: 'flex',
-                  flexDirection: 'row',
-                  justifyContent: 'center',
+                  navigation.navigate('Login');
                 }}>
-                <Text style={{color: WHITE, marginBottom: 20}}>
-                  Already have an account?
-                </Text>
-                <TouchableOpacity
-                  style={{marginLeft: 10}}
-                  onPress={() => {
-                    navigation.navigate('Login');
+                <Text
+                  style={{
+                    color: SECONDARY,
+                    textDecorationStyle: 'solid',
+                    textDecorationLine: 'underline',
                   }}>
-                  <Text
-                    style={{
-                      color: SECONDARY,
-                      textDecorationStyle: 'solid',
-                      textDecorationLine: 'underline',
-                    }}>
-                    Login
-                  </Text>
-                </TouchableOpacity>
-              </View>
+                  Login
+                </Text>
+              </TouchableOpacity>
             </View>
-          </ImageBackground>
-        </View>
+          </View>
+        </ImageBackground>
       </ScrollView>
     </SafeAreaView>
   );
