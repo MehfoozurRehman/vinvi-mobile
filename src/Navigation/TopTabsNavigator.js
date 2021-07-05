@@ -4,6 +4,8 @@ import {createMaterialTopTabNavigator} from '@react-navigation/material-top-tabs
 
 import SearchIndividualScreen from '../Screens/SearchIndividualScreen';
 import SearchBuisnessScreen from '../Screens/SearchBuisnessScreen';
+import SentRequestScreen from '../Screens/SentRequestScreen';
+import RecievedRequestScreen from '../Screens/RecievedRequestScreen';
 import {SECONDARY, WHITE} from '../Constants/Colors';
 
 const Tab = createMaterialTopTabNavigator();
@@ -45,8 +47,8 @@ export default function TopTabsNavigator({variant}) {
           },
           bounces: true,
         }}>
-        <Tab.Screen name="Sent" component={SearchIndividualScreen} />
-        <Tab.Screen name="Recieved" component={SearchBuisnessScreen} />
+        <Tab.Screen name="Sent" component={SentRequestScreen} />
+        <Tab.Screen name="Recieved" component={RecievedRequestScreen} />
       </Tab.Navigator>
     );
   }
