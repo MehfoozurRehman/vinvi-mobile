@@ -17,6 +17,7 @@ import SearchResultScreen from '../Screens/SearchResultScreen';
 import MessagesScreen from '../Screens/MessagesScreen';
 import ChangePassowrdScreen from '../Screens/ChangePassowrdScreen';
 import RequestScreen from '../Screens/RequestScreen';
+import NotificationScreen from '../Screens/NotificationScreen';
 
 Stack = createStackNavigator();
 

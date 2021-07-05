@@ -8,6 +8,9 @@ import HomeDashboardScreen from '../Screens/HomeDashboardScreen';
 import CustomSidebarMenu from './DrawerMenu';
 import {SECONDARY, WHITE} from '../Constants/Colors';
 import Svg, {G, Path} from 'react-native-svg';
+import NotificationScreen from '../Screens/NotificationScreen';
+import TermsConditionScreen from '../Screens/TermsConditionScreen';
+import BroadCastScreen from '../Screens/BroadCastScreen';
 
 const Drawer = createDrawerNavigator();
 
@@ -64,7 +67,7 @@ export default function DrawerNavigator() {
       />
       <Drawer.Screen
         name="Notification"
-        component={HomeDashboardScreen}
+        component={NotificationScreen}
         options={{
           drawerIcon: ({focused}) => {
             return (
@@ -92,7 +95,7 @@ export default function DrawerNavigator() {
       />
       <Drawer.Screen
         name="Broadcast"
-        component={HomeDashboardScreen}
+        component={BroadCastScreen}
         options={{
           drawerIcon: ({focused}) => {
             return (
@@ -133,8 +136,8 @@ export default function DrawerNavigator() {
         }}
       />
       <Drawer.Screen
-        name="Terms & Conditions"
-        component={HomeDashboardScreen}
+        name="TermsConditions"
+        component={TermsConditionScreen}
         options={{
           drawerIcon: ({focused}) => {
             return (
