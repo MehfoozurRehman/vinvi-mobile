@@ -82,7 +82,7 @@ function LinkButton({placeholder, svg}) {
         alignItems: 'center',
       }}>
       {svg}
-      <Text style={{marginLeft: 12, color: SECONDARY, fontSize: 16}}>
+      <Text style={{marginLeft: 12, color: SECONDARY, fontSize: 14}}>
         {placeholder}
       </Text>
     </TouchableOpacity>

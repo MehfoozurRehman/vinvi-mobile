@@ -2,7 +2,7 @@ import React, {Children} from 'react';
 
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 
-import DashboardScreen from '../Screens/HomeDashboardScreen';
+import DrawerNavigation from '../Navigation/DrawerNavigation';
 import SavedDashboardScreen from '../Screens/SavedDashboardScreen';
 import ChatsDashboardScreen from '../Screens/ChatsDashboardScreen';
 import AccountDashboardScreen from '../Screens/AccountDashboardScreen';
@@ -36,7 +36,7 @@ export default function BottomTabsNavigator() {
       }}>
       <Tab.Screen
         name="Home"
-        component={DashboardScreen}
+        component={DrawerNavigation}
         options={{
           tabBarIcon: ({focused}) => {
             return (

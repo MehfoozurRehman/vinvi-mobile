@@ -22,58 +22,6 @@ import DashboardStories from '../Components/DashboardStories';
 import Svg, {Path} from 'react-native-svg';
 import {Height, Width} from '../Constants/Constants';
 
-function LoginInputBox({placeholder, inputType}) {
-  const [isfocused, setIsfocused] = useState(false);
-  let secureTextEntry;
-  if (inputType === 'password') {
-    secureTextEntry = true;
-  } else {
-    secureTextEntry = false;
-  }
-  return (
-    <TouchableOpacity
-      activeOpacity={1}
-      style={{
-        width: '100%',
-        backgroundColor: '#EFEFEF',
-        borderRadius: 5,
-        marginVertical: 5,
-        borderWidth: 1,
-        borderColor: SECONDARY,
-      }}>
-      {isfocused ? (
-        <Text
-          style={{
-            width: '100%',
-            paddingHorizontal: 20,
-            paddingTop: 10,
-            fontSize: 12,
-            color: SECONDARY,
-          }}>
-          {placeholder}
-        </Text>
-      ) : null}
-      <TextInput
-        placeholder={placeholder}
-        style={{
-          width: '100%',
-          paddingHorizontal: 20,
-          height: 40,
-          color: SECONDARY,
-        }}
-        type={inputType}
-        secureTextEntry={secureTextEntry}
-        onPressIn={() => {
-          setIsfocused(true);
-        }}
-        onBlur={() => {
-          setIsfocused(false);
-        }}
-      />
-    </TouchableOpacity>
-  );
-}
-
 export default function HomeDashboardScreen({navigation}) {
   return (
     <SafeAreaView style={{height: Height, width: Width}}>
@@ -83,9 +31,9 @@ export default function HomeDashboardScreen({navigation}) {
         <Header
           navigation={navigation}
           variant="drawer"
-          // onPress={() => {
-          //   navigation.navigate('Login');
-          // }}
+          onPress={() => {
+            navigation.toggleDrawer();
+          }}
         />
         <View
           style={{

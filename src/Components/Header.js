@@ -110,11 +110,7 @@ export default function Header({
           paddingHorizontal: 20,
           paddingVertical: 25,
         }}>
-        <TouchableOpacity
-        // onPress={() => {
-        //   navigation.navigate('Login');
-        // }}
-        >
+        <TouchableOpacity onPress={onPress}>
           <Svg
             xmlns="http://www.w3.org/2000/svg"
             width={20}
