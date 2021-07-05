@@ -3,6 +3,7 @@ import {Button, View} from 'react-native';
 import {createDrawerNavigator} from '@react-navigation/drawer';
 
 import AccountDashboardScreen from '../Screens/AccountDashboardScreen';
+import ChatsDashboardScreen from '../Screens/ChatsDashboardScreen';
 import HomeDashboardScreen from '../Screens/HomeDashboardScreen';
 import CustomSidebarMenu from './DrawerMenu';
 import {SECONDARY, WHITE} from '../Constants/Colors';
@@ -33,7 +34,7 @@ export default function DrawerNavigator() {
       />
       <Drawer.Screen
         name="Profile"
-        component={HomeDashboardScreen}
+        component={AccountDashboardScreen}
         options={{
           drawerIcon: ({focused}) => {
             return (
@@ -112,7 +113,7 @@ export default function DrawerNavigator() {
       />
       <Drawer.Screen
         name="Chats"
-        component={HomeDashboardScreen}
+        component={ChatsDashboardScreen}
         options={{
           drawerIcon: ({focused}) => {
             return (

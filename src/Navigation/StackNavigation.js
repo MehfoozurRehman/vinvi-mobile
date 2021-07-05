@@ -15,6 +15,8 @@ import NewBusinessCardScreen from '../Screens/NewBusinessCardScreen';
 import SearchScreen from '../Screens/SearchScreen';
 import SearchResultScreen from '../Screens/SearchResultScreen';
 import MessagesScreen from '../Screens/MessagesScreen';
+import ChangePassowrdScreen from '../Screens/ChangePassowrdScreen';
+import RequestScreen from '../Screens/RequestScreen';
 
 Stack = createStackNavigator();
 
@@ -65,12 +67,18 @@ export default function StackNavigation() {
         options={{}}
       />
       <Stack.Screen name="Search" component={SearchScreen} options={{}} />
+      <Stack.Screen name="Request" component={RequestScreen} options={{}} />
       <Stack.Screen
         name="SearchResult"
         component={SearchResultScreen}
         options={{}}
       />
       <Stack.Screen name="Messages" component={MessagesScreen} options={{}} />
+      <Stack.Screen
+        name="ChangePassowrd"
+        component={ChangePassowrdScreen}
+        options={{}}
+      />
     </Stack.Navigator>
   );
 }

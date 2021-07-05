@@ -42,7 +42,11 @@ export default function HomeDashboardScreen({navigation}) {
           }}>
           <DashboardStories />
         </View>
-        <ScrollView style={{flex: 1}}></ScrollView>
+        <ScrollView style={{flex: 1}}>
+          <TouchableOpacity onPress={navigation.navigate('Request')}>
+            <Text>Request screen</Text>
+          </TouchableOpacity>
+        </ScrollView>
       </ImageBackground>
     </SafeAreaView>
   );

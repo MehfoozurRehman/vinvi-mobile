@@ -66,9 +66,10 @@ function AccountCard() {
     </View>
   );
 }
-function LinkButton({placeholder, svg}) {
+function LinkButton({placeholder, svg, onPress}) {
   return (
     <TouchableOpacity
+      onPress={onPress}
       style={{
         flex: 1,
         borderRadius: 5,
@@ -127,6 +128,9 @@ export default function AccountDashboardScreen({navigation}) {
             }}>
             <LinkButton
               placeholder="Change Password"
+              onPress={() => {
+                navigation.navigate('ChangePassowrd');
+              }}
               svg={
                 <Svg
                   xmlns="http://www.w3.org/2000/svg"
