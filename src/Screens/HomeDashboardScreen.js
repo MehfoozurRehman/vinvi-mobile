@@ -19,6 +19,7 @@ import {
 import BtnComponent from '../Components/BtnComponent';
 import Header from '../Components/Header';
 import DashboardStories from '../Components/DashboardStories';
+import UserCard from '../Components/UserCard';
 import Svg, {Path} from 'react-native-svg';
 import {Height, Width} from '../Constants/Constants';
 
@@ -27,7 +28,7 @@ export default function HomeDashboardScreen({navigation}) {
     <SafeAreaView style={{height: Height, width: Width}}>
       <ImageBackground
         source={require('../Assets/dashboardbg.png')}
-        style={{flex: 1}}>
+        style={{flex: 1, paddingBottom: 100}}>
         <Header
           navigation={navigation}
           variant="drawer"
@@ -43,12 +44,13 @@ export default function HomeDashboardScreen({navigation}) {
           <DashboardStories />
         </View>
         <ScrollView style={{flex: 1}}>
-          <TouchableOpacity
-            onPress={() => {
-              navigation.navigate('Request');
-            }}>
-            <Text>Request screen</Text>
-          </TouchableOpacity>
+          <UserCard cta={true} variant="closed" />
+          <UserCard cta={true} variant="broadcasted" />
+          <UserCard cta={true} variant="open" />
+          <UserCard cta={true} variant="open" />
+          <UserCard cta={true} variant="open" />
+          <UserCard cta={true} variant="open" />
+          <UserCard cta={true} variant="open" />
         </ScrollView>
       </ImageBackground>
     </SafeAreaView>

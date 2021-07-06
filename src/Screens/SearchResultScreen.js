@@ -18,7 +18,7 @@ import {
 import BtnComponent from '../Components/BtnComponent';
 import Header from '../Components/Header';
 import OutlinedInputBox from '../Components/OutlinedInputBox';
-import UploadBtn from '../Components/UploadBtn';
+import UserCard from '../Components/UserCard';
 import TopTabsNavigator from '../Navigation/TopTabsNavigator';
 import {SafeAreaView} from 'react-native-safe-area-context';
 import Svg, {G, Circle, Path} from 'react-native-svg';
@@ -70,7 +70,7 @@ export default function SearchResultScreen({navigation}) {
     <SafeAreaView style={{height: Height, width: Width}}>
       <ImageBackground
         source={require('../Assets/screenbg.png')}
-        style={{flex: 1}}>
+        style={{flex: 1, paddingBottom: 50}}>
         <Header
           navigation={navigation}
           variant="dark"
@@ -91,7 +91,6 @@ export default function SearchResultScreen({navigation}) {
             navigation.navigate('Search');
           }}
         />
-
         <FilterTag filterName="Area" filterValue="Lahore" onPress={() => {}} />
         <FilterTag
           filterName="Niche"
@@ -99,10 +98,23 @@ export default function SearchResultScreen({navigation}) {
           onPress={() => {}}
         />
         <FilterTag filterName="Name" filterValue="Rahul" onPress={() => {}} />
-        <Text style={{marginVertical: 10, fontSize: 18, marginHorizontal: 20}}>
+        <Text style={{marginVertical: 10, fontSize: 16, marginHorizontal: 20}}>
           Showing 203 Results
         </Text>
-        <ScrollView style={{flex: 1, paddingHorizontal: 20}}></ScrollView>
+        <ScrollView style={{flex: 1}}>
+          <UserCard variant="closed" favoritBtn={true} />
+          <UserCard variant="broadcasted" favoritBtn={true} />
+          <UserCard variant="open" favoritBtn={true} />
+          <UserCard variant="closed" favoritBtn={true} />
+          <UserCard variant="broadcasted" favoritBtn={true} />
+          <UserCard variant="open" favoritBtn={true} />
+          <UserCard variant="closed" favoritBtn={true} />
+          <UserCard variant="broadcasted" favoritBtn={true} />
+          <UserCard variant="open" favoritBtn={true} />
+          <UserCard variant="closed" favoritBtn={true} />
+          <UserCard variant="broadcasted" favoritBtn={true} />
+          <UserCard variant="open" favoritBtn={true} />
+        </ScrollView>
       </ImageBackground>
     </SafeAreaView>
   );

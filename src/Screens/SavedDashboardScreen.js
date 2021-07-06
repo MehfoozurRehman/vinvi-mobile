@@ -18,7 +18,7 @@ import {
 } from '../Constants/Colors';
 import BtnComponent from '../Components/BtnComponent';
 import Header from '../Components/Header';
-import DashboardStories from '../Components/DashboardStories';
+import UserCard from '../Components/UserCard';
 import Svg, {Path} from 'react-native-svg';
 import {Height, Width} from '../Constants/Constants';
 
@@ -27,7 +27,7 @@ export default function SavedDashboardScreen({navigation}) {
     <SafeAreaView style={{height: Height, width: Width}}>
       <ImageBackground
         source={require('../Assets/screenbg.png')}
-        style={{flex: 1}}>
+        style={{flex: 1, paddingBottom: 100}}>
         <Header
           navigation={navigation}
           variant="dark"
@@ -49,7 +49,20 @@ export default function SavedDashboardScreen({navigation}) {
             </Svg>
           }
         />
-        <ScrollView style={{flex: 1}}></ScrollView>
+        <ScrollView style={{flex: 1}}>
+          <UserCard variant="closed" />
+          <UserCard variant="broadcasted" />
+          <UserCard variant="open" />
+          <UserCard variant="closed" />
+          <UserCard variant="broadcasted" />
+          <UserCard variant="open" />
+          <UserCard variant="closed" />
+          <UserCard variant="broadcasted" />
+          <UserCard variant="open" />
+          <UserCard variant="closed" />
+          <UserCard variant="broadcasted" />
+          <UserCard variant="open" />
+        </ScrollView>
       </ImageBackground>
     </SafeAreaView>
   );
