@@ -23,6 +23,7 @@ import Header from '../Components/Header';
 import UserCard from '../Components/UserCard';
 import Svg, {G, Path} from 'react-native-svg';
 import {Height, Width} from '../Constants/Constants';
+import QRCode from 'react-native-qrcode-svg';
 
 function ContactDetailsRow({placeholder, svg}) {
   return (
@@ -86,24 +87,10 @@ export default function IndividualScreen({navigation}) {
           style={{width: '100%', height: 300}}>
           <Header
             navigation={navigation}
-            variant="dark"
-            headerName="Saved"
+            variant="user"
             onPress={() => {
-              navigation.navigate('Home');
+              navigation.navigate('Dashboard');
             }}
-            headerIcon={
-              <Svg
-                xmlns="http://www.w3.org/2000/svg"
-                width={22.295}
-                height={19.508}
-                viewBox="0 0 22.295 19.508">
-                <Path
-                  data-name="Icon awesome-heart"
-                  d="M20.131 1.334a5.955 5.955 0 00-8.13.592l-.858.884-.858-.884a5.954 5.954 0 00-8.125-.592 6.253 6.253 0 00-.431 9.053l8.426 8.7a1.365 1.365 0 001.973 0l8.426-8.7a6.249 6.249 0 00-.427-9.053z"
-                  fill="#fff"
-                />
-              </Svg>
-            }
           />
         </ImageBackground>
         <View
@@ -489,34 +476,6 @@ export default function IndividualScreen({navigation}) {
               marginTop: 20,
             }}>
             <Text style={{fontSize: 20, color: SECONDARY, marginBottom: 8}}>
-              Skills
-            </Text>
-            <View
-              style={{
-                display: 'flex',
-                flexDirection: 'row',
-                flexWrap: 'wrap',
-              }}>
-              <SkillTag placeholder="Skill Name" />
-              <SkillTag placeholder="Skill Name" />
-              <SkillTag placeholder="Skill Name" />
-              <SkillTag placeholder="Skill Name" />
-              <SkillTag placeholder="Skill Name" />
-              <SkillTag placeholder="Skill Name" />
-              <SkillTag placeholder="Skill Name" />
-            </View>
-          </View>
-          <View
-            style={{
-              width: '100%',
-              backgroundColor: FIFTH,
-              paddingVertical: 20,
-              paddingLeft: 20,
-              paddingRight: 10,
-              borderRadius: 8,
-              marginTop: 20,
-            }}>
-            <Text style={{fontSize: 20, color: SECONDARY, marginBottom: 8}}>
               Protfolio
             </Text>
             <View
@@ -547,6 +506,17 @@ export default function IndividualScreen({navigation}) {
               />
             </View>
           </View>
+          <View
+            style={{width: '100%', marginVertical: 70, alignItems: 'center'}}>
+            <QRCode
+              value="https://www.google.com"
+              // logo={{uri: base64Logo}}
+              logoSize={30}
+              logoBackgroundColor="transparent"
+              color={SECONDARY}
+            />
+          </View>
+          <BtnComponent placeholder="Block" onPress={() => {}} />
         </View>
       </ScrollView>
     </SafeAreaView>

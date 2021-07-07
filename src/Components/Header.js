@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {TouchableOpacity, View, Text, Image} from 'react-native';
 import Svg, {Path, G, Rect} from 'react-native-svg';
 import {LIGHT_TEXT_COLOR, SECONDARY, WHITE} from '../Constants/Colors';
@@ -19,6 +19,7 @@ export default function Header({
   } else {
     isheaderName = false;
   }
+  const [favorit, setFavorit] = useState(false);
   if (variant === 'light') {
     return (
       <View
@@ -218,6 +219,49 @@ export default function Header({
             </View>
           </View>
         </View>
+      </View>
+    );
+  } else if (variant === 'user') {
+    return (
+      <View
+        style={{
+          display: 'flex',
+          flexDirection: 'row',
+          justifyContent: 'space-between',
+          alignItems: 'center',
+          paddingHorizontal: 20,
+          paddingVertical: 25,
+        }}>
+        <TouchableOpacity onPress={onPress}>
+          <Svg
+            xmlns="http://www.w3.org/2000/svg"
+            width={20.957}
+            height={20.957}
+            viewBox="0 0 17.957 17.957">
+            <Path
+              data-name="Icon material-arrow_back"
+              d="M17.957 7.856H4.3l6.274-6.274L8.979 0 0 8.979l8.979 8.979 1.582-1.582L4.3 10.1h13.657z"
+              fill={WHITE}
+            />
+          </Svg>
+        </TouchableOpacity>
+        <TouchableOpacity
+          activeOpacity={0.5}
+          onPress={() => {
+            setFavorit(true);
+          }}>
+          <Svg
+            xmlns="http://www.w3.org/2000/svg"
+            width={22.295}
+            height={19.508}
+            viewBox="0 0 22.295 19.508">
+            <Path
+              data-name="Icon awesome-heart"
+              d="M20.131 1.334a5.955 5.955 0 00-8.13.592l-.858.884-.858-.884a5.954 5.954 0 00-8.125-.592 6.253 6.253 0 00-.431 9.053l8.426 8.7a1.365 1.365 0 001.973 0l8.426-8.7a6.249 6.249 0 00-.427-9.053z"
+              fill={favorit ? SECONDARY : '#fff'}
+            />
+          </Svg>
+        </TouchableOpacity>
       </View>
     );
   }

@@ -50,18 +50,66 @@ export default function SavedDashboardScreen({navigation}) {
           }
         />
         <ScrollView style={{flex: 1}}>
-          <UserCard variant="closed" />
-          <UserCard variant="broadcasted" />
-          <UserCard variant="open" />
-          <UserCard variant="closed" />
-          <UserCard variant="broadcasted" />
-          <UserCard variant="open" />
-          <UserCard variant="closed" />
-          <UserCard variant="broadcasted" />
-          <UserCard variant="open" />
-          <UserCard variant="closed" />
-          <UserCard variant="broadcasted" />
-          <UserCard variant="open" />
+          <UserCard
+            variant="closed"
+            navigation={navigation}
+            navigationPath="Individual"
+          />
+          <UserCard
+            variant="broadcasted"
+            navigation={navigation}
+            navigationPath="Individual"
+          />
+          <UserCard
+            variant="open"
+            navigation={navigation}
+            navigationPath="Individual"
+          />
+          <UserCard
+            variant="closed"
+            navigation={navigation}
+            navigationPath="Individual"
+          />
+          <UserCard
+            variant="broadcasted"
+            navigation={navigation}
+            navigationPath="Individual"
+          />
+          <UserCard
+            variant="open"
+            navigation={navigation}
+            navigationPath="Individual"
+          />
+          <UserCard
+            variant="closed"
+            navigation={navigation}
+            navigationPath="Individual"
+          />
+          <UserCard
+            variant="broadcasted"
+            navigation={navigation}
+            navigationPath="Individual"
+          />
+          <UserCard
+            variant="open"
+            navigation={navigation}
+            navigationPath="Individual"
+          />
+          <UserCard
+            variant="closed"
+            navigation={navigation}
+            navigationPath="Individual"
+          />
+          <UserCard
+            variant="broadcasted"
+            navigation={navigation}
+            navigationPath="Individual"
+          />
+          <UserCard
+            variant="open"
+            navigation={navigation}
+            navigationPath="Individual"
+          />
         </ScrollView>
       </ImageBackground>
     </SafeAreaView>

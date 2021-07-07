@@ -44,13 +44,48 @@ export default function HomeDashboardScreen({navigation}) {
           <DashboardStories />
         </View>
         <ScrollView style={{flex: 1}}>
-          <UserCard cta={true} variant="closed" navigation={navigation} />
-          <UserCard cta={true} variant="broadcasted" navigation={navigation} />
-          <UserCard cta={true} variant="open" navigation={navigation} />
-          <UserCard cta={true} variant="open" navigation={navigation} />
-          <UserCard cta={true} variant="open" navigation={navigation} />
-          <UserCard cta={true} variant="open" navigation={navigation} />
-          <UserCard cta={true} variant="open" navigation={navigation} />
+          <UserCard
+            cta={true}
+            variant="closed"
+            navigation={navigation}
+            navigationPath="Individual"
+          />
+          <UserCard
+            cta={true}
+            variant="broadcasted"
+            navigation={navigation}
+            navigationPath="Individual"
+          />
+          <UserCard
+            cta={true}
+            variant="open"
+            navigation={navigation}
+            navigationPath="Individual"
+          />
+          <UserCard
+            cta={true}
+            variant="open"
+            navigation={navigation}
+            navigationPath="Individual"
+          />
+          <UserCard
+            cta={true}
+            variant="open"
+            navigation={navigation}
+            navigationPath="Individual"
+          />
+          <UserCard
+            cta={true}
+            variant="open"
+            navigation={navigation}
+            navigationPath="Individual"
+          />
+          <UserCard
+            cta={true}
+            variant="open"
+            navigation={navigation}
+            navigationPath="Individual"
+          />
         </ScrollView>
       </ImageBackground>
     </SafeAreaView>

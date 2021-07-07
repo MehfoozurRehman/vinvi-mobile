@@ -102,18 +102,78 @@ export default function SearchResultScreen({navigation}) {
           Showing 203 Results
         </Text>
         <ScrollView style={{flex: 1}}>
-          <UserCard variant="closed" favoritBtn={true} />
-          <UserCard variant="broadcasted" favoritBtn={true} />
-          <UserCard variant="open" favoritBtn={true} />
-          <UserCard variant="closed" favoritBtn={true} />
-          <UserCard variant="broadcasted" favoritBtn={true} />
-          <UserCard variant="open" favoritBtn={true} />
-          <UserCard variant="closed" favoritBtn={true} />
-          <UserCard variant="broadcasted" favoritBtn={true} />
-          <UserCard variant="open" favoritBtn={true} />
-          <UserCard variant="closed" favoritBtn={true} />
-          <UserCard variant="broadcasted" favoritBtn={true} />
-          <UserCard variant="open" favoritBtn={true} />
+          <UserCard
+            variant="closed"
+            favoritBtn={true}
+            navigation={navigation}
+            navigationPath="Individual"
+          />
+          <UserCard
+            variant="broadcasted"
+            favoritBtn={true}
+            navigation={navigation}
+            navigationPath="Buisness"
+          />
+          <UserCard
+            variant="open"
+            favoritBtn={true}
+            navigation={navigation}
+            navigationPath="Individual"
+          />
+          <UserCard
+            variant="closed"
+            favoritBtn={true}
+            navigation={navigation}
+            navigationPath="Individual"
+          />
+          <UserCard
+            variant="broadcasted"
+            favoritBtn={true}
+            navigation={navigation}
+            navigationPath="Individual"
+          />
+          <UserCard
+            variant="open"
+            favoritBtn={true}
+            navigation={navigation}
+            navigationPath="Individual"
+          />
+          <UserCard
+            variant="closed"
+            favoritBtn={true}
+            navigation={navigation}
+            navigationPath="Individual"
+          />
+          <UserCard
+            variant="broadcasted"
+            favoritBtn={true}
+            navigation={navigation}
+            navigationPath="Individual"
+          />
+          <UserCard
+            variant="open"
+            favoritBtn={true}
+            navigation={navigation}
+            navigationPath="Individual"
+          />
+          <UserCard
+            variant="closed"
+            favoritBtn={true}
+            navigation={navigation}
+            navigationPath="Individual"
+          />
+          <UserCard
+            variant="broadcasted"
+            favoritBtn={true}
+            navigation={navigation}
+            navigationPath="Individual"
+          />
+          <UserCard
+            variant="open"
+            favoritBtn={true}
+            navigation={navigation}
+            navigationPath="Individual"
+          />
         </ScrollView>
       </ImageBackground>
     </SafeAreaView>

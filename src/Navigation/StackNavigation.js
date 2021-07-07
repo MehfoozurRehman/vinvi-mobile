@@ -17,7 +17,7 @@ import SearchResultScreen from '../Screens/SearchResultScreen';
 import MessagesScreen from '../Screens/MessagesScreen';
 import ChangePassowrdScreen from '../Screens/ChangePassowrdScreen';
 import RequestScreen from '../Screens/RequestScreen';
-import NotificationScreen from '../Screens/NotificationScreen';
+import BuisnessScreen from '../Screens/BuisnessScreen';
 import IndividualScreen from '../Screens/IndividualScreen';
 
 Stack = createStackNavigator();
@@ -81,6 +81,7 @@ export default function StackNavigation() {
         component={IndividualScreen}
         options={{}}
       />
+      <Stack.Screen name="Buisness" component={BuisnessScreen} options={{}} />
       <Stack.Screen
         name="ChangePassowrd"
         component={ChangePassowrdScreen}
