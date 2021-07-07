@@ -113,9 +113,12 @@ function UserCardStatus({status}) {
   }
 }
 
-export default function UserCard({cta, variant, favoritBtn}) {
+export default function UserCard({cta, variant, favoritBtn, navigation}) {
   return (
     <TouchableOpacity
+      onPress={() => {
+        navigation.navigate('Individual');
+      }}
       activeOpacity={0.9}
       style={{
         display: 'flex',

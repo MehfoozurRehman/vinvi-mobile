@@ -16,12 +16,17 @@ import {
 } from '../Constants/Colors';
 import Svg, {G, Path} from 'react-native-svg';
 
-export default function BtnComponent({placeholder, onPress}) {
+export default function BtnComponent({
+  placeholder,
+  onPress,
+  width,
+  widthValue,
+}) {
   return (
     <TouchableOpacity
       style={{
         height: 50,
-        width: '100%',
+        width: width ? widthValue : '100%',
         backgroundColor: SECONDARY,
         marginVertical: 20,
         display: 'flex',
