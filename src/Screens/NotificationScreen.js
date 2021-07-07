@@ -73,7 +73,7 @@ export default function NotificationScreen({navigation}) {
     <SafeAreaView style={{height: Height, width: Width}}>
       <ImageBackground
         source={require('../Assets/screenbg.png')}
-        style={{flex: 1}}>
+        style={{flex: 1, paddingBottom: 20}}>
         <Header
           navigation={navigation}
           variant="dark"
@@ -123,6 +123,18 @@ export default function NotificationScreen({navigation}) {
               </Text>
             </View>
           </View>
+          <Notification status={true} />
+          <Notification status={true} />
+          <Notification status={true} />
+          <Notification status={true} />
+          <Notification status={true} />
+          <Notification status={true} />
+          <Notification status={true} />
+          <Notification status={true} />
+          <Notification status={true} />
+          <Notification status={true} />
+          <Notification status={true} />
+          <Notification status={true} />
           <Notification status={true} />
           <Notification status={true} />
           <Notification status={true} />

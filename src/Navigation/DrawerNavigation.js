@@ -4,7 +4,7 @@ import {createDrawerNavigator} from '@react-navigation/drawer';
 
 import AccountDashboardScreen from '../Screens/AccountDashboardScreen';
 import ChatsDashboardScreen from '../Screens/ChatsDashboardScreen';
-import HomeDashboardScreen from '../Screens/HomeDashboardScreen';
+import BottomTabsNavigator from '../Navigation/BottomTabNavigator';
 import CustomSidebarMenu from './DrawerMenu';
 import {SECONDARY, WHITE} from '../Constants/Colors';
 import Svg, {G, Path} from 'react-native-svg';
@@ -28,7 +28,7 @@ export default function DrawerNavigator() {
       drawerContent={props => <CustomSidebarMenu {...props} />}>
       <Drawer.Screen
         name="Home"
-        component={HomeDashboardScreen}
+        component={BottomTabsNavigator}
         options={{
           drawerLabel: () => null,
           title: null,

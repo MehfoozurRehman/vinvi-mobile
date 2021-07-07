@@ -111,7 +111,7 @@ export default function BroadCastScreen({navigation}) {
     <SafeAreaView style={{height: Height, width: Width}}>
       <ImageBackground
         source={require('../Assets/screenbg.png')}
-        style={{flex: 1}}>
+        style={{flex: 1, paddingBottom: 20}}>
         <Header
           navigation={navigation}
           variant="dark"
@@ -164,8 +164,16 @@ export default function BroadCastScreen({navigation}) {
           <BroadcastCard status={false} />
           <BroadcastCard status={true} />
           <BroadcastCard status={false} />
+          <BroadcastCard status={true} />
+          <BroadcastCard status={false} />
+          <BroadcastCard status={true} />
+          <BroadcastCard status={false} />
+          <BroadcastCard status={true} />
+          <BroadcastCard status={false} />
+          <BroadcastCard status={true} />
+          <BroadcastCard status={false} />
         </ScrollView>
-        <View style={{marginBottom: 90, marginHorizontal: 20}}>
+        <View style={{marginHorizontal: 20}}>
           <BtnComponent placeholder="Broadcast" onPress={() => {}} />
         </View>
       </ImageBackground>

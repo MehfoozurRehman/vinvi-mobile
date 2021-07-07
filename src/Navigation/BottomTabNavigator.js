@@ -2,7 +2,6 @@ import React, {Children} from 'react';
 
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 
-import DrawerNavigation from '../Navigation/DrawerNavigation';
 import SavedDashboardScreen from '../Screens/SavedDashboardScreen';
 import ChatsDashboardScreen from '../Screens/ChatsDashboardScreen';
 import AccountDashboardScreen from '../Screens/AccountDashboardScreen';
@@ -13,6 +12,7 @@ import Svg, {G, Path} from 'react-native-svg';
 import LinearGradient from 'react-native-linear-gradient';
 
 import AddCardScreen from '../Screens/AddCardScreen';
+import HomeDashboardScreen from '../Screens/HomeDashboardScreen';
 
 const Tab = createBottomTabNavigator();
 
@@ -22,21 +22,28 @@ export default function BottomTabsNavigator() {
       tabBarOptions={{
         showLabel: false,
         style: {
-          backgroundColor: WHITE,
-          borderTopColor: SECONDARY,
+          backgroundColor: 'transparent',
+          borderTopColor: 'transparent',
           borderTopWidth: 1,
           position: 'absolute',
           left: 10,
           right: 10,
-          bottom: 10,
+          bottom: 5,
           elevation: 0,
           borderBottomLeftRadius: 15,
           borderBottomRightRadius: 15,
+          height: 70,
+        },
+        tabStyle: {
+          backgroundColor: WHITE,
+          marginTop: 20,
+          borderTopColor: SECONDARY,
+          borderTopWidth: 1,
         },
       }}>
       <Tab.Screen
         name="Home"
-        component={DrawerNavigation}
+        component={HomeDashboardScreen}
         options={{
           tabBarIcon: ({focused}) => {
             return (
@@ -110,18 +117,27 @@ export default function BottomTabsNavigator() {
           },
           tabBarButton: ({children, onPress, focused}) => {
             return (
-              <TouchableOpacity onPress={onPress} activeOpacity={0.5}>
-                <LinearGradient
-                  colors={['#3b5998', '#192f6a']}
+              <View
+                style={{
+                  backgroundColor: WHITE,
+                  borderTopLeftRadius: 30,
+                  borderTopRightRadius: 30,
+                }}>
+                <TouchableOpacity
+                  onPress={onPress}
+                  activeOpacity={0.5}
                   style={{
-                    width: 60,
-                    height: 60,
+                    width: 55,
+                    height: 55,
                     borderRadius: 60,
-                    top: -30,
                   }}>
-                  {children}
-                </LinearGradient>
-              </TouchableOpacity>
+                  <LinearGradient
+                    colors={['#3b5998', '#192f6a']}
+                    style={{width: '100%', height: '100%', borderRadius: 60}}>
+                    {children}
+                  </LinearGradient>
+                </TouchableOpacity>
+              </View>
             );
           },
         }}

@@ -88,7 +88,7 @@ export default function ChatsDashboardScreen({navigation}) {
     <SafeAreaView style={{height: Height, width: Width}}>
       <ImageBackground
         source={require('../Assets/screenbg.png')}
-        style={{flex: 1}}>
+        style={{flex: 1, paddingBottom: 80}}>
         <Header
           navigation={navigation}
           variant="dark"
@@ -110,7 +110,79 @@ export default function ChatsDashboardScreen({navigation}) {
             </Svg>
           }
         />
-        <ScrollView style={{flex: 1, paddingBottom: 80}}>
+        <ScrollView style={{flex: 1}}>
+          <ChatCard
+            picture={require('../Assets/profilePic.png')}
+            lastMessage="Hi, I am there"
+            name="John Smith"
+            timeStamp="16:43"
+            badgeValue="3"
+            navigation={navigation}
+          />
+          <ChatCard
+            picture={require('../Assets/profilePic.png')}
+            lastMessage="Hi, I am there"
+            name="John Smith"
+            timeStamp="16:43"
+            badgeValue="3"
+            navigation={navigation}
+          />
+          <ChatCard
+            picture={require('../Assets/profilePic.png')}
+            lastMessage="Hi, I am there"
+            name="John Smith"
+            timeStamp="16:43"
+            badgeValue="3"
+            navigation={navigation}
+          />
+          <ChatCard
+            picture={require('../Assets/profilePic.png')}
+            lastMessage="Hi, I am there"
+            name="John Smith"
+            timeStamp="16:43"
+            badgeValue="3"
+            navigation={navigation}
+          />
+          <ChatCard
+            picture={require('../Assets/profilePic.png')}
+            lastMessage="Hi, I am there"
+            name="John Smith"
+            timeStamp="16:43"
+            badgeValue="3"
+            navigation={navigation}
+          />
+          <ChatCard
+            picture={require('../Assets/profilePic.png')}
+            lastMessage="Hi, I am there"
+            name="John Smith"
+            timeStamp="16:43"
+            badgeValue="3"
+            navigation={navigation}
+          />
+          <ChatCard
+            picture={require('../Assets/profilePic.png')}
+            lastMessage="Hi, I am there"
+            name="John Smith"
+            timeStamp="16:43"
+            badgeValue="3"
+            navigation={navigation}
+          />
+          <ChatCard
+            picture={require('../Assets/profilePic.png')}
+            lastMessage="Hi, I am there"
+            name="John Smith"
+            timeStamp="16:43"
+            badgeValue="3"
+            navigation={navigation}
+          />
+          <ChatCard
+            picture={require('../Assets/profilePic.png')}
+            lastMessage="Hi, I am there"
+            name="John Smith"
+            timeStamp="16:43"
+            badgeValue="3"
+            navigation={navigation}
+          />
           <ChatCard
             picture={require('../Assets/profilePic.png')}
             lastMessage="Hi, I am there"

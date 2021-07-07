@@ -68,6 +68,7 @@ export default function SearchBuisnessScreen({navigation}) {
         paddingHorizontal: 20,
         backgroundColor: WHITE,
         paddingBottom: 20,
+        height: '100%',
       }}>
       <Text>Name</Text>
       <InputBoxWOPlaceholder />
