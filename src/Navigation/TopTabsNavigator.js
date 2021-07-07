@@ -6,7 +6,7 @@ import SearchIndividualScreen from '../Screens/SearchIndividualScreen';
 import SearchBuisnessScreen from '../Screens/SearchBuisnessScreen';
 import SentRequestScreen from '../Screens/SentRequestScreen';
 import RecievedRequestScreen from '../Screens/RecievedRequestScreen';
-import {SECONDARY, WHITE} from '../Constants/Colors';
+import {WHITE} from '../Constants/Colors';
 
 const Tab = createMaterialTopTabNavigator();
 

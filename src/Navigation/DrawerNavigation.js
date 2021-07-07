@@ -1,5 +1,4 @@
 import * as React from 'react';
-import {Button, View} from 'react-native';
 import {createDrawerNavigator} from '@react-navigation/drawer';
 
 import AccountDashboardScreen from '../Screens/AccountDashboardScreen';

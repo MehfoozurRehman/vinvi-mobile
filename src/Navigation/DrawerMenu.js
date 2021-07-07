@@ -1,21 +1,11 @@
 import React from 'react';
-import {
-  SafeAreaView,
-  View,
-  StyleSheet,
-  Image,
-  Text,
-  Linking,
-  TouchableOpacity,
-} from 'react-native';
+import {SafeAreaView, View, Image, Text} from 'react-native';
 
 import {
   DrawerContentScrollView,
   DrawerItemList,
-  DrawerItem,
 } from '@react-navigation/drawer';
 import {SECONDARY, WHITE} from '../Constants/Colors';
-import Svg, {G, Rect, Path} from 'react-native-svg';
 
 const CustomSidebarMenu = props => {
   return (
@@ -53,25 +43,5 @@ const CustomSidebarMenu = props => {
     </SafeAreaView>
   );
 };
-
-const styles = StyleSheet.create({
-  sideMenuProfileIcon: {
-    resizeMode: 'center',
-    width: 100,
-    height: 100,
-    borderRadius: 100 / 2,
-    alignSelf: 'center',
-  },
-  iconStyle: {
-    width: 15,
-    height: 15,
-    marginHorizontal: 5,
-  },
-  customItem: {
-    padding: 16,
-    flexDirection: 'row',
-    alignItems: 'center',
-  },
-});
 
 export default CustomSidebarMenu;

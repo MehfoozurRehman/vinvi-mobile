@@ -1,20 +1,6 @@
-import React, {useState} from 'react';
-import {
-  View,
-  Text,
-  ImageBackground,
-  Image,
-  TouchableOpacity,
-  TextInput,
-  ScrollView,
-} from 'react-native';
-import {
-  SECONDARY,
-  TEXT_COLOR,
-  LIGHT_TEXT_COLOR,
-  WHITE,
-} from '../Constants/Colors';
-import Svg, {G, Path} from 'react-native-svg';
+import React from 'react';
+import {Text, TouchableOpacity} from 'react-native';
+import {SECONDARY, WHITE} from '../Constants/Colors';
 
 export default function BtnComponent({
   placeholder,

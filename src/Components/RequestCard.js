@@ -1,13 +1,5 @@
 import React from 'react';
-import {
-  View,
-  Text,
-  ImageBackground,
-  Image,
-  TouchableOpacity,
-  TextInput,
-  ScrollView,
-} from 'react-native';
+import {View, Text, Image, TouchableOpacity} from 'react-native';
 import {SECONDARY, WHITE} from '../Constants/Colors';
 
 export default function RequestCard({onPress, placeholder, image, btnText}) {

@@ -1,17 +1,6 @@
 import React, {useState} from 'react';
-import {
-  View,
-  Text,
-  ImageBackground,
-  Image,
-  TouchableOpacity,
-  TextInput,
-  ScrollView,
-} from 'react-native';
-import {SECONDARY, TEXT_COLOR, WHITE} from '../Constants/Colors';
-import SocialLoginBtn from '../Components/SocialLoginBtn';
-import BtnComponent from '../Components/BtnComponent';
-import {SafeAreaView} from 'react-native-safe-area-context';
+import {Text, TouchableOpacity, TextInput} from 'react-native';
+import {SECONDARY} from '../Constants/Colors';
 
 export default function LoginInputBox({placeholder, inputType}) {
   const [isfocused, setIsfocused] = useState(false);

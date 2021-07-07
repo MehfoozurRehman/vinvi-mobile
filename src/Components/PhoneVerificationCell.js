@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {SafeAreaView, Text, StyleSheet} from 'react-native';
+import {Text, StyleSheet} from 'react-native';
 
 import {
   CodeField,

@@ -1,19 +1,7 @@
-import React, {useState} from 'react';
-import {
-  View,
-  Text,
-  ImageBackground,
-  Image,
-  TouchableOpacity,
-} from 'react-native';
-import {
-  SECONDARY,
-  TEXT_COLOR,
-  LIGHT_TEXT_COLOR,
-  WHITE,
-} from '../Constants/Colors';
+import React from 'react';
+import {View, Text, TouchableOpacity} from 'react-native';
+import {WHITE} from '../Constants/Colors';
 import Svg, {G, Path} from 'react-native-svg';
-import {TextInput} from 'react-native-paper';
 
 export default function SocialLoginBtn() {
   return (

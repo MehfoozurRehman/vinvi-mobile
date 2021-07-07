@@ -1,27 +1,11 @@
-import React, {useState} from 'react';
-import {
-  View,
-  Text,
-  ImageBackground,
-  Image,
-  TouchableOpacity,
-  TextInput,
-  ScrollView,
-  Dimensions,
-} from 'react-native';
-import {
-  SECONDARY,
-  LIGHT_TEXT_COLOR,
-  TEXT_COLOR,
-  WHITE,
-} from '../Constants/Colors';
+import React from 'react';
+import {View, ImageBackground, ScrollView} from 'react-native';
 import BtnComponent from '../Components/BtnComponent';
 import Header from '../Components/Header';
 import OutlinedInputBox from '../Components/OutlinedInputBox';
 import UploadBtn from '../Components/UploadBtn';
-import NewCardStepPanel from '../Components/NewCardStepPanel';
 import {SafeAreaView} from 'react-native-safe-area-context';
-import Svg, {G, Circle, Path} from 'react-native-svg';
+import Svg, {G, Path} from 'react-native-svg';
 import {Height, Width} from '../Constants/Constants';
 
 export default function NewBusinessCardScreen({navigation}) {

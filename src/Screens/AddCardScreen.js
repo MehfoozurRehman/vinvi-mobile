@@ -1,21 +1,6 @@
-import React, {useState} from 'react';
-import {
-  View,
-  Text,
-  ImageBackground,
-  Image,
-  TouchableOpacity,
-  TextInput,
-  ScrollView,
-  Dimensions,
-} from 'react-native';
-import {
-  SECONDARY,
-  LIGHT_TEXT_COLOR,
-  TEXT_COLOR,
-  WHITE,
-} from '../Constants/Colors';
-import BtnComponent from '../Components/BtnComponent';
+import React from 'react';
+import {View, Text, ImageBackground, TouchableOpacity} from 'react-native';
+import {SECONDARY, WHITE} from '../Constants/Colors';
 import Header from '../Components/Header';
 import {SafeAreaView} from 'react-native-safe-area-context';
 import Svg, {G, Circle, Path} from 'react-native-svg';

@@ -1,4 +1,4 @@
-import React, {Children} from 'react';
+import React from 'react';
 
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 
@@ -7,7 +7,7 @@ import ChatsDashboardScreen from '../Screens/ChatsDashboardScreen';
 import AccountDashboardScreen from '../Screens/AccountDashboardScreen';
 
 import {SECONDARY, WHITE} from '../Constants/Colors';
-import {View, Image, Text, TouchableOpacity} from 'react-native';
+import {View, TouchableOpacity} from 'react-native';
 import Svg, {G, Path} from 'react-native-svg';
 import LinearGradient from 'react-native-linear-gradient';
 

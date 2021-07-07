@@ -1,26 +1,7 @@
-import React, {useState} from 'react';
-import {
-  View,
-  ImageBackground,
-  Image,
-  TouchableOpacity,
-  TextInput,
-  ScrollView,
-  Dimensions,
-  SafeAreaView,
-  Text,
-} from 'react-native';
-import {
-  SECONDARY,
-  LIGHT_TEXT_COLOR,
-  TEXT_COLOR,
-  WHITE,
-  FORTH,
-  FIFTH,
-} from '../Constants/Colors';
-import Svg, {G, Path} from 'react-native-svg';
-import {Height, Width} from '../Constants/Constants';
-import Slider from '@react-native-community/slider';
+import React from 'react';
+import {View, Image, TouchableOpacity, Text} from 'react-native';
+import {SECONDARY, WHITE} from '../Constants/Colors';
+import Svg, {Path} from 'react-native-svg';
 
 function UserCardStatus({status}) {
   if (status === 'open') {

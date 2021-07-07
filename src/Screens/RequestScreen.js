@@ -1,27 +1,8 @@
-import React, {useState} from 'react';
-import {
-  View,
-  Text,
-  ImageBackground,
-  Image,
-  TouchableOpacity,
-  TextInput,
-  ScrollView,
-  Dimensions,
-} from 'react-native';
-import {
-  SECONDARY,
-  LIGHT_TEXT_COLOR,
-  TEXT_COLOR,
-  WHITE,
-} from '../Constants/Colors';
-import BtnComponent from '../Components/BtnComponent';
+import React from 'react';
+import {ImageBackground, ScrollView} from 'react-native';
 import Header from '../Components/Header';
-import OutlinedInputBox from '../Components/OutlinedInputBox';
-import UploadBtn from '../Components/UploadBtn';
 import TopTabsNavigator from '../Navigation/TopTabsNavigator';
 import {SafeAreaView} from 'react-native-safe-area-context';
-import Svg, {G, Circle, Path} from 'react-native-svg';
 import {Height, Width} from '../Constants/Constants';
 
 export default function RequestScreen({navigation}) {

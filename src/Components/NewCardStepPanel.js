@@ -1,21 +1,6 @@
-import React, {useState} from 'react';
-import {
-  View,
-  Text,
-  ImageBackground,
-  Image,
-  TouchableOpacity,
-  TextInput,
-  ScrollView,
-} from 'react-native';
-import {
-  SECONDARY,
-  LIGHT_TEXT_COLOR,
-  TEXT_COLOR,
-  WHITE,
-} from '../Constants/Colors';
-import {SafeAreaView} from 'react-native-safe-area-context';
-import Svg, {G, Circle, Path} from 'react-native-svg';
+import React from 'react';
+import {View, Text} from 'react-native';
+import {SECONDARY, WHITE} from '../Constants/Colors';
 
 export default function NewCardStepPanel({step1, step2, step3, step4}) {
   return (

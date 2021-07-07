@@ -1,26 +1,16 @@
-import React, {useState} from 'react';
+import React from 'react';
 import {
   View,
   Text,
   ImageBackground,
   Image,
   TouchableOpacity,
-  TextInput,
   ScrollView,
-  Dimensions,
   SafeAreaView,
 } from 'react-native';
-import {
-  SECONDARY,
-  LIGHT_TEXT_COLOR,
-  TEXT_COLOR,
-  WHITE,
-  FIFTH,
-  FORTH,
-} from '../Constants/Colors';
+import {SECONDARY, WHITE, FIFTH, FORTH} from '../Constants/Colors';
 import BtnComponent from '../Components/BtnComponent';
 import Header from '../Components/Header';
-import UserCard from '../Components/UserCard';
 import Svg, {G, Path} from 'react-native-svg';
 import {Height, Width} from '../Constants/Constants';
 import QRCode from 'react-native-qrcode-svg';

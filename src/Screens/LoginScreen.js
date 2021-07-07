@@ -5,9 +5,7 @@ import {
   ImageBackground,
   Image,
   TouchableOpacity,
-  TextInput,
   ScrollView,
-  Dimensions,
   SafeAreaView,
 } from 'react-native';
 import {SECONDARY, TEXT_COLOR, WHITE} from '../Constants/Colors';

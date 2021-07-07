@@ -1,24 +1,14 @@
-import React, {useState} from 'react';
+import React from 'react';
 import {
   View,
   Text,
-  ImageBackground,
-  Image,
   TouchableOpacity,
   TextInput,
   ScrollView,
-  Dimensions,
   SafeAreaView,
 } from 'react-native';
-import {
-  SECONDARY,
-  LIGHT_TEXT_COLOR,
-  TEXT_COLOR,
-  WHITE,
-} from '../Constants/Colors';
-import BtnComponent from '../Components/BtnComponent';
+import {SECONDARY, WHITE} from '../Constants/Colors';
 import Header from '../Components/Header';
-import DashboardStories from '../Components/DashboardStories';
 import Svg, {Defs, ClipPath, Path, G} from 'react-native-svg';
 import {Height, Width} from '../Constants/Constants';
 

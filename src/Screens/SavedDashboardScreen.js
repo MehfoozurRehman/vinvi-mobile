@@ -1,22 +1,5 @@
-import React, {useState} from 'react';
-import {
-  View,
-  Text,
-  ImageBackground,
-  Image,
-  TouchableOpacity,
-  TextInput,
-  ScrollView,
-  Dimensions,
-  SafeAreaView,
-} from 'react-native';
-import {
-  SECONDARY,
-  LIGHT_TEXT_COLOR,
-  TEXT_COLOR,
-  WHITE,
-} from '../Constants/Colors';
-import BtnComponent from '../Components/BtnComponent';
+import React from 'react';
+import {ImageBackground, ScrollView, SafeAreaView} from 'react-native';
 import Header from '../Components/Header';
 import UserCard from '../Components/UserCard';
 import Svg, {Path} from 'react-native-svg';

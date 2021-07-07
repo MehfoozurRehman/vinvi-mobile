@@ -1,20 +1,6 @@
-import React, {useState} from 'react';
-import {
-  View,
-  Text,
-  ImageBackground,
-  Image,
-  TouchableOpacity,
-  TextInput,
-  ScrollView,
-  Dimensions,
-} from 'react-native';
-import {
-  SECONDARY,
-  LIGHT_TEXT_COLOR,
-  TEXT_COLOR,
-  WHITE,
-} from '../Constants/Colors';
+import React from 'react';
+import {View, Text, ImageBackground, ScrollView} from 'react-native';
+import {SECONDARY, LIGHT_TEXT_COLOR} from '../Constants/Colors';
 import BtnComponent from '../Components/BtnComponent';
 import Header from '../Components/Header';
 import PhoneVerificationCell from '../Components/PhoneVerificationCell';

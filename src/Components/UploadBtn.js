@@ -1,26 +1,7 @@
 import React, {useState} from 'react';
-import {
-  View,
-  Text,
-  ImageBackground,
-  Image,
-  TouchableOpacity,
-  TextInput,
-  ScrollView,
-  Modal,
-} from 'react-native';
-import {
-  SECONDARY,
-  LIGHT_TEXT_COLOR,
-  TEXT_COLOR,
-  WHITE,
-} from '../Constants/Colors';
+import {View, Text, TouchableOpacity, Modal} from 'react-native';
+import {WHITE} from '../Constants/Colors';
 import BtnComponent from '../Components/BtnComponent';
-import Header from '../Components/Header';
-import OutlinedInputBox from '../Components/OutlinedInputBox';
-import NewCardStepPanel from '../Components/NewCardStepPanel';
-import {SafeAreaView} from 'react-native-safe-area-context';
-import Svg, {G, Circle, Path} from 'react-native-svg';
 import ImagePicker from 'react-native-image-crop-picker';
 
 export default function UploadBtn({svg, placeholder, onPress}) {

@@ -7,7 +7,6 @@ import {
   TouchableOpacity,
   TextInput,
   ScrollView,
-  Dimensions,
   SafeAreaView,
 } from 'react-native';
 import {SECONDARY, WHITE} from '../Constants/Colors';
