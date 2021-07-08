@@ -1,11 +1,13 @@
 import 'react-native-gesture-handler';
-import React from 'react';
+import React, {Component} from 'react';
 
 import {DefaultTheme, Provider as PaperProvider} from 'react-native-paper';
 
 import {NavigationContainer} from '@react-navigation/native';
 
 import StackNavigation from './Navigation/StackNavigation';
+
+import SplashScreen from 'react-native-splash-screen';
 
 const theme = {
   ...DefaultTheme,
@@ -16,13 +18,19 @@ const theme = {
     accent: '#f1c40f',
   },
 };
-
-export default function App() {
-  return (
-    <PaperProvider theme={theme}>
-      <NavigationContainer>
-        <StackNavigation />
-      </NavigationContainer>
-    </PaperProvider>
-  );
+export default class App extends Component {
+  componentDidMount() {
+    // do stuff while splash screen is shown
+    // After having done stuff (such as async tasks) hide the splash screen
+    SplashScreen.hide();
+  }
+  render() {
+    return (
+      <PaperProvider theme={theme}>
+        <NavigationContainer>
+          <StackNavigation />
+        </NavigationContainer>
+      </PaperProvider>
+    );
+  }
 }

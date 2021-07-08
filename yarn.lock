@@ -5836,6 +5836,11 @@ react-native-screens@^3.4.0:
   dependencies:
     warn-once "^0.1.0"
 
+react-native-splash-screen@^3.2.0:
+  version "3.2.0"
+  resolved "https://registry.yarnpkg.com/react-native-splash-screen/-/react-native-splash-screen-3.2.0.tgz#d47ec8557b1ba988ee3ea98d01463081b60fff45"
+  integrity sha512-Ls9qiNZzW/OLFoI25wfjjAcrf2DZ975hn2vr6U9gyuxi2nooVbzQeFoQS5vQcbCt9QX5NY8ASEEAtlLdIa6KVg==
+
 react-native-story@^0.1.3:
   version "0.1.3"
   resolved "https://registry.yarnpkg.com/react-native-story/-/react-native-story-0.1.3.tgz#5502bdafd7ebf0b4c7fd018dba6c69f21a6e1449"
