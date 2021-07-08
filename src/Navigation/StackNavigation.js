@@ -6,7 +6,7 @@ import RegisterScreen from '../Screens/RegisterScreen';
 import LoginScreen from '../Screens/LoginScreen';
 import ForgotPasswordScreen from '../Screens/ForgotPasswordScreen';
 import PhoneVerificationScreen from '../Screens/PhoneVerificationScreen';
-import DashboardScreen from '../Screens/DashboardScreen';
+import DrawerNavigation from '../Navigation/DrawerNavigation';
 import AddCardScreen from '../Screens/AddCardScreen';
 import NewPersonalCardScreen1 from '../Screens/NewPersonalCardScreen1';
 import NewPersonalCardScreen2 from '../Screens/NewPersonalCardScreen2';
@@ -42,7 +42,11 @@ export default function StackNavigation() {
         component={PhoneVerificationScreen}
         options={{}}
       />
-      <Stack.Screen name="Dashboard" component={DashboardScreen} options={{}} />
+      <Stack.Screen
+        name="Dashboard"
+        component={DrawerNavigation}
+        options={{}}
+      />
       <Stack.Screen name="AddCard" component={AddCardScreen} options={{}} />
       <Stack.Screen
         name="NewPersonalCard1"

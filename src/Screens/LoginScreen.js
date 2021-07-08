@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import {
   View,
   Text,
@@ -15,7 +15,6 @@ import OutlinedInputBox from '../Components/OutlinedInputBox';
 import {Height, Width} from '../Constants/Constants';
 
 export default function LoginScreen({navigation}) {
-  const [text, setText] = useState('');
   return (
     <SafeAreaView style={{height: Height, width: Width}}>
       <ScrollView style={{flex: 1}}>

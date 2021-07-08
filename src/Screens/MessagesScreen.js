@@ -1,54 +1,18 @@
 import React from 'react';
 import {
   View,
-  Text,
   TouchableOpacity,
   TextInput,
   ScrollView,
   SafeAreaView,
 } from 'react-native';
-import {SECONDARY, WHITE} from '../Constants/Colors';
+import {WHITE} from '../Constants/Colors';
 import Header from '../Components/Header';
+import UserMessage from '../Components/UserMessage';
+import TimeStamp from '../Components/TimeStamp';
+import OtherMessage from '../Components/OtherMessage';
 import Svg, {Defs, ClipPath, Path, G} from 'react-native-svg';
 import {Height, Width} from '../Constants/Constants';
-
-function UserMessage({placeholder}) {
-  return (
-    <View style={{alignItems: 'flex-end', marginBottom: 20}}>
-      <View
-        style={{
-          width: '80%',
-          backgroundColor: SECONDARY,
-          padding: 20,
-          borderRadius: 10,
-        }}>
-        <Text style={{color: WHITE}}>{placeholder}</Text>
-      </View>
-    </View>
-  );
-}
-function TimeStamp({placeholder}) {
-  return (
-    <View style={{width: '100%', marginBottom: 20, alignItems: 'center'}}>
-      <Text style={{color: SECONDARY}}>{placeholder}</Text>
-    </View>
-  );
-}
-function OtherMessage({placeholder}) {
-  return (
-    <View style={{alignItems: 'flex-start', marginBottom: 20}}>
-      <View
-        style={{
-          width: '80%',
-          backgroundColor: '#FBFBFB',
-          padding: 20,
-          borderRadius: 10,
-        }}>
-        <Text style={{color: '#000000'}}>{placeholder}</Text>
-      </View>
-    </View>
-  );
-}
 
 export default function ChatsDashboardScreen({navigation}) {
   return (

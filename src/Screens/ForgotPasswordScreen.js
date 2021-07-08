@@ -12,7 +12,7 @@ import Header from '../Components/Header';
 import OutlinedInputBox from '../Components/OutlinedInputBox';
 import {Height, Width} from '../Constants/Constants';
 
-export default function LoginScreen({navigation}) {
+export default function ForgetPasswordScreen({navigation}) {
   return (
     <SafeAreaView style={{height: Height, widht: Width}}>
       <ImageBackground

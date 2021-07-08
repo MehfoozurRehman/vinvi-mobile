@@ -10,63 +10,13 @@ import {
 } from 'react-native';
 import {SECONDARY, WHITE, FIFTH, FORTH} from '../Constants/Colors';
 import BtnComponent from '../Components/BtnComponent';
+import ContactDetailsRow from '../Components/ContactDetailsRow';
+import ContactDetailsRowReverse from '../Components/ContactDetailsRowReverseIndividual';
+import SkillTag from '../Components/SkillTag';
 import Header from '../Components/Header';
 import Svg, {G, Path} from 'react-native-svg';
 import {Height, Width} from '../Constants/Constants';
 import QRCode from 'react-native-qrcode-svg';
-
-function ContactDetailsRow({placeholder, svg}) {
-  return (
-    <View
-      style={{
-        marginVertical: 8,
-        display: 'flex',
-        flexDirection: 'row',
-        paddingHorizontal: 20,
-        alignItems: 'center',
-      }}>
-      {svg}
-      <Text style={{fontSize: 14, color: WHITE, marginLeft: 10}}>
-        {placeholder}
-      </Text>
-    </View>
-  );
-}
-
-function ContactDetailsRowReverse({placeholder, svg}) {
-  return (
-    <View
-      style={{
-        marginVertical: 8,
-        display: 'flex',
-        flexDirection: 'row',
-        paddingHorizontal: 20,
-        alignItems: 'center',
-      }}>
-      {svg}
-      <Text style={{fontSize: 14, color: SECONDARY, marginLeft: 10}}>
-        {placeholder}
-      </Text>
-    </View>
-  );
-}
-
-function SkillTag({placeholder}) {
-  return (
-    <View
-      style={{
-        paddingHorizontal: 20,
-        paddingVertical: 10,
-        borderRadius: 20,
-        borderWidth: 1,
-        borderColor: SECONDARY,
-        marginRight: 10,
-        marginBottom: 10,
-      }}>
-      <Text style={{color: SECONDARY, fontSize: 12}}>{placeholder}</Text>
-    </View>
-  );
-}
 
 export default function IndividualScreen({navigation}) {
   return (

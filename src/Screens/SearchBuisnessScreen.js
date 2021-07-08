@@ -1,46 +1,10 @@
-import React, {useState, useRef} from 'react';
+import React from 'react';
 import {View, Text} from 'react-native';
 import {SECONDARY, WHITE} from '../Constants/Colors';
+import PickerComponent from '../Components/PickerComponent';
 import BtnComponent from '../Components/BtnComponent';
 import InputBoxWOPlaceholder from '../Components/InputBoxWOPlaceholder';
-import {Picker} from '@react-native-picker/picker';
 import Slider from '@react-native-community/slider';
-
-function PickerComponent({placeholder, itemValues, itemLabels}) {
-  const [selectedLanguage, setSelectedLanguage] = useState();
-  const pickerRef = useRef();
-
-  function open() {
-    pickerRef.current.focus();
-  }
-
-  function close() {
-    pickerRef.current.blur();
-  }
-
-  return (
-    <>
-      <Text>{placeholder}</Text>
-      <View
-        style={{
-          height: 40,
-          backgroundColor: '#eeeeee',
-          borderRadius: 5,
-          marginTop: 5,
-        }}>
-        <Picker
-          style={{marginTop: -6}}
-          ref={pickerRef}
-          selectedValue={selectedLanguage}
-          onValueChange={(itemValue, itemIndex) =>
-            setSelectedLanguage(itemValue)
-          }>
-          <Picker.Item label={itemLabels} value={itemValues} />
-        </Picker>
-      </View>
-    </>
-  );
-}
 
 export default function SearchBuisnessScreen({navigation}) {
   return (

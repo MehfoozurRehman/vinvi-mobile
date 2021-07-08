@@ -10,71 +10,12 @@ import {
 } from 'react-native';
 import {SECONDARY, WHITE, FIFTH, FORTH} from '../Constants/Colors';
 import BtnComponent from '../Components/BtnComponent';
+import ContactDetailsRowReverse from '../Components/ContactDetailsRowReverse';
+import ProductCard from '../Components/ProductCard';
 import Header from '../Components/Header';
-import Svg, {G, Path} from 'react-native-svg';
+import Svg, {Path} from 'react-native-svg';
 import {Height, Width} from '../Constants/Constants';
 import QRCode from 'react-native-qrcode-svg';
-
-function ContactDetailsRowReverse({placeholder, value, svg}) {
-  return (
-    <View
-      style={{
-        marginVertical: 8,
-        display: 'flex',
-        flexDirection: 'row',
-        width: '100%',
-        justifyContent: 'space-between',
-        alignItems: 'center',
-      }}>
-      <View
-        style={{display: 'flex', flexDirection: 'row', alignItems: 'center'}}>
-        {svg}
-        <Text style={{fontSize: 14, color: SECONDARY, marginLeft: 10}}>
-          {placeholder}
-        </Text>
-      </View>
-      <Text
-        style={{
-          fontSize: 14,
-          color: SECONDARY,
-          fontWeight: 'bold',
-          marginLeft: 10,
-        }}>
-        {value}
-      </Text>
-    </View>
-  );
-}
-
-function ProductCard({productPic, productName, productPrice}) {
-  return (
-    <View
-      style={{
-        display: 'flex',
-        backgroundColor: FIFTH,
-        width: '48%',
-        marginBottom: 20,
-        borderRadius: 8,
-      }}>
-      <Image
-        source={productPic}
-        style={{width: '100%', borderTopLeftRadius: 8, borderTopRightRadius: 8}}
-      />
-      <View style={{paddingHorizontal: 10, paddingVertical: 15}}>
-        <Text
-          style={{
-            fontSize: 15,
-            color: SECONDARY,
-            marginBottom: 1,
-            fontWeight: 'bold',
-          }}>
-          {productName}
-        </Text>
-        <Text style={{fontSize: 14, color: SECONDARY}}>{productPrice}</Text>
-      </View>
-    </View>
-  );
-}
 
 export default function BuisnessScreen({navigation}) {
   return (

@@ -1,39 +1,12 @@
 import React from 'react';
-import {
-  View,
-  Text,
-  ImageBackground,
-  TouchableOpacity,
-  ScrollView,
-} from 'react-native';
-import {LIGHT_TEXT_COLOR} from '../Constants/Colors';
+import {View, ImageBackground, ScrollView} from 'react-native';
 import BtnComponent from '../Components/BtnComponent';
 import Header from '../Components/Header';
+import LinkBtn from '../Components/LinkBtn';
 import NewCardStepPanel from '../Components/NewCardStepPanel';
 import {SafeAreaView} from 'react-native-safe-area-context';
 import Svg, {Path} from 'react-native-svg';
 import {Height, Width} from '../Constants/Constants';
-
-function LinkBtn({svg, placeholder}) {
-  return (
-    <TouchableOpacity
-      style={{
-        display: 'flex',
-        flexDirection: 'row',
-        alignItems: 'center',
-        backgroundColor: '#EFEFEF',
-        paddingHorizontal: 20,
-        paddingVertical: 15,
-        borderRadius: 5,
-        marginVertical: 10,
-      }}>
-      {svg}
-      <Text style={{fontSize: 14, color: LIGHT_TEXT_COLOR, marginLeft: 20}}>
-        {placeholder}
-      </Text>
-    </TouchableOpacity>
-  );
-}
 
 export default function NewCardScreen({navigation}) {
   return (
