@@ -1,6 +1,7 @@
 import React from 'react';
 import {View, Text, Image, TouchableOpacity} from 'react-native';
 import {SECONDARY, WHITE} from '../Constants/Colors';
+import {USER_NAME} from '../Constants/Constants';
 
 export default function AccountCard() {
   return (
@@ -27,8 +28,8 @@ export default function AccountCard() {
       }}>
       <Image source={require('../Assets/profilePic.png')} />
       <View style={{marginLeft: 20}}>
-        <Text style={{fontSize: 20, fontWeight: 'bold'}}>Adam Christ</Text>
-        <Text style={{fontSize: 16}}>adam@gmail.com</Text>
+        <Text style={{fontSize: 20, fontWeight: 'bold'}}>{USER_NAME}</Text>
+        <Text style={{fontSize: 16}}>{USER_NAME}</Text>
       </View>
       <TouchableOpacity
         style={{

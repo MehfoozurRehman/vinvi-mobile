@@ -35,8 +35,7 @@ export default function HomeScreen({navigation}) {
               harum enim tempore eum error quibusdam labore ipsum recusandae.
               Tenetur recusandae quisquam rerum facilis consectetur dolore sint
               perspiciatis numquam ipsa architecto, sit excepturi provident
-              mollitia culpa ab!
-              "
+              mollitia culpa ab!"
           />
           <View
             style={{

@@ -2,6 +2,7 @@ import React from 'react';
 import {View} from 'react-native';
 import {WHITE} from '../Constants/Colors';
 import RequestCard from '../Components/RequestCard';
+import {USER_NAME} from '../Constants/Constants';
 
 export default function RecievedRequestScreen({navigation}) {
   return (
@@ -14,67 +15,67 @@ export default function RecievedRequestScreen({navigation}) {
       }}>
       <RequestCard
         onPress={() => {}}
-        placeholder="Umer Altaf"
+        placeholder={USER_NAME}
         image={require('../Assets/profilePic.png')}
         btnText="Accept Request"
       />
       <RequestCard
         onPress={() => {}}
-        placeholder="Umer Altaf"
+        placeholder={USER_NAME}
         image={require('../Assets/profilePic.png')}
         btnText="Accept Request"
       />
       <RequestCard
         onPress={() => {}}
-        placeholder="Umer Altaf"
+        placeholder={USER_NAME}
         image={require('../Assets/profilePic.png')}
         btnText="Accept Request"
       />
       <RequestCard
         onPress={() => {}}
-        placeholder="Umer Altaf"
+        placeholder={USER_NAME}
         image={require('../Assets/profilePic.png')}
         btnText="Accept Request"
       />
       <RequestCard
         onPress={() => {}}
-        placeholder="Umer Altaf"
+        placeholder={USER_NAME}
         image={require('../Assets/profilePic.png')}
         btnText="Accept Request"
       />
       <RequestCard
         onPress={() => {}}
-        placeholder="Umer Altaf"
+        placeholder={USER_NAME}
         image={require('../Assets/profilePic.png')}
         btnText="Accept Request"
       />
       <RequestCard
         onPress={() => {}}
-        placeholder="Umer Altaf"
+        placeholder={USER_NAME}
         image={require('../Assets/profilePic.png')}
         btnText="Accept Request"
       />
       <RequestCard
         onPress={() => {}}
-        placeholder="Umer Altaf"
+        placeholder={USER_NAME}
         image={require('../Assets/profilePic.png')}
         btnText="Accept Request"
       />
       <RequestCard
         onPress={() => {}}
-        placeholder="Umer Altaf"
+        placeholder={USER_NAME}
         image={require('../Assets/profilePic.png')}
         btnText="Accept Request"
       />
       <RequestCard
         onPress={() => {}}
-        placeholder="Umer Altaf"
+        placeholder={USER_NAME}
         image={require('../Assets/profilePic.png')}
         btnText="Accept Request"
       />
       <RequestCard
         onPress={() => {}}
-        placeholder="Umer Altaf"
+        placeholder={USER_NAME}
         image={require('../Assets/profilePic.png')}
         btnText="Accept Request"
       />

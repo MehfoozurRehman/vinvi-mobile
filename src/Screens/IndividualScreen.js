@@ -15,7 +15,12 @@ import ContactDetailsRowReverse from '../Components/ContactDetailsRowReverseIndi
 import SkillTag from '../Components/SkillTag';
 import Header from '../Components/Header';
 import Svg, {G, Path} from 'react-native-svg';
-import {Height, Width} from '../Constants/Constants';
+import {
+  Height,
+  USER_DESIGNATION,
+  USER_NAME,
+  Width,
+} from '../Constants/Constants';
 import QRCode from 'react-native-qrcode-svg';
 
 export default function IndividualScreen({navigation}) {
@@ -48,8 +53,8 @@ export default function IndividualScreen({navigation}) {
             style={{width: 100, height: 100}}
           />
           <View style={{paddingHorizontal: 20, marginBottom: 10}}>
-            <Text style={{color: SECONDARY, fontSize: 20}}>Umer Altaf</Text>
-            <Text style={{fontSize: 14, color: FORTH}}>Software Engineer</Text>
+            <Text style={{color: SECONDARY, fontSize: 20}}>{USER_NAME}</Text>
+            <Text style={{fontSize: 14, color: FORTH}}>{USER_DESIGNATION}</Text>
           </View>
         </View>
         <View

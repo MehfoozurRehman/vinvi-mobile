@@ -2,6 +2,7 @@ import React from 'react';
 import {View, Text, Image} from 'react-native';
 import {SECONDARY, WHITE} from '../Constants/Colors';
 import Svg, {Path} from 'react-native-svg';
+import {USER_DESIGNATION, USER_EMAIL, USER_NAME} from '../Constants/Constants';
 
 export default function BroadcastCard({status}) {
   return (
@@ -28,7 +29,7 @@ export default function BroadcastCard({status}) {
         style={{width: 80, height: 80}}
       />
       <View style={{marginLeft: 10}}>
-        <Text style={{fontSize: 14, color: SECONDARY}}>Umer Altaf</Text>
+        <Text style={{fontSize: 14, color: SECONDARY}}>{USER_NAME}</Text>
         <Text
           style={{
             fontSize: 16,
@@ -36,9 +37,9 @@ export default function BroadcastCard({status}) {
             color: SECONDARY,
             marginBottom: 10,
           }}>
-          Software Engineer
+          {USER_DESIGNATION}
         </Text>
-        <Text style={{fontSize: 14, color: SECONDARY}}>umer@gmail.com</Text>
+        <Text style={{fontSize: 14, color: SECONDARY}}>{USER_EMAIL}</Text>
         <Text style={{fontSize: 14, color: SECONDARY}}>Lahore, Pakistan</Text>
       </View>
       {status ? (

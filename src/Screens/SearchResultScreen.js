@@ -5,7 +5,7 @@ import UserCard from '../Components/UserCard';
 import FilterTag from '../Components/FilterTag';
 import {SafeAreaView} from 'react-native-safe-area-context';
 import Svg, {Path} from 'react-native-svg';
-import {Height, Width} from '../Constants/Constants';
+import {Height, USER_DESIGNATION, Width} from '../Constants/Constants';
 
 export default function SearchResultScreen({navigation}) {
   return (
@@ -36,7 +36,7 @@ export default function SearchResultScreen({navigation}) {
         <FilterTag filterName="Area" filterValue="Lahore" onPress={() => {}} />
         <FilterTag
           filterName="Niche"
-          filterValue="Software Engineering"
+          filterValue={USER_DESIGNATION}
           onPress={() => {}}
         />
         <FilterTag filterName="Name" filterValue="Rahul" onPress={() => {}} />

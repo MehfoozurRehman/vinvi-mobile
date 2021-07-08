@@ -6,6 +6,7 @@ import {
   DrawerItemList,
 } from '@react-navigation/drawer';
 import {SECONDARY, WHITE} from '../Constants/Colors';
+import {USER_EMAIL, USER_NAME} from '../Constants/Constants';
 
 const CustomSidebarMenu = props => {
   return (
@@ -31,9 +32,9 @@ const CustomSidebarMenu = props => {
         />
         <View style={{marginLeft: 20}}>
           <Text style={{color: WHITE, fontSize: 18, fontWeight: 'bold'}}>
-            Adam Christ
+            {USER_NAME}
           </Text>
-          <Text style={{color: WHITE, fontSize: 14}}>adam@gmail.com</Text>
+          <Text style={{color: WHITE, fontSize: 14}}>{USER_EMAIL}</Text>
         </View>
       </View>
       <View style={{marginTop: 90}}></View>
