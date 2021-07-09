@@ -14,7 +14,7 @@ import ContactDetailsRowReverse from '../Components/ContactDetailsRowReverse';
 import ProductCard from '../Components/ProductCard';
 import Header from '../Components/Header';
 import Svg, {Path} from 'react-native-svg';
-import {Height, Width} from '../Constants/Constants';
+import {Height, QRCODE_URL, Width} from '../Constants/Constants';
 import QRCode from 'react-native-qrcode-svg';
 
 export default class BuisnessScreen extends Component {
@@ -264,7 +264,7 @@ export default class BuisnessScreen extends Component {
             <View
               style={{width: '100%', marginVertical: 70, alignItems: 'center'}}>
               <QRCode
-                value="https://www.google.com"
+                value={QRCODE_URL}
                 // logo={{uri: base64Logo}}
                 logoSize={30}
                 logoBackgroundColor="transparent"

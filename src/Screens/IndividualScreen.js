@@ -17,6 +17,7 @@ import Header from '../Components/Header';
 import Svg, {G, Path} from 'react-native-svg';
 import {
   Height,
+  QRCODE_URL,
   USER_DESIGNATION,
   USER_NAME,
   Width,
@@ -460,7 +461,7 @@ export default class IndividualScreen extends Component {
             <View
               style={{width: '100%', marginVertical: 70, alignItems: 'center'}}>
               <QRCode
-                value="https://www.google.com"
+                value={QRCODE_URL}
                 // logo={{uri: base64Logo}}
                 logoSize={30}
                 logoBackgroundColor="transparent"
