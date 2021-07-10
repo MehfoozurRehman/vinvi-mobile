@@ -51,7 +51,7 @@ export default class NewCardScreen extends Component {
               <BtnComponent
                 placeholder="Finish"
                 onPress={() => {
-                  navigation.navigate('Dashboard');
+                  navigation.navigate('Individual');
                 }}
               />
             </View>

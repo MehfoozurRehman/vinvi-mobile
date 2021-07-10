@@ -54,7 +54,7 @@ export default class BuisnessScreen extends Component {
             </View>
           </View>
           <View
-            style={{marginTop: 100, paddingHorizontal: 20, paddingBottom: 50}}>
+            style={{marginTop: 70, paddingHorizontal: 20, paddingBottom: 50}}>
             <View
               style={{
                 display: 'flex',
@@ -149,7 +149,7 @@ export default class BuisnessScreen extends Component {
                 placeholder="Connect"
                 onPress={() => {}}
                 width={true}
-                widthValue="35%"
+                widthValue="28%"
               />
             </View>
             <View
