@@ -9,7 +9,6 @@ export default function AccountCard() {
       style={{
         display: 'flex',
         flexDirection: 'row',
-        justifyContent: 'center',
         alignItems: 'center',
         backgroundColor: WHITE,
         borderRadius: 8,
@@ -21,15 +20,15 @@ export default function AccountCard() {
         shadowOpacity: 0.1,
         shadowRadius: 4,
         elevation: 3,
-        paddingHorizontal: 20,
+        paddingHorizontal: 30,
         paddingVertical: 15,
         marginBottom: 20,
         marginHorizontal: 20,
       }}>
       <Image source={require('../Assets/profilePic.png')} />
       <View style={{marginLeft: 20}}>
-        <Text style={{fontSize: 20, fontWeight: 'bold'}}>{USER_NAME}</Text>
-        <Text style={{fontSize: 16}}>{USER_NAME}</Text>
+        <Text style={{fontSize: 18, fontWeight: 'bold'}}>{USER_NAME}</Text>
+        <Text style={{fontSize: 14}}>{USER_NAME}</Text>
       </View>
       <TouchableOpacity
         style={{

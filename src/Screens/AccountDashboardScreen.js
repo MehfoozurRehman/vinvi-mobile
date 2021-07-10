@@ -82,6 +82,9 @@ export default class AccountDashboardScreen extends Component {
               />
               <LinkButton
                 placeholder="Terms & Conditions"
+                onPress={() => {
+                  navigation.navigate('TermsConditions');
+                }}
                 svg={
                   <Svg
                     data-name={3745341}
@@ -136,6 +139,9 @@ export default class AccountDashboardScreen extends Component {
               }}>
               <LinkButton
                 placeholder="Privacy Policy"
+                onPress={() => {
+                  navigation.navigate('TermsConditions');
+                }}
                 svg={
                   <Svg
                     data-name={4252491}
@@ -174,6 +180,9 @@ export default class AccountDashboardScreen extends Component {
               />
               <LinkButton
                 placeholder="Contact Us"
+                onPress={() => {
+                  navigation.navigate('TermsConditions');
+                }}
                 svg={
                   <Svg
                     xmlns="http://www.w3.org/2000/svg"

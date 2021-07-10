@@ -19,7 +19,7 @@ export default function LinkButton({placeholder, svg, onPress}) {
         alignItems: 'center',
       }}>
       {svg}
-      <Text style={{marginLeft: 12, color: SECONDARY, fontSize: 14}}>
+      <Text style={{marginLeft: 12, color: SECONDARY, fontSize: 12}}>
         {placeholder}
       </Text>
     </TouchableOpacity>

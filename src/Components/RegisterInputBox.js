@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import {Text, TouchableOpacity, TextInput} from 'react-native';
-import {SECONDARY} from '../Constants/Colors';
+import {SECONDARY, TEXT_COLOR} from '../Constants/Colors';
 
 export default function RegisterInputBox({placeholder, inputType}) {
   const [isfocused, setIsfocused] = useState(false);
@@ -33,10 +33,11 @@ export default function RegisterInputBox({placeholder, inputType}) {
       ) : null}
       <TextInput
         placeholder={placeholder}
+        placeholderTextColor={TEXT_COLOR}
         style={{
           width: '100%',
           paddingHorizontal: 20,
-          height: 40,
+          height: 50,
           color: SECONDARY,
         }}
         type={inputType}

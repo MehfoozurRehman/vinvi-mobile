@@ -83,7 +83,7 @@ export default class NewBusinessCardScreen extends Component {
               <BtnComponent
                 placeholder="Finish"
                 onPress={() => {
-                  navigation.navigate('');
+                  navigation.navigate('Dashboard');
                 }}
               />
             </View>

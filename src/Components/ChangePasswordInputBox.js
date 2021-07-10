@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import {View, TextInput} from 'react-native';
-import {SECONDARY} from '../Constants/Colors';
+import {SECONDARY, TEXT_COLOR} from '../Constants/Colors';
 import Svg, {Path} from 'react-native-svg';
 
 export default function ChangePasswordInputBox({placeholder}) {
@@ -48,6 +48,7 @@ export default function ChangePasswordInputBox({placeholder}) {
       </Svg>
       <TextInput
         placeholder={placeholder}
+        placeholderTextColor={TEXT_COLOR}
         style={{paddingHorizontal: 20}}
         onFocus={() => {
           setFocus(true);

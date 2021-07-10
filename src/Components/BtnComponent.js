@@ -11,7 +11,7 @@ export default function BtnComponent({
   return (
     <TouchableOpacity
       style={{
-        height: 50,
+        height: 55,
         width: width ? widthValue : '100%',
         backgroundColor: SECONDARY,
         marginVertical: 20,

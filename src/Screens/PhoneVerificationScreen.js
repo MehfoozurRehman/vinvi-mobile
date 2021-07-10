@@ -14,7 +14,7 @@ export default class PhoneVerificationScreen extends Component {
       <SafeAreaView style={{height: Height, width: Width}}>
         <ImageBackground
           source={require('../Assets/loginbg.png')}
-          style={{flex: 1}}>
+          style={{flex: 1, height: Height}}>
           <Header
             navigation={navigation}
             variant="light"
@@ -23,41 +23,41 @@ export default class PhoneVerificationScreen extends Component {
               navigation.navigate('ForgotPassword');
             }}
           />
-          <ScrollView style={{flex: 1}}>
-            <View
-              style={{
-                justifyContent: 'space-between',
-                minHeight: 350,
-                paddingHorizontal: 20,
-              }}>
-              <View>
-                <Text
-                  style={{
-                    fontSize: 20,
-                    color: SECONDARY,
-                    fontWeight: 'bold',
-                    marginBottom: 10,
-                  }}>
-                  Phone Verification
-                </Text>
-                <Text
-                  style={{
-                    fontSize: 16,
-                    color: LIGHT_TEXT_COLOR,
-                    marginBottom: 20,
-                  }}>
-                  Enter the 6-Digit Code you Recieved on you phone
-                </Text>
-                <PhoneVerificationCell />
-              </View>
-              <BtnComponent
-                placeholder="Verify"
-                // onPress={() => {
-                //   navigation.navigate('PhoneVerification');
-                // }}
-              />
+          <View
+            style={{
+              paddingVertical: 50,
+              paddingHorizontal: 20,
+              display: 'flex',
+              justifyContent: 'space-between',
+              height: Height - 100,
+            }}>
+            <View>
+              <Text
+                style={{
+                  fontSize: 20,
+                  color: SECONDARY,
+                  fontWeight: 'bold',
+                  marginBottom: 10,
+                }}>
+                Phone Verification
+              </Text>
+              <Text
+                style={{
+                  fontSize: 16,
+                  color: LIGHT_TEXT_COLOR,
+                  marginBottom: 20,
+                }}>
+                Enter the 6-Digit Code you Recieved on you phone
+              </Text>
+              <PhoneVerificationCell />
             </View>
-          </ScrollView>
+            <BtnComponent
+              placeholder="Verify"
+              // onPress={() => {
+              //   navigation.navigate('PhoneVerification');
+              // }}
+            />
+          </View>
         </ImageBackground>
       </SafeAreaView>
     );

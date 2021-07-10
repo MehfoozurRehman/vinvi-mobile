@@ -63,7 +63,7 @@ export default class IndividualScreen extends Component {
             </View>
           </View>
           <View
-            style={{marginTop: 100, paddingHorizontal: 20, paddingBottom: 50}}>
+            style={{marginTop: 70, paddingHorizontal: 20, paddingBottom: 50}}>
             <View
               style={{
                 display: 'flex',
@@ -158,7 +158,7 @@ export default class IndividualScreen extends Component {
                 placeholder="Connect"
                 onPress={() => {}}
                 width={true}
-                widthValue="35%"
+                widthValue="28%"
               />
             </View>
             <Text
@@ -181,7 +181,7 @@ export default class IndividualScreen extends Component {
                 paddingRight: 10,
                 borderRadius: 8,
               }}>
-              <Text style={{fontSize: 20, color: WHITE, marginBottom: 8}}>
+              <Text style={{fontSize: 18, color: WHITE, marginBottom: 20}}>
                 Contact Details
               </Text>
               <ContactDetailsRow
@@ -259,7 +259,7 @@ export default class IndividualScreen extends Component {
                 borderRadius: 8,
                 marginTop: 20,
               }}>
-              <Text style={{fontSize: 20, color: SECONDARY, marginBottom: 8}}>
+              <Text style={{fontSize: 18, color: SECONDARY, marginBottom: 20}}>
                 Personal Details
               </Text>
               <ContactDetailsRowReverse
@@ -399,7 +399,7 @@ export default class IndividualScreen extends Component {
                 borderRadius: 8,
                 marginTop: 20,
               }}>
-              <Text style={{fontSize: 20, color: SECONDARY, marginBottom: 8}}>
+              <Text style={{fontSize: 18, color: SECONDARY, marginBottom: 20}}>
                 Skills
               </Text>
               <View
@@ -427,7 +427,7 @@ export default class IndividualScreen extends Component {
                 borderRadius: 8,
                 marginTop: 20,
               }}>
-              <Text style={{fontSize: 20, color: SECONDARY, marginBottom: 8}}>
+              <Text style={{fontSize: 18, color: SECONDARY, marginBottom: 20}}>
                 Protfolio
               </Text>
               <View

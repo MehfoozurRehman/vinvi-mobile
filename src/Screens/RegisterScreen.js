@@ -22,7 +22,7 @@ export default class RegisterScreen extends Component {
         <ScrollView style={{flex: 1}}>
           <ImageBackground
             source={require('../Assets/registerbg.png')}
-            style={{flex: 1}}>
+            style={{flex: 1, minHeight: Height}}>
             <View
               style={{
                 width: '100%',
@@ -43,7 +43,7 @@ export default class RegisterScreen extends Component {
               <Text
                 style={{
                   fontSize: 30,
-                  color: SECONDARY,
+                  color: WHITE,
                   fontWeight: 'bold',
                   marginBottom: 20,
                 }}>
@@ -76,7 +76,7 @@ export default class RegisterScreen extends Component {
                   flexDirection: 'row',
                   justifyContent: 'center',
                 }}>
-                <Text style={{color: WHITE, marginBottom: 20}}>
+                <Text style={{color: WHITE, fontSize: 14, marginBottom: 40}}>
                   Already have an account?
                 </Text>
                 <TouchableOpacity
@@ -89,6 +89,7 @@ export default class RegisterScreen extends Component {
                       color: SECONDARY,
                       textDecorationStyle: 'solid',
                       textDecorationLine: 'underline',
+                      fontSize: 14,
                     }}>
                     Login
                   </Text>

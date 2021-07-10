@@ -39,12 +39,12 @@ export default function ChatCard({
         style={{display: 'flex', flexDirection: 'row', alignItems: 'center'}}>
         <Image source={picture} style={{width: 55, height: 55}} />
         <View style={{marginLeft: 10}}>
-          <Text style={{fontSize: 22, fontWeight: 'bold'}}>{name}</Text>
-          <Text style={{fontSize: 16, color: '#3C50FF'}}>{lastMessage}</Text>
+          <Text style={{fontSize: 18, fontWeight: 'bold'}}>{name}</Text>
+          <Text style={{fontSize: 14, color: '#3C50FF'}}>{lastMessage}</Text>
         </View>
       </View>
       <View style={{alignItems: 'flex-end'}}>
-        <Text style={{fontSize: 16, color: LIGHT_TEXT_COLOR, marginBottom: 5}}>
+        <Text style={{fontSize: 14, color: LIGHT_TEXT_COLOR, marginBottom: 5}}>
           {timeStamp}
         </Text>
         <View
