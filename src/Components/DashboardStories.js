@@ -1,7 +1,7 @@
 import React from 'react';
 import Story from 'react-native-story';
 import {TextInput} from 'react-native';
-import {WHITE} from '../Constants/Colors';
+import {WHITE, SECONDARY} from '../Constants/Colors';
 
 export default function DashboardStories() {
   const stories = [
@@ -44,22 +44,22 @@ export default function DashboardStories() {
   ];
   return (
     <Story
-      unPressedBorderColor="#e95950"
-      pressedBorderColor="#ebebeb"
+      unPressedBorderColor={SECONDARY}
+      pressedBorderColor={WHITE}
       stories={stories}
-      footerComponent={
-        <TextInput
-          placeholder="Send message"
-          placeholderTextColor="white"
-          style={{
-            width: '100%',
-            borderWidth: 1,
-            borderColor: WHITE,
-            borderRadius: 50,
-            paddingHorizontal: 20,
-          }}
-        />
-      }
+      // footerComponent={
+      //   <TextInput
+      //     placeholder="Send message"
+      //     placeholderTextColor="white"
+      //     style={{
+      //       width: '100%',
+      //       borderWidth: 1,
+      //       borderColor: WHITE,
+      //       borderRadius: 50,
+      //       paddingHorizontal: 20,
+      //     }}
+      //   />
+      // }
     />
   );
 }

@@ -29,6 +29,7 @@ export default class RegisterScreen extends Component {
                 height: '100%',
                 paddingVertical: 20,
                 paddingHorizontal: 20,
+                paddingBottom: 50,
                 display: 'flex',
                 justifyContent: 'space-evenly',
               }}>
@@ -45,7 +46,7 @@ export default class RegisterScreen extends Component {
                   fontSize: 30,
                   color: WHITE,
                   fontWeight: 'bold',
-                  marginBottom: 20,
+                  marginBottom: 5,
                 }}>
                 Join Us
               </Text>
@@ -76,7 +77,7 @@ export default class RegisterScreen extends Component {
                   flexDirection: 'row',
                   justifyContent: 'center',
                 }}>
-                <Text style={{color: WHITE, fontSize: 14, marginBottom: 40}}>
+                <Text style={{color: WHITE, fontSize: 14}}>
                   Already have an account?
                 </Text>
                 <TouchableOpacity

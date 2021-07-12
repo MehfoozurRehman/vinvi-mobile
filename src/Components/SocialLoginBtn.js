@@ -16,7 +16,6 @@ export default function SocialLoginBtn() {
           flexDirection: 'row',
           alignItems: 'center',
           paddingHorizontal: 20,
-          marginVertical: 5,
         }}>
         <Svg
           data-name="g+"
@@ -92,7 +91,6 @@ export default function SocialLoginBtn() {
           flexDirection: 'row',
           alignItems: 'center',
           paddingHorizontal: 20,
-          marginVertical: 10,
         }}>
         <Svg
           xmlns="http://www.w3.org/2000/svg"
