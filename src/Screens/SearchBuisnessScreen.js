@@ -30,15 +30,15 @@ export default class SearchBuisnessScreen extends Component {
           <View style={{flex: 1, marginRight: 10}}>
             <PickerComponent
               placeholder="Industry"
-              itemLabels={('hello', 'hi')}
-              itemValues={('hello', 'hi')}
+              itemLabels={('hello', 'Machenic')}
+              itemValues={('hello', 'Machenic')}
             />
           </View>
           <View style={{flex: 1, marginLeft: 10}}>
             <PickerComponent
               placeholder="Area"
-              itemLabels={('hello', 'hi')}
-              itemValues={('hello', 'hi')}
+              itemLabels={('hello', 'Lahore')}
+              itemValues={('hello', 'Lahore')}
             />
           </View>
         </View>
@@ -71,8 +71,8 @@ export default class SearchBuisnessScreen extends Component {
           <View style={{flex: 1}}>
             <PickerComponent
               placeholder="Employee"
-              itemLabels={('hello', 'hi')}
-              itemValues={('hello', 'hi')}
+              itemLabels={('hello', '100 -  200')}
+              itemValues={('hello', '100 -  200')}
             />
           </View>
         </View>

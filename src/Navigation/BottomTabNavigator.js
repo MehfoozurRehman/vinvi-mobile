@@ -6,7 +6,7 @@ import SavedDashboardScreen from '../Screens/SavedDashboardScreen';
 import ChatsDashboardScreen from '../Screens/ChatsDashboardScreen';
 import AccountDashboardScreen from '../Screens/AccountDashboardScreen';
 
-import {SECONDARY, WHITE} from '../Constants/Colors';
+import {SECONDARY, THIRD, WHITE} from '../Constants/Colors';
 import {View, TouchableOpacity} from 'react-native';
 import Svg, {G, Path} from 'react-native-svg';
 import LinearGradient from 'react-native-linear-gradient';
@@ -37,7 +37,7 @@ export default function BottomTabsNavigator() {
         tabStyle: {
           backgroundColor: WHITE,
           marginTop: 20,
-          borderTopColor: SECONDARY,
+          borderTopColor: THIRD,
           borderTopWidth: 1,
         },
       }}>

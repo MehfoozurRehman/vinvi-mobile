@@ -29,15 +29,15 @@ export default class SearchIndividualScreen extends Component {
           <View style={{flex: 1, marginRight: 10}}>
             <PickerComponent
               placeholder="Niche"
-              itemLabels={('hello', 'hi')}
-              itemValues={('hello', 'hi')}
+              itemLabels={('hello', 'Machenic')}
+              itemValues={('hello', 'Machenic')}
             />
           </View>
           <View style={{flex: 1, marginLeft: 10}}>
             <PickerComponent
               placeholder="Area"
-              itemLabels={('hello', 'hi')}
-              itemValues={('hello', 'hi')}
+              itemLabels={('hello', 'Lahore')}
+              itemValues={('hello', 'Lahore')}
             />
           </View>
         </View>
@@ -70,15 +70,15 @@ export default class SearchIndividualScreen extends Component {
           <View style={{flex: 1, marginRight: 10}}>
             <PickerComponent
               placeholder="Habbits"
-              itemLabels={('hello', 'hi')}
-              itemValues={('hello', 'hi')}
+              itemLabels={('hello', 'Gardening')}
+              itemValues={('hello', 'Gardening')}
             />
           </View>
           <View style={{flex: 1, marginLeft: 10}}>
             <PickerComponent
               placeholder="Education"
-              itemLabels={('hello', 'hi')}
-              itemValues={('hello', 'hi')}
+              itemLabels={('hello', 'Metric')}
+              itemValues={('hello', 'Metric')}
             />
           </View>
         </View>
@@ -93,15 +93,15 @@ export default class SearchIndividualScreen extends Component {
           <View style={{flex: 1, marginRight: 10}}>
             <PickerComponent
               placeholder="Interests"
-              itemLabels={('hello', 'hi')}
-              itemValues={('hello', 'hi')}
+              itemLabels={('hello', 'Football')}
+              itemValues={('hello', 'Football')}
             />
           </View>
           <View style={{flex: 1, marginLeft: 10}}>
             <PickerComponent
               placeholder="Skills"
-              itemLabels={('hello', 'hi')}
-              itemValues={('hello', 'hi')}
+              itemLabels={('hello', 'Programming')}
+              itemValues={('hello', 'Programming')}
             />
           </View>
         </View>

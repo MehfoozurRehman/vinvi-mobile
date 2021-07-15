@@ -14,7 +14,7 @@ export default class SearchScreen extends Component {
         <ImageBackground
           source={require('../Assets/screenbg.png')}
           style={{flex: 1, height: 800}}>
-          <ScrollView style={{flex: 1}}>
+          <ScrollView style={{flex: 1, minHeight: Height}}>
             <Header
               navigation={navigation}
               variant="dark"
