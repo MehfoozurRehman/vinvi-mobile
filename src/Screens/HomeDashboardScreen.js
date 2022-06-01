@@ -79,8 +79,8 @@ export default function HomeDashboardScreen(props) {
           }}>
           <TouchableOpacity
             style={{
-              width: 50,
-              height: 50,
+              width: 55,
+              height: 55,
               backgroundColor: '#ffffff',
               justifyContent: 'center',
               alignItems: 'center',

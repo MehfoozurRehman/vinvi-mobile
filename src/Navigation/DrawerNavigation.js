@@ -9,6 +9,7 @@ import NotificationScreen from '../Screens/NotificationScreen';
 import TermsConditionScreen from '../Screens/TermsConditionScreen';
 import BroadCastScreen from '../Screens/BroadCastScreen';
 import MyCardsDashboardScreen from '../Screens/MyCardsDashboardScreen';
+import RequestsDashboardScreen from '../Screens/RequestsDashboardScreen';
 
 const Drawer = createDrawerNavigator();
 
@@ -167,7 +168,7 @@ export default function DrawerNavigator() {
       />
       <Drawer.Screen
         name="Requests"
-        component={TermsConditionScreen}
+        component={RequestsDashboardScreen}
         options={{
           drawerLabel: 'Requests',
           drawerIcon: ({focused}) => {
