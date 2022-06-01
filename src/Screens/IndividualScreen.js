@@ -140,7 +140,7 @@ export default function IndividualScreen(props) {
             style={{
               display: 'flex',
               flexDirection: 'row',
-              justifyContent: 'center',
+              justifyContent: 'space-between',
               alignItems: 'center',
             }}>
             <View
@@ -152,6 +152,7 @@ export default function IndividualScreen(props) {
                 alignItems: 'center',
                 height: 50,
                 marginRight: 10,
+                maxWidth: '45%',
               }}>
               <Svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -209,7 +210,7 @@ export default function IndividualScreen(props) {
                 />
               </Svg>
             </View>
-            <TouchableOpacity
+            {/* <TouchableOpacity
               style={{
                 borderWidth: 1,
                 borderColor: SECONDARY,
@@ -223,12 +224,12 @@ export default function IndividualScreen(props) {
                 marginRight: 10,
               }}>
               <Text style={{color: SECONDARY, fontSize: 14}}>Send Request</Text>
-            </TouchableOpacity>
+            </TouchableOpacity> */}
             <BtnComponent
               placeholder="Connect"
               onPress={() => {}}
               width={true}
-              widthValue="28%"
+              widthValue="40%"
             />
           </View>
           <Text
@@ -248,12 +249,32 @@ export default function IndividualScreen(props) {
               backgroundColor: SECONDARY,
               paddingVertical: 20,
               paddingLeft: 20,
-              paddingRight: 10,
+              paddingRight: 20,
               borderRadius: 8,
             }}>
-            <Text style={{fontSize: 18, color: WHITE, marginBottom: 20}}>
-              Contact Details
-            </Text>
+            <View
+              style={{
+                flexDirection: 'row',
+                alignItems: 'center',
+                justifyContent: 'space-between',
+                marginBottom: 20,
+              }}>
+              <Text style={{fontSize: 18, color: WHITE}}>Contact Details</Text>
+              <TouchableOpacity>
+                <Svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width={21.004}
+                  height={21.009}
+                  viewBox="0 0 21.004 21.009">
+                  <Path
+                    data-name="Icon ionic-ios-settings"
+                    d="M23.77 15a2.7 2.7 0 011.73-2.52 10.713 10.713 0 00-1.3-3.123 2.739 2.739 0 01-1.1.235 2.7 2.7 0 01-2.467-3.8 10.681 10.681 0 00-3.118-1.3 2.7 2.7 0 01-5.043 0A10.713 10.713 0 009.357 5.8 2.7 2.7 0 016.89 9.6a2.65 2.65 0 01-1.1-.235 10.95 10.95 0 00-1.29 3.121 2.7 2.7 0 01.005 5.043 10.713 10.713 0 001.3 3.123 2.7 2.7 0 013.561 3.561 10.776 10.776 0 003.123 1.3 2.7 2.7 0 015.032 0 10.713 10.713 0 003.123-1.3 2.7 2.7 0 013.556-3.561 10.776 10.776 0 001.3-3.123A2.716 2.716 0 0123.77 15zm-8.719 4.37A4.376 4.376 0 1119.427 15a4.375 4.375 0 01-4.376 4.372z"
+                    transform="translate(-4.5 -4.5)"
+                    fill="#fff"
+                  />
+                </Svg>
+              </TouchableOpacity>
+            </View>
             <ContactDetailsRow
               placeholder={data != null ? data.phoneNo : 'Phone No.'}
               svg={
@@ -325,13 +346,209 @@ export default function IndividualScreen(props) {
               backgroundColor: FIFTH,
               paddingVertical: 20,
               paddingLeft: 20,
-              paddingRight: 10,
+              paddingRight: 20,
               borderRadius: 8,
               marginTop: 20,
             }}>
-            <Text style={{fontSize: 18, color: SECONDARY, marginBottom: 20}}>
-              Personal Details
-            </Text>
+            <View
+              style={{
+                flexDirection: 'row',
+                alignItems: 'center',
+                marginBottom: 20,
+                justifyContent: 'space-between',
+              }}>
+              <View
+                style={{
+                  flexDirection: 'row',
+                  alignItems: 'center',
+                }}>
+                <Svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width={23.11}
+                  height={18.864}
+                  style={{marginRight: 10}}
+                  viewBox="0 0 23.11 18.864">
+                  <G data-name="Group 597" fill="#151269">
+                    <Path
+                      data-name="Path 2227"
+                      d="M57.77 206.547a3.007 3.007 0 01-2.967 0l-6.715-4.118s-.606-.372-.606.47v4.113c0 2.166 3.942 4.5 8.8 4.5s8.8-2.335 8.8-4.5v-4.344c0-.676-.431-.345-.431-.345z"
+                      transform="translate(-44.732 -192.649)"
+                    />
+                    <Path
+                      data-name="Path 2228"
+                      d="M22.723 43.151a.621.621 0 000-1.151l-10.23-5.116a1.973 1.973 0 00-1.876 0L.387 42a.621.621 0 000 1.151l10.23 6.274a1.973 1.973 0 001.876 0"
+                      transform="translate(0 -36.648)"
+                    />
+                    <Path
+                      data-name="Path 2229"
+                      d="M357.508 192.847v-6.929s0-.328-.19-.22a5.664 5.664 0 00-.674.418.582.582 0 00-.121.439v6.292a.185.185 0 01-.113.153 1.2 1.2 0 101.207 0 .178.178 0 01-.109-.153z"
+                      transform="translate(-335.209 -177.044)"
+                    />
+                  </G>
+                </Svg>
+                <Text style={{fontSize: 18, color: SECONDARY}}>Education</Text>
+                <Svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width={11.698}
+                  height={11.698}
+                  style={{marginLeft: 10}}
+                  viewBox="0 0 11.698 11.698">
+                  <Path
+                    data-name="Icon material-public"
+                    d="M8.849 3A5.849 5.849 0 1014.7 8.849 5.851 5.851 0 008.849 3zm-.585 10.487A4.672 4.672 0 014.17 8.849 4.748 4.748 0 014.293 7.8l2.8 2.8v.585a1.173 1.173 0 001.17 1.17zM12.3 12a1.16 1.16 0 00-1.111-.813H10.6V9.434a.587.587 0 00-.585-.585H6.509v-1.17h1.17a.587.587 0 00.585-.585v-1.17h1.17a1.173 1.173 0 001.17-1.17v-.24A4.669 4.669 0 0112.3 12z"
+                    transform="translate(-3 -3)"
+                    fill="#151269"
+                    opacity={0.49}
+                  />
+                </Svg>
+              </View>
+              <TouchableOpacity>
+                <Svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width={21.004}
+                  height={21.009}
+                  viewBox="0 0 21.004 21.009">
+                  <Path
+                    data-name="Icon ionic-ios-settings"
+                    d="M23.77 15a2.7 2.7 0 011.73-2.52 10.713 10.713 0 00-1.3-3.123 2.739 2.739 0 01-1.1.235 2.7 2.7 0 01-2.467-3.8 10.681 10.681 0 00-3.118-1.3 2.7 2.7 0 01-5.043 0A10.713 10.713 0 009.357 5.8 2.7 2.7 0 016.89 9.6a2.65 2.65 0 01-1.1-.235 10.95 10.95 0 00-1.29 3.121 2.7 2.7 0 01.005 5.043 10.713 10.713 0 001.3 3.123 2.7 2.7 0 013.561 3.561 10.776 10.776 0 003.123 1.3 2.7 2.7 0 015.032 0 10.713 10.713 0 003.123-1.3 2.7 2.7 0 013.556-3.561 10.776 10.776 0 001.3-3.123A2.716 2.716 0 0123.77 15zm-8.719 4.37A4.376 4.376 0 1119.427 15a4.375 4.375 0 01-4.376 4.372z"
+                    transform="translate(-4.5 -4.5)"
+                    fill="#113066"
+                  />
+                </Svg>
+              </TouchableOpacity>
+            </View>
+            <ScrollView horizontal={true}>
+              <EducationCard />
+              <EducationCard />
+              <EducationCard />
+              <EducationCard />
+              <EducationCard />
+            </ScrollView>
+          </View>
+          <View
+            style={{
+              width: '100%',
+              backgroundColor: FIFTH,
+              paddingVertical: 20,
+              paddingLeft: 20,
+              paddingRight: 20,
+              borderRadius: 8,
+              marginTop: 20,
+            }}>
+            <View
+              style={{
+                flexDirection: 'row',
+                alignItems: 'center',
+                marginBottom: 20,
+                justifyContent: 'space-between',
+              }}>
+              <View
+                style={{
+                  flexDirection: 'row',
+                  alignItems: 'center',
+                }}>
+                <Svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width={23.11}
+                  height={18.864}
+                  style={{marginRight: 10}}
+                  viewBox="0 0 23.11 18.864">
+                  <G data-name="Group 597" fill="#151269">
+                    <Path
+                      data-name="Path 2227"
+                      d="M57.77 206.547a3.007 3.007 0 01-2.967 0l-6.715-4.118s-.606-.372-.606.47v4.113c0 2.166 3.942 4.5 8.8 4.5s8.8-2.335 8.8-4.5v-4.344c0-.676-.431-.345-.431-.345z"
+                      transform="translate(-44.732 -192.649)"
+                    />
+                    <Path
+                      data-name="Path 2228"
+                      d="M22.723 43.151a.621.621 0 000-1.151l-10.23-5.116a1.973 1.973 0 00-1.876 0L.387 42a.621.621 0 000 1.151l10.23 6.274a1.973 1.973 0 001.876 0"
+                      transform="translate(0 -36.648)"
+                    />
+                    <Path
+                      data-name="Path 2229"
+                      d="M357.508 192.847v-6.929s0-.328-.19-.22a5.664 5.664 0 00-.674.418.582.582 0 00-.121.439v6.292a.185.185 0 01-.113.153 1.2 1.2 0 101.207 0 .178.178 0 01-.109-.153z"
+                      transform="translate(-335.209 -177.044)"
+                    />
+                  </G>
+                </Svg>
+                <Text style={{fontSize: 18, color: SECONDARY}}>
+                  Job History
+                </Text>
+                <Svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width={13.473}
+                  height={9.432}
+                  viewBox="0 0 13.473 9.432"
+                  style={{marginLeft: 10}}>
+                  <Path
+                    data-name="Icon awesome-user-friends"
+                    d="M4.042 6.966a2.358 2.358 0 10-2.358-2.358 2.357 2.357 0 002.358 2.358zm1.617.674h-.175a3.255 3.255 0 01-2.884 0h-.175A2.426 2.426 0 000 10.065v.606a1.011 1.011 0 001.011 1.011h6.063a1.011 1.011 0 001.011-1.011v-.606a2.426 2.426 0 00-2.426-2.426zm4.446-.674a2.021 2.021 0 10-2.021-2.021 2.022 2.022 0 002.021 2.021zm1.011.674h-.08a2.655 2.655 0 01-1.861 0h-.08a2.338 2.338 0 00-1.173.324 3.081 3.081 0 01.836 2.1v.808c0 .046-.011.091-.013.135h3.718A1.011 1.011 0 0013.473 10a2.357 2.357 0 00-2.358-2.358z"
+                    transform="translate(0 -2.25)"
+                    fill="#151269"
+                    opacity={0.49}
+                  />
+                </Svg>
+              </View>
+              <TouchableOpacity>
+                <Svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width={21.004}
+                  height={21.009}
+                  viewBox="0 0 21.004 21.009">
+                  <Path
+                    data-name="Icon ionic-ios-settings"
+                    d="M23.77 15a2.7 2.7 0 011.73-2.52 10.713 10.713 0 00-1.3-3.123 2.739 2.739 0 01-1.1.235 2.7 2.7 0 01-2.467-3.8 10.681 10.681 0 00-3.118-1.3 2.7 2.7 0 01-5.043 0A10.713 10.713 0 009.357 5.8 2.7 2.7 0 016.89 9.6a2.65 2.65 0 01-1.1-.235 10.95 10.95 0 00-1.29 3.121 2.7 2.7 0 01.005 5.043 10.713 10.713 0 001.3 3.123 2.7 2.7 0 013.561 3.561 10.776 10.776 0 003.123 1.3 2.7 2.7 0 015.032 0 10.713 10.713 0 003.123-1.3 2.7 2.7 0 013.556-3.561 10.776 10.776 0 001.3-3.123A2.716 2.716 0 0123.77 15zm-8.719 4.37A4.376 4.376 0 1119.427 15a4.375 4.375 0 01-4.376 4.372z"
+                    transform="translate(-4.5 -4.5)"
+                    fill="#113066"
+                  />
+                </Svg>
+              </TouchableOpacity>
+            </View>
+            <ScrollView horizontal={true}>
+              <JobCard />
+              <JobCard />
+              <JobCard />
+              <JobCard />
+              <JobCard />
+              <JobCard />
+              <JobCard />
+            </ScrollView>
+          </View>
+          <View
+            style={{
+              width: '100%',
+              backgroundColor: FIFTH,
+              paddingVertical: 20,
+              paddingLeft: 20,
+              paddingRight: 20,
+              borderRadius: 8,
+              marginTop: 20,
+            }}>
+            <View
+              style={{
+                flexDirection: 'row',
+                alignItems: 'center',
+                justifyContent: 'space-between',
+                marginBottom: 20,
+              }}>
+              <Text style={{fontSize: 18, color: SECONDARY}}>
+                Personal Details
+              </Text>
+              <TouchableOpacity>
+                <Svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width={21.004}
+                  height={21.009}
+                  viewBox="0 0 21.004 21.009">
+                  <Path
+                    data-name="Icon ionic-ios-settings"
+                    d="M23.77 15a2.7 2.7 0 011.73-2.52 10.713 10.713 0 00-1.3-3.123 2.739 2.739 0 01-1.1.235 2.7 2.7 0 01-2.467-3.8 10.681 10.681 0 00-3.118-1.3 2.7 2.7 0 01-5.043 0A10.713 10.713 0 009.357 5.8 2.7 2.7 0 016.89 9.6a2.65 2.65 0 01-1.1-.235 10.95 10.95 0 00-1.29 3.121 2.7 2.7 0 01.005 5.043 10.713 10.713 0 001.3 3.123 2.7 2.7 0 013.561 3.561 10.776 10.776 0 003.123 1.3 2.7 2.7 0 015.032 0 10.713 10.713 0 003.123-1.3 2.7 2.7 0 013.556-3.561 10.776 10.776 0 001.3-3.123A2.716 2.716 0 0123.77 15zm-8.719 4.37A4.376 4.376 0 1119.427 15a4.375 4.375 0 01-4.376 4.372z"
+                    transform="translate(-4.5 -4.5)"
+                    fill="#113066"
+                  />
+                </Svg>
+              </TouchableOpacity>
+            </View>
             <ContactDetailsRowReverse
               placeholder="Graduate"
               svg={
@@ -465,19 +682,14 @@ export default function IndividualScreen(props) {
               backgroundColor: FIFTH,
               paddingVertical: 20,
               paddingLeft: 20,
-              paddingRight: 10,
+              paddingRight: 20,
               borderRadius: 8,
               marginTop: 20,
             }}>
             <Text style={{fontSize: 18, color: SECONDARY, marginBottom: 20}}>
               Skills
             </Text>
-            <View
-              style={{
-                display: 'flex',
-                flexDirection: 'row',
-                flexWrap: 'wrap',
-              }}>
+            <ScrollView horizontal={true}>
               <SkillTag placeholder="Skill Name" />
               <SkillTag placeholder="Skill Name" />
               <SkillTag placeholder="Skill Name" />
@@ -485,49 +697,9 @@ export default function IndividualScreen(props) {
               <SkillTag placeholder="Skill Name" />
               <SkillTag placeholder="Skill Name" />
               <SkillTag placeholder="Skill Name" />
-            </View>
+            </ScrollView>
           </View>
-          <View
-            style={{
-              width: '100%',
-              backgroundColor: FIFTH,
-              paddingVertical: 20,
-              paddingLeft: 20,
-              paddingRight: 10,
-              borderRadius: 8,
-              marginTop: 20,
-            }}>
-            <Text style={{fontSize: 18, color: SECONDARY, marginBottom: 20}}>
-              Protfolio
-            </Text>
-            <View
-              style={{
-                display: 'flex',
-                flexDirection: 'row',
-                flexWrap: 'wrap',
-              }}>
-              <Image
-                source={require('../Assets/portfolioPic.png')}
-                style={{marginRight: 10, marginBottom: 10}}
-              />
-              <Image
-                source={require('../Assets/portfolioPic.png')}
-                style={{marginRight: 10, marginBottom: 10}}
-              />
-              <Image
-                source={require('../Assets/portfolioPic.png')}
-                style={{marginRight: 10, marginBottom: 10}}
-              />
-              <Image
-                source={require('../Assets/portfolioPic.png')}
-                style={{marginRight: 10, marginBottom: 10}}
-              />
-              <Image
-                source={require('../Assets/portfolioPic.png')}
-                style={{marginRight: 10, marginBottom: 10}}
-              />
-            </View>
-          </View>
+
           <View
             style={{width: '100%', marginVertical: 70, alignItems: 'center'}}>
             <QRCode
@@ -542,5 +714,71 @@ export default function IndividualScreen(props) {
         </View>
       </ScrollView>
     </SafeAreaView>
+  );
+}
+
+function EducationCard({}) {
+  return (
+    <View
+      style={{
+        backgroundColor: '#ffffff',
+        padding: 20,
+        borderRadius: 5,
+        marginRight: 10,
+        minWidth: 250,
+      }}>
+      <Text
+        style={{
+          color: '#606060',
+        }}>
+        Institute
+      </Text>
+      <Text
+        style={{
+          color: '#606060',
+        }}>
+        2016 - 2020
+      </Text>
+      <Text
+        style={{
+          color: '#606060',
+        }}>
+        Degree
+      </Text>
+    </View>
+  );
+}
+
+function JobCard({}) {
+  return (
+    <View
+      style={{
+        backgroundColor: '#ffffff',
+        padding: 20,
+        borderRadius: 5,
+        marginRight: 10,
+        width: 250,
+      }}>
+      <Text
+        style={{
+          color: '#606060',
+        }}>
+        Company Name
+      </Text>
+      <Text
+        style={{
+          color: '#606060',
+        }}>
+        2016 - 2020
+      </Text>
+      <Text
+        style={{
+          color: '#606060',
+        }}>
+        Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in
+        laying out print, graphic or web designs. The passage is attributed to
+        an unknown typesetter in the 15th century
+      </Text>
+    </View>
   );
 }

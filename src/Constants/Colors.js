@@ -4,7 +4,7 @@ module.exports = {
   SECONDARY: '#101056',
   THIRD: '#151269',
   FORTH: '#81B1CE',
-  FIFTH: '#AAD6EC',
+  FIFTH: '#F1F6F9',
   TEXT_COLOR: '#242424',
   LIGHT_TEXT_COLOR: '#707070',
   WHITE: '#FFFFFF',
