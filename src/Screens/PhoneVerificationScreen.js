@@ -24,7 +24,7 @@ export default function PhoneVerificationScreen(props, navigation) {
         LoginPassword: props.route.params.paramKey1,
       };
       console.log('object', object);
-      // debugger;
+
       verifyUserApiCall(object)
         .then(response => {
           console.log('response', response);

@@ -309,8 +309,6 @@ export default function NewBusinessCardScreen1(props) {
             <BtnComponent
               placeholder="Next"
               onPress={() => {
-                // debugger;
-
                 onNext();
 
                 // console.log("page 2 data", props.route.params.paramkey)

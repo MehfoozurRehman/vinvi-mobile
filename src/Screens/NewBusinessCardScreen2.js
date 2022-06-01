@@ -30,7 +30,6 @@ export default function NewBusinessCardScreen1(props) {
 
   let [userData, setUserData] = useState(null);
   const newBusinessArray = props.route.params;
-  debugger;
 
   const businessCardScreen2Array = [
     {
