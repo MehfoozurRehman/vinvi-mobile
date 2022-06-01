@@ -10,6 +10,7 @@ import MyCardIndividual from '../Components/MyCardIndividual';
 import {createMaterialTopTabNavigator} from '@react-navigation/material-top-tabs';
 import {PRIMARY1} from '../Constants/Colors';
 import {useIsFocused} from '@react-navigation/native';
+import MyCardBuisness from '../Components/MyCardBuisness';
 
 const Tab = createMaterialTopTabNavigator();
 
@@ -106,6 +107,7 @@ export default function MyCardsDashboardScreen(navigation) {
 }
 
 function Individual({navigation}) {
+  const [selected, setSelected] = useState(null);
   let [userData, setUserData] = useState(null);
   const [data, setdata] = useState([]);
 
@@ -145,6 +147,9 @@ function Individual({navigation}) {
               navigationPath="Individual"
               item={item}
               key={index}
+              selected={selected}
+              setSelected={setSelected}
+              index={index}
             />
           )}
         />
@@ -153,6 +158,7 @@ function Individual({navigation}) {
   );
 }
 function Buisness({navigation}) {
+  const [selected, setSelected] = useState(null);
   let [userData, setUserData] = useState(null);
   const [data, setdata] = useState([]);
 
@@ -185,13 +191,16 @@ function Buisness({navigation}) {
           horizontal={false}
           keyExtractor={item => item.id}
           renderItem={({item, index}) => (
-            <MyCardIndividual
+            <MyCardBuisness
               cta={true}
               variant="closed"
               navigation={navigation}
               navigationPath="Individual"
               item={item}
               key={index}
+              index={index}
+              selected={selected}
+              setSelected={setSelected}
             />
           )}
         />
