@@ -1,20 +1,16 @@
-import React, {useState, useEffect} from 'react';
-import {ImageBackground, SafeAreaView, Text} from 'react-native';
+import React from 'react';
+import {ImageBackground, SafeAreaView} from 'react-native';
 import Header from '../Components/Header';
 import Svg, {G, Path} from 'react-native-svg';
 import {Height, Width} from '../Constants/Constants';
-import {FlatList} from 'react-native-gesture-handler';
-import AsyncStorage from '@react-native-async-storage/async-storage';
-import {getPersonalCardAllActiveApiCall} from '../Apis/Repo';
-import MyCardIndividual from '../Components/MyCardIndividual';
 import {createMaterialTopTabNavigator} from '@react-navigation/material-top-tabs';
-import {PRIMARY1} from '../Constants/Colors';
 import {useIsFocused} from '@react-navigation/native';
-import MyCardBuisness from '../Components/MyCardBuisness';
+import {Buisness} from './Buisness';
+import {Individual} from './Individual';
 
 const Tab = createMaterialTopTabNavigator();
 
-export default function MyCardsDashboardScreen(navigation) {
+export default function MyCardsDashboardScreen({navigation}) {
   return (
     <SafeAreaView style={{height: Height, width: Width}}>
       <ImageBackground
@@ -103,108 +99,5 @@ export default function MyCardsDashboardScreen(navigation) {
         </Tab.Navigator>
       </ImageBackground>
     </SafeAreaView>
-  );
-}
-
-function Individual({navigation}) {
-  const [selected, setSelected] = useState(null);
-  let [userData, setUserData] = useState(null);
-  const [data, setdata] = useState([]);
-
-  useEffect(() => {
-    AsyncStorage.getItem('user_data').then(response => {
-      setUserData((userData = JSON.parse(response)));
-      console.log('userdata', userData);
-    });
-  }, []);
-
-  useEffect(() => {
-    getData();
-  }, []);
-
-  const getData = () => {
-    getPersonalCardAllActiveApiCall()
-      .then(res => {
-        console.log('res', res);
-        setdata(res.data.result);
-      })
-      .catch(err => {
-        console.log('err', err);
-      });
-  };
-  return (
-    <>
-      {data != null ? (
-        <FlatList
-          data={data}
-          horizontal={false}
-          keyExtractor={item => item.id}
-          renderItem={({item, index}) => (
-            <MyCardIndividual
-              cta={true}
-              variant="closed"
-              navigation={navigation}
-              navigationPath="Individual"
-              item={item}
-              key={index}
-              selected={selected}
-              setSelected={setSelected}
-              index={index}
-            />
-          )}
-        />
-      ) : null}
-    </>
-  );
-}
-function Buisness({navigation}) {
-  const [selected, setSelected] = useState(null);
-  let [userData, setUserData] = useState(null);
-  const [data, setdata] = useState([]);
-
-  useEffect(() => {
-    AsyncStorage.getItem('user_data').then(response => {
-      setUserData((userData = JSON.parse(response)));
-      console.log('userdata', userData);
-    });
-  }, []);
-
-  useEffect(() => {
-    getData();
-  }, []);
-
-  const getData = () => {
-    getPersonalCardAllActiveApiCall()
-      .then(res => {
-        console.log('res', res);
-        setdata(res.data.result);
-      })
-      .catch(err => {
-        console.log('err', err);
-      });
-  };
-  return (
-    <>
-      {data != null ? (
-        <FlatList
-          data={data}
-          horizontal={false}
-          keyExtractor={item => item.id}
-          renderItem={({item, index}) => (
-            <MyCardBuisness
-              cta={true}
-              variant="closed"
-              navigation={navigation}
-              navigationPath="Individual"
-              item={item}
-              key={index}
-              index={index}
-              selected={selected}
-              setSelected={setSelected}
-            />
-          )}
-        />
-      ) : null}
-    </>
   );
 }
