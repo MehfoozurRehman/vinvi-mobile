@@ -12,6 +12,7 @@ import UserCard from '../Components/UserCard';
 import {Height, Width} from '../Constants/Constants';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import {FlatList} from 'react-native-gesture-handler';
+import { launchImageLibrary} from 'react-native-image-picker';
 import {
   getBusinessCardAllActiveApiCall,
   getPersonalCardAllActiveApiCall,
@@ -87,7 +88,11 @@ export default function HomeDashboardScreen(props) {
               borderRadius: 50,
               marginTop: 43,
               marginRight: 10,
-            }}>
+            }}
+            onPress={()=>{
+              launchImageLibrary({mediaType:"photo"}, ()=>{})
+            }}
+            >
             <Text style={{color: '#242424', fontSize: 25}}>+</Text>
           </TouchableOpacity>
           <DashboardStories />
