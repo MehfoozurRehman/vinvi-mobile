@@ -1,0 +1,11 @@
+module.exports = {
+  PRIMARY: '#113065',
+  PRIMARY1: '#113066',
+  SECONDARY: '#101056',
+  THIRD: '#151269',
+  FORTH: '#81B1CE',
+  FIFTH: '#AAD6EC',
+  TEXT_COLOR: '#242424',
+  LIGHT_TEXT_COLOR: '#707070',
+  WHITE: '#FFFFFF',
+};
