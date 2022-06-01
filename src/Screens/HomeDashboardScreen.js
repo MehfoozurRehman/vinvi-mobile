@@ -1,5 +1,11 @@
 import React, {useState, useEffect} from 'react';
-import {View, ImageBackground, SafeAreaView} from 'react-native';
+import {
+  View,
+  ImageBackground,
+  SafeAreaView,
+  TouchableOpacity,
+  Text,
+} from 'react-native';
 import Header from '../Components/Header';
 import DashboardStories from '../Components/DashboardStories';
 import UserCard from '../Components/UserCard';
@@ -67,7 +73,23 @@ export default function HomeDashboardScreen(props) {
             paddingHorizontal: 20,
             marginTop: -65,
             marginBottom: 10,
+            flexDirection: 'row',
+            alignItems: 'center',
+            zIndex: 5,
           }}>
+          <TouchableOpacity
+            style={{
+              width: 50,
+              height: 50,
+              backgroundColor: '#ffffff',
+              justifyContent: 'center',
+              alignItems: 'center',
+              borderRadius: 50,
+              marginTop: 43,
+              marginRight: 10,
+            }}>
+            <Text style={{color: '#242424', fontSize: 25}}>+</Text>
+          </TouchableOpacity>
           <DashboardStories />
         </View>
         {data != null ? (

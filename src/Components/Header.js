@@ -30,6 +30,7 @@ export default function Header({
           alignItems: 'center',
           paddingHorizontal: 20,
           paddingVertical: 25,
+          zIndex: 999,
         }}>
         <TouchableOpacity onPress={onPress}>
           <Svg
@@ -70,6 +71,7 @@ export default function Header({
           alignItems: 'center',
           paddingHorizontal: 20,
           paddingVertical: 25,
+          zIndex: 999,
         }}>
         <TouchableOpacity onPress={onPress}>
           <Svg
@@ -110,6 +112,7 @@ export default function Header({
           alignItems: 'center',
           paddingHorizontal: 20,
           paddingVertical: 25,
+          zIndex: 999,
         }}>
         <TouchableOpacity onPress={onPress}>
           <Svg
@@ -172,6 +175,7 @@ export default function Header({
           alignItems: 'center',
           paddingHorizontal: 20,
           paddingVertical: 20,
+          zIndex: 999,
         }}>
         <TouchableOpacity onPress={onPress}>
           <Svg
@@ -231,6 +235,7 @@ export default function Header({
           alignItems: 'center',
           paddingHorizontal: 20,
           paddingVertical: 25,
+          zIndex: 999,
         }}>
         <TouchableOpacity onPress={onPress}>
           <Svg
@@ -274,6 +279,7 @@ export default function Header({
           alignItems: 'center',
           paddingHorizontal: 20,
           paddingVertical: 25,
+          zIndex: 999,
         }}>
         <TouchableOpacity onPress={onPress}>
           <Svg
@@ -315,6 +321,7 @@ export default function Header({
           alignItems: 'center',
           paddingHorizontal: 20,
           paddingTop: 20,
+          zIndex: 999,
         }}>
         <TouchableOpacity onPress={onPress}>
           <Svg
@@ -356,6 +363,7 @@ export default function Header({
           alignItems: 'center',
           paddingHorizontal: 20,
           paddingVertical: 25,
+          zIndex: 999,
         }}>
         <TouchableOpacity onPress={onPress}>
           <Svg
