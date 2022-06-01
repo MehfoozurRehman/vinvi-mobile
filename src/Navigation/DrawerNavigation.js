@@ -8,6 +8,7 @@ import Svg, {Circle, G, Path} from 'react-native-svg';
 import NotificationScreen from '../Screens/NotificationScreen';
 import TermsConditionScreen from '../Screens/TermsConditionScreen';
 import BroadCastScreen from '../Screens/BroadCastScreen';
+import MyCardsDashboardScreen from '../Screens/MyCardsDashboardScreen';
 
 const Drawer = createDrawerNavigator();
 
@@ -113,7 +114,7 @@ export default function DrawerNavigator() {
       />
       <Drawer.Screen
         name="MyCard"
-        component={TermsConditionScreen}
+        component={MyCardsDashboardScreen}
         options={{
           drawerLabel: 'My Card',
           drawerIcon: ({focused}) => {
