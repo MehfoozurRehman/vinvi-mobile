@@ -30,74 +30,47 @@ export default function StackNavigation() {
       screenOptions={{
         header: () => null,
       }}>
-      <Stack.Screen name="Home" component={HomeScreen} options={{}} />
-      <Stack.Screen name="Register" component={RegisterScreen} options={{}} />
-      <Stack.Screen name="Login" component={LoginScreen} options={{}} />
-      <Stack.Screen
-        name="ForgotPassword"
-        component={ForgotPasswordScreen}
-        options={{}}
-      />
+      <Stack.Screen name="Home" component={HomeScreen} />
+      <Stack.Screen name="Register" component={RegisterScreen} />
+      <Stack.Screen name="Login" component={LoginScreen} />
+      <Stack.Screen name="ForgotPassword" component={ForgotPasswordScreen} />
       <Stack.Screen
         name="PhoneVerification"
         component={PhoneVerificationScreen}
-        options={{}}
       />
-      <Stack.Screen
-        name="Dashboard"
-        component={DrawerNavigation}
-        options={{}}
-      />
-      <Stack.Screen name="AddCard" component={AddCardScreen} options={{}} />
+      <Stack.Screen name="Dashboard" component={DrawerNavigation} />
+      <Stack.Screen name="AddCard" component={AddCardScreen} />
       <Stack.Screen
         name="NewPersonalCard1"
         component={NewPersonalCardScreen1}
-        options={{}}
       />
       <Stack.Screen
         name="NewPersonalCard2"
         component={NewPersonalCardScreen2}
-        options={{}}
       />
       <Stack.Screen
         name="NewPersonalCard3"
         component={NewPersonalCardScreen3}
-        options={{}}
       />
       <Stack.Screen
         name="NewPersonalCard4"
         component={NewPersonalCardScreen4}
-        options={{}}
       />
       <Stack.Screen
         name="NewBuisnessCard1"
         component={NewBusinessCardScreen1}
-        options={{}}
       />
-      <Stack.Screen name="Search" component={SearchScreen} options={{}} />
-      <Stack.Screen name="Request" component={RequestScreen} options={{}} />
-      <Stack.Screen
-        name="SearchResult"
-        component={SearchResultScreen}
-        options={{}}
-      />
-      <Stack.Screen name="Messages" component={MessagesScreen} options={{}} />
-      <Stack.Screen
-        name="Individual"
-        component={IndividualScreen}
-        options={{}}
-      />
-      <Stack.Screen name="Buisness" component={BuisnessScreen} options={{}} />
-      <Stack.Screen
-        name="ChangePassowrd"
-        component={ChangePassowrdScreen}
-        options={{}}
-      />
-      <Stack.Screen name="EditProfile" component={EditProfile} options={{}} />
+      <Stack.Screen name="Search" component={SearchScreen} />
+      <Stack.Screen name="Request" component={RequestScreen} />
+      <Stack.Screen name="SearchResult" component={SearchResultScreen} />
+      <Stack.Screen name="Messages" component={MessagesScreen} />
+      <Stack.Screen name="Individual" component={IndividualScreen} />
+      <Stack.Screen name="Buisness" component={BuisnessScreen} />
+      <Stack.Screen name="ChangePassowrd" component={ChangePassowrdScreen} />
+      <Stack.Screen name="EditProfile" component={EditProfile} />
       <Stack.Screen
         name="NewBusinessCard2"
         component={NewBusinessCardScreen2}
-        options={{}}
       />
     </Stack.Navigator>
   );

@@ -10,6 +10,7 @@ import TermsConditionScreen from '../Screens/TermsConditionScreen';
 import BroadCastScreen from '../Screens/BroadCastScreen';
 import MyCardsDashboardScreen from '../Screens/MyCardsDashboardScreen';
 import RequestsDashboardScreen from '../Screens/RequestsDashboardScreen';
+import ChatsDashboardScreen from '../Screens/ChatsDashboardScreen';
 
 const Drawer = createDrawerNavigator();
 
@@ -113,6 +114,27 @@ export default function DrawerNavigator() {
           },
         }}
       />
+      {/* <Drawer.Screen
+        name="Chats"
+        component={ChatsDashboardScreen}
+        options={{
+          drawerIcon: ({focused}) => {
+            return (
+              <Svg
+                xmlns="http://www.w3.org/2000/svg"
+                width={19.263}
+                height={19.263}
+                viewBox="0 0 19.263 19.263">
+                <Path
+                  data-name="Icon material-chat_bubble_outline"
+                  d="M17.337 0H1.926A1.932 1.932 0 000 1.926v17.337l3.853-3.853h13.484a1.932 1.932 0 001.926-1.926V1.926A1.932 1.932 0 0017.337 0zm0 13.484H3.853l-1.927 1.927V1.926h15.411z"
+                  fill={focused ? SECONDARY : WHITE}
+                />
+              </Svg>
+            );
+          },
+        }}
+      /> */}
       <Drawer.Screen
         name="MyCard"
         component={MyCardsDashboardScreen}

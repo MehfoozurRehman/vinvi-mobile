@@ -211,7 +211,9 @@ export default function IndividualScreen(props) {
             </View>
             <BtnComponent
               placeholder="Connect"
-              onPress={() => {}}
+              onPress={() => {
+                props.navigation.navigate('Messages');
+              }}
               width={true}
               widthValue="40%"
             />
