@@ -4,7 +4,7 @@ import {SECONDARY, FIFTH} from '../Constants/Colors';
 import ContactDetailsRowReverse from '../Components/ContactDetailsRowReverseIndividual';
 import Svg, {G, Path} from 'react-native-svg';
 
-export function PersonalDetails({}) {
+export function PersonalDetails({setIsEdit}) {
   return (
     <View
       style={{
@@ -30,7 +30,10 @@ export function PersonalDetails({}) {
           }}>
           Personal Details
         </Text>
-        <TouchableOpacity>
+        <TouchableOpacity
+          onPress={() => {
+            setIsEdit(true);
+          }}>
           <Svg
             xmlns="http://www.w3.org/2000/svg"
             width={21.004}

@@ -4,7 +4,7 @@ import {SECONDARY, FIFTH} from '../Constants/Colors';
 import Svg, {G, Path} from 'react-native-svg';
 import {JobCard} from './JobCard';
 
-export function JobHistory({}) {
+export function JobHistory({setEdit}) {
   return (
     <View
       style={{
@@ -78,7 +78,10 @@ export function JobHistory({}) {
             />
           </Svg>
         </View>
-        <TouchableOpacity>
+        <TouchableOpacity
+          onPress={() => {
+            setEdit(true);
+          }}>
           <Svg
             xmlns="http://www.w3.org/2000/svg"
             width={21.004}

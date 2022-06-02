@@ -4,7 +4,7 @@ import {SECONDARY, WHITE} from '../Constants/Colors';
 import ContactDetailsRow from '../Components/ContactDetailsRow';
 import Svg, {Path} from 'react-native-svg';
 
-export function ContactDetails({data, arraycountry}) {
+export function ContactDetails({data, arraycountry, setEdit}) {
   return (
     <View
       style={{
@@ -29,7 +29,10 @@ export function ContactDetails({data, arraycountry}) {
           }}>
           Contact Details
         </Text>
-        <TouchableOpacity>
+        <TouchableOpacity
+          onPress={() => {
+            setEdit(true);
+          }}>
           <Svg
             xmlns="http://www.w3.org/2000/svg"
             width={21.004}

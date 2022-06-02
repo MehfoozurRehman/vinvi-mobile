@@ -11,7 +11,12 @@ import BtnComponent from '../Components/BtnComponent';
 import OutlinedInputBox from '../Components/OutlinedInputBox';
 import Svg, {Path} from 'react-native-svg';
 
-export function JobHistoryModal({modalVisible, setModalVisible, setHobbies}) {
+export function JobHistoryModal({
+  modalVisible,
+  setModalVisible,
+  setHobbies,
+  isEdit,
+}) {
   return (
     <Modal
       animationType="fade"
@@ -55,7 +60,7 @@ export function JobHistoryModal({modalVisible, setModalVisible, setHobbies}) {
                   fontSize: 16,
                   fontWeight: 'bold',
                 }}>
-                Add Job History
+                {isEdit ? 'Edit' : 'Add'} Job History
               </Text>
               <TouchableOpacity
                 onPress={() => {
@@ -117,7 +122,7 @@ export function JobHistoryModal({modalVisible, setModalVisible, setHobbies}) {
               }}
             />
             <BtnComponent
-              placeholder="Add"
+              placeholder={isEdit ? 'Edit' : 'Add'}
               onPress={() => {
                 setModalVisible(!modalVisible);
               }}

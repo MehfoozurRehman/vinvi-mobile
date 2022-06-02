@@ -24,7 +24,6 @@ import {
 import {JobHistoryCard} from './JobHistoryCard';
 import {EducationCard} from './EducationCard.1';
 import {SkillCard} from './SkillCard';
-import PickerComponent from '../Components/PickerComponent';
 import {EducationModal} from './EducationModal';
 import {SkillModal} from './SkillModal';
 import {JobHistoryModal} from './JobHistoryModal';

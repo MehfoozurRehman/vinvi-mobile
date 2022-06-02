@@ -11,7 +11,7 @@ import BtnComponent from '../Components/BtnComponent';
 import OutlinedInputBox from '../Components/OutlinedInputBox';
 import Svg, {Path} from 'react-native-svg';
 
-export function EducationModal({
+export function ContactModal({
   modalVisible,
   setModalVisible,
   setHobbies,
@@ -60,7 +60,7 @@ export function EducationModal({
                   fontSize: 16,
                   fontWeight: 'bold',
                 }}>
-                {isEdit ? 'Edit' : 'Add'} Education
+                {isEdit ? 'Edit' : 'Add'} Contact Details
               </Text>
               <TouchableOpacity
                 onPress={() => {
@@ -81,40 +81,35 @@ export function EducationModal({
               </TouchableOpacity>
             </View>
             <OutlinedInputBox
-              placeholder="Institute"
+              placeholder="Number"
               inputType="text"
               onChange={value => {
                 setHobbies(value);
               }}
             />
-            <View
-              style={{
-                flexDirection: 'row',
-              }}>
-              <OutlinedInputBox
-                placeholder="From"
-                inputType="text"
-                style={{
-                  width: '48%',
-                  marginRight: '2%',
-                }}
-                onChange={value => {
-                  setHobbies(value);
-                }}
-              />
-              <OutlinedInputBox
-                placeholder="To"
-                inputType="text"
-                style={{
-                  width: '50%',
-                }}
-                onChange={value => {
-                  setHobbies(value);
-                }}
-              />
-            </View>
             <OutlinedInputBox
-              placeholder="Degree"
+              placeholder="Email Address"
+              inputType="text"
+              onChange={value => {
+                setHobbies(value);
+              }}
+            />
+            <OutlinedInputBox
+              placeholder="Address"
+              inputType="text"
+              onChange={value => {
+                setHobbies(value);
+              }}
+            />
+            <OutlinedInputBox
+              placeholder="City"
+              inputType="text"
+              onChange={value => {
+                setHobbies(value);
+              }}
+            />
+            <OutlinedInputBox
+              placeholder="Country"
               inputType="text"
               onChange={value => {
                 setHobbies(value);

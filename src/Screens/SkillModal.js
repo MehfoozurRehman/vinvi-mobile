@@ -11,7 +11,12 @@ import BtnComponent from '../Components/BtnComponent';
 import OutlinedInputBox from '../Components/OutlinedInputBox';
 import Svg, {Path} from 'react-native-svg';
 
-export function SkillModal({modalVisible, setModalVisible, setHobbies}) {
+export function SkillModal({
+  modalVisible,
+  setModalVisible,
+  setHobbies,
+  isEdit,
+}) {
   return (
     <Modal
       animationType="fade"
@@ -55,7 +60,7 @@ export function SkillModal({modalVisible, setModalVisible, setHobbies}) {
                   fontSize: 16,
                   fontWeight: 'bold',
                 }}>
-                Add Skill
+                {isEdit ? 'Edit' : 'Add'} Skill
               </Text>
               <TouchableOpacity
                 onPress={() => {
@@ -83,7 +88,7 @@ export function SkillModal({modalVisible, setModalVisible, setHobbies}) {
               }}
             />
             <BtnComponent
-              placeholder="Add"
+              placeholder={isEdit ? 'Edit' : 'Add'}
               onPress={() => {
                 setModalVisible(!modalVisible);
               }}

@@ -22,8 +22,19 @@ import {Education} from './Education';
 import {JobHistory} from './JobHistory';
 import {PersonalDetails} from './PersonalDetails';
 import {Skills} from './Skills';
+import {EducationModal} from './EducationModal';
+import {JobHistoryModal} from './JobHistoryModal';
+import {SkillModal} from './SkillModal';
+import {ContactModal} from './ContactModal';
+import {PersonalModal} from './PersonalModal';
 
 export default function IndividualScreen(props) {
+  const [isEducationModalVisible, setIsEducationModalVisible] = useState(false);
+  const [isJobHistoryModalVisible, setIsJobHistoryModalVisible] =
+    useState(false);
+  const [isSkillModalVisible, setIsSkillModalVisible] = useState(false);
+  const [isContactModalVisible, setIsContactModalVisible] = useState(false);
+  const [isPersonalModalVisible, setIsPersonalModalVisible] = useState(false);
   let [userData, setUserData] = useState(null);
   const [data, setdata] = useState(' ');
   const [favorit, setFavorit] = useState(false);
@@ -229,11 +240,15 @@ export default function IndividualScreen(props) {
             meet you there. When the soul lies down in that grass the world is
             too full to talk about.
           </Text>
-          <ContactDetails data={data} arraycountry={arraycountry} />
-          <Education />
-          <JobHistory />
-          <PersonalDetails />
-          <Skills />
+          <ContactDetails
+            data={data}
+            arraycountry={arraycountry}
+            setEdit={setIsContactModalVisible}
+          />
+          <Education setEdit={setIsEducationModalVisible} />
+          <JobHistory setEdit={setIsJobHistoryModalVisible} />
+          <PersonalDetails setIsEdit={setIsPersonalModalVisible} />
+          <Skills setEdit={setIsSkillModalVisible} />
           <View
             style={{width: '100%', marginVertical: 70, alignItems: 'center'}}>
             <QRCode
@@ -246,6 +261,31 @@ export default function IndividualScreen(props) {
           <BtnComponent placeholder="Block" onPress={() => {}} />
         </View>
       </ScrollView>
+      <EducationModal
+        isEdit
+        modalVisible={isEducationModalVisible}
+        setModalVisible={setIsEducationModalVisible}
+      />
+      <JobHistoryModal
+        isEdit
+        modalVisible={isJobHistoryModalVisible}
+        setModalVisible={setIsJobHistoryModalVisible}
+      />
+      <SkillModal
+        isEdit
+        modalVisible={isSkillModalVisible}
+        setModalVisible={setIsSkillModalVisible}
+      />
+      <ContactModal
+        isEdit
+        modalVisible={isContactModalVisible}
+        setModalVisible={setIsContactModalVisible}
+      />
+      <PersonalModal
+        isEdit
+        modalVisible={isPersonalModalVisible}
+        setModalVisible={setIsPersonalModalVisible}
+      />
     </SafeAreaView>
   );
 }
