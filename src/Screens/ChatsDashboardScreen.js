@@ -17,6 +17,7 @@ const ChatsDashboardScreen = props => {
         source={require('../Assets/screenbg.png')}
         style={{
           flex: 1,
+          marginBottom: 50,
         }}>
         <Header
           navigation={navigation}

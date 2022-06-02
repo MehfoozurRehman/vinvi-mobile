@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import {View, ScrollView} from 'react-native';
+import {View, ScrollView, TouchableOpacity, Text} from 'react-native';
 import BtnComponent from '../Components/BtnComponent';
 import Header from '../Components/Header';
 import OutlinedInputBox from '../Components/OutlinedInputBox';
@@ -219,34 +219,96 @@ export default function NewCardScreen(props) {
               setAchivements(value);
             }}
           />
-          <OutlinedInputBox
-            placeholder="Personal Info"
-            inputType="text"
-            onChange={value => {
-              setPersonalInfo(value);
-            }}
-          />
-          <OutlinedInputBox
-            placeholder="Skills"
-            inputType="text"
-            onChange={value => {
-              setSkills(value);
-            }}
-          />
-          <OutlinedInputBox
-            placeholder="Portfolio"
-            inputType="text"
-            onChange={value => {
-              setPortFolio(value);
-            }}
-          />
-          <OutlinedInputBox
-            placeholder="Job History"
-            inputType="text"
-            onChange={value => {
-              setJobHistory(value);
-            }}
-          />
+          <View style={{flexDirection: 'column', marginBottom: 20}}>
+            <View
+              style={{
+                flexDirection: 'row',
+                justifyContent: 'space-between',
+                alignItems: 'center',
+                marginBottom: 10,
+              }}>
+              <Text style={{color: '#242424', fontSize: 16}}>Skills</Text>
+              <TouchableOpacity
+                style={{
+                  borderWidth: 1,
+                  borderRadius: 5,
+                  paddingHorizontal: 10,
+                  paddingVertical: 5,
+                }}>
+                <Text>
+                  <Text>+</Text>Add
+                </Text>
+              </TouchableOpacity>
+            </View>
+            <ScrollView horizontal={true}>
+              <SkillCard />
+              <SkillCard />
+              <SkillCard />
+              <SkillCard />
+              <SkillCard />
+              <SkillCard />
+            </ScrollView>
+          </View>
+          <View style={{flexDirection: 'column', marginBottom: 20}}>
+            <View
+              style={{
+                flexDirection: 'row',
+                justifyContent: 'space-between',
+                alignItems: 'center',
+                marginBottom: 10,
+              }}>
+              <Text style={{color: '#242424', fontSize: 16}}>Education</Text>
+              <TouchableOpacity
+                style={{
+                  borderWidth: 1,
+                  borderRadius: 5,
+                  paddingHorizontal: 10,
+                  paddingVertical: 5,
+                }}>
+                <Text>
+                  <Text>+</Text>Add
+                </Text>
+              </TouchableOpacity>
+            </View>
+            <ScrollView horizontal={true}>
+              <EducationCard />
+              <EducationCard />
+              <EducationCard />
+              <EducationCard />
+              <EducationCard />
+              <EducationCard />
+            </ScrollView>
+          </View>
+          <View style={{flexDirection: 'column', marginBottom: 20}}>
+            <View
+              style={{
+                flexDirection: 'row',
+                justifyContent: 'space-between',
+                alignItems: 'center',
+                marginBottom: 10,
+              }}>
+              <Text style={{color: '#242424', fontSize: 16}}>Job History</Text>
+              <TouchableOpacity
+                style={{
+                  borderWidth: 1,
+                  borderRadius: 5,
+                  paddingHorizontal: 10,
+                  paddingVertical: 5,
+                }}>
+                <Text>
+                  <Text>+</Text>Add
+                </Text>
+              </TouchableOpacity>
+            </View>
+            <ScrollView horizontal={true}>
+              <JobHistoryCard />
+              <JobHistoryCard />
+              <JobHistoryCard />
+              <JobHistoryCard />
+              <JobHistoryCard />
+              <JobHistoryCard />
+            </ScrollView>
+          </View>
           <BtnComponent
             placeholder="Finish"
             onPress={() => {
@@ -256,5 +318,90 @@ export default function NewCardScreen(props) {
         </View>
       </ScrollView>
     </SafeAreaView>
+  );
+}
+
+function JobHistoryCard({}) {
+  return (
+    <View
+      style={{
+        backgroundColor: '#EFEFEF',
+        width: 250,
+        padding: 20,
+        marginRight: 10,
+      }}>
+      <Text
+        style={{
+          color: '#7A7A7A',
+        }}>
+        Company Name
+      </Text>
+      <Text
+        style={{
+          color: '#7A7A7A',
+          marginVertical: 10,
+        }}>
+        2016 - 2020
+      </Text>
+      <Text
+        style={{
+          color: '#7A7A7A',
+          fontSize: 12,
+        }}>
+        Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in
+        laying out print, graphic or web designs. The passage is attributed to
+        an unknown typesetter in the 15th century who is thought to have
+        scrambled parts of Cicero's De Finibus Bonorum et
+      </Text>
+    </View>
+  );
+}
+function EducationCard({}) {
+  return (
+    <View
+      style={{
+        backgroundColor: '#EFEFEF',
+        width: 250,
+        padding: 20,
+        marginRight: 10,
+      }}>
+      <Text
+        style={{
+          color: '#7A7A7A',
+        }}>
+        Institute
+      </Text>
+      <Text
+        style={{
+          color: '#7A7A7A',
+          marginVertical: 10,
+        }}>
+        2016 - 2020
+      </Text>
+      <Text
+        style={{
+          color: '#7A7A7A',
+          fontSize: 12,
+        }}>
+        Degree
+      </Text>
+    </View>
+  );
+}
+function SkillCard({}) {
+  return (
+    <View
+      style={{
+        backgroundColor: '#EFEFEF',
+        padding: 20,
+        marginRight: 10,
+      }}>
+      <Text
+        style={{
+          color: '#7A7A7A',
+        }}>
+        Skill name
+      </Text>
+    </View>
   );
 }

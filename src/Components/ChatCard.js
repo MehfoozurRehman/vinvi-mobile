@@ -25,10 +25,10 @@ export default function ChatCard({
         backgroundColor: WHITE,
         borderRadius: 5,
         marginBottom: 20,
-        shadowColor: '#000',
+        shadowColor: 'rgba(0,0,0,.5)',
         shadowOffset: {
-          width: 5,
-          height: 5,
+          width: 8,
+          height: 8,
         },
         shadowOpacity: 0.1,
         shadowRadius: 4,

@@ -18,7 +18,7 @@ export default function BtnComponent({
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-        borderRadius: 5,
+        borderRadius: 10,
       }}
       onPress={onPress}>
       <Text style={{color: WHITE, fontSize: 14}}>{placeholder}</Text>
