@@ -8,9 +8,9 @@ export default function ProductCard({productPic, productName, productPrice}) {
       style={{
         display: 'flex',
         backgroundColor: FIFTH,
-        width: '48%',
-        marginBottom: 20,
+        width: 200,
         borderRadius: 8,
+        marginRight: 20,
       }}>
       <Image
         source={productPic}
@@ -19,14 +19,15 @@ export default function ProductCard({productPic, productName, productPrice}) {
       <View style={{paddingHorizontal: 10, paddingVertical: 15}}>
         <Text
           style={{
-            fontSize: 15,
+            fontSize: 14,
             color: SECONDARY,
             marginBottom: 1,
-            fontWeight: 'bold',
           }}>
           {productName}
         </Text>
-        <Text style={{fontSize: 14, color: SECONDARY}}>{productPrice}</Text>
+        <Text style={{fontSize: 15, color: SECONDARY, fontWeight: 'bold'}}>
+          {productPrice}
+        </Text>
       </View>
     </View>
   );
