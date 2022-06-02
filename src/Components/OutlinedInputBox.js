@@ -2,7 +2,13 @@ import React, {useState} from 'react';
 import {Text, TouchableOpacity, TextInput, View} from 'react-native';
 import {SECONDARY, TEXT_COLOR} from '../Constants/Colors';
 
-export default function LoginInputBox({placeholder, inputType, onChange}) {
+export default function LoginInputBox({
+  placeholder,
+  inputType,
+  onChange,
+  style,
+  multiline,
+}) {
   const [isfocused, setIsfocused] = useState(false);
   let secureTextEntry;
 
@@ -23,6 +29,7 @@ export default function LoginInputBox({placeholder, inputType, onChange}) {
         borderWidth: 1,
         borderColor: isfocused ? SECONDARY : '#EFEFEF',
         position: 'relative',
+        ...style,
       }}>
       {isfocused ? (
         <View
@@ -46,8 +53,10 @@ export default function LoginInputBox({placeholder, inputType, onChange}) {
         style={{
           width: '100%',
           paddingHorizontal: 20,
-          height: 45,
+          height: multiline ? 200 : 45,
+          textAlignVertical: multiline ? 'top' : 'center',
           color: SECONDARY,
+          paddingVertical: multiline ? 15 : 0,
         }}
         type={inputType}
         keyboardType={inputType}
@@ -59,6 +68,7 @@ export default function LoginInputBox({placeholder, inputType, onChange}) {
         onBlur={() => {
           setIsfocused(false);
         }}
+        multiline={multiline}
       />
     </TouchableOpacity>
   );
