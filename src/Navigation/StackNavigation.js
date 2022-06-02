@@ -30,7 +30,7 @@ export default function StackNavigation() {
       screenOptions={{
         header: () => null,
       }}
-      initialRouteName="Buisness">
+      initialRouteName="Dashboard">
       <Stack.Screen name="Home" component={HomeScreen} />
       <Stack.Screen name="Register" component={RegisterScreen} />
       <Stack.Screen name="Login" component={LoginScreen} />

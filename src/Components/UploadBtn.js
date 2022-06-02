@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
-import {View, Text, TouchableOpacity, Modal} from 'react-native';
-import {WHITE} from '../Constants/Colors';
+import {View, Text, TouchableOpacity, Modal, Image} from 'react-native';
+import {PRIMARY, WHITE} from '../Constants/Colors';
 import BtnComponent from '../Components/BtnComponent';
 import ImagePicker from 'react-native-image-crop-picker';
 import RNFS from 'react-native-fs';
@@ -14,13 +14,14 @@ const UploadBtn = ({svg, placeholder, onCallBack}) => {
         style={{
           display: 'flex',
           alignItems: 'center',
-          backgroundColor: '#A9D6EB',
-          paddingVertical: 40,
+          paddingVertical: 20,
           borderRadius: 5,
           marginVertical: 10,
+          borderWidth: 1,
+          borderStyle: 'dashed',
+          borderColor: PRIMARY,
         }}>
-        {svg}
-        <Text style={{fontSize: 14, color: WHITE, marginTop: 20}}>
+        <Text style={{fontSize: 14, color: '#242424', fontWeight: 'bold'}}>
           {placeholder}
         </Text>
       </TouchableOpacity>
@@ -38,6 +39,14 @@ const UploadBtn = ({svg, placeholder, onCallBack}) => {
           alignItems: 'center',
           flex: 1,
         }}>
+        <TouchableOpacity
+          style={{
+            width: '100%',
+            height: '55%',
+            backgroundColor: 'rgba(255,255,255,.5)',
+          }}
+          onPress={() => setModalVisible(!modalVisible)}
+        />
         <View
           style={{
             width: '100%',
@@ -45,7 +54,7 @@ const UploadBtn = ({svg, placeholder, onCallBack}) => {
             bottom: 0,
             padding: 20,
             position: 'absolute',
-            top: '50%',
+            height: '45%',
           }}>
           <BtnComponent
             placeholder="Open Camera"

@@ -1,7 +1,7 @@
 import React from 'react';
 import {Text, ScrollView} from 'react-native';
 import Header from '../Components/Header';
-import UserCard from '../Components/UserCard';
+import IndividualCard from '../Components/IndividualCard';
 import FilterTag from '../Components/FilterTag';
 import {SafeAreaView} from 'react-native-safe-area-context';
 import Svg, {Path} from 'react-native-svg';
@@ -44,73 +44,73 @@ export default function SearchResultScreen(props) {
         Showing 203 Results
       </Text>
       <ScrollView style={{flex: 1}}>
-        <UserCard
+        <IndividualCard
           variant="closed"
           favoritBtn={true}
           navigation={props.navigation}
           navigationPath="Individual"
         />
-        <UserCard
+        <IndividualCard
           variant="broadcasted"
           favoritBtn={true}
           navigation={props.navigation}
           navigationPath="Buisness"
         />
-        <UserCard
+        <IndividualCard
           variant="open"
           favoritBtn={true}
           navigation={props.navigation}
           navigationPath="Individual"
         />
-        <UserCard
+        <IndividualCard
           variant="closed"
           favoritBtn={true}
           navigation={props.navigation}
           navigationPath="Individual"
         />
-        <UserCard
+        <IndividualCard
           variant="broadcasted"
           favoritBtn={true}
           navigation={props.navigation}
           navigationPath="Individual"
         />
-        <UserCard
+        <IndividualCard
           variant="open"
           favoritBtn={true}
           navigation={props.navigation}
           navigationPath="Individual"
         />
-        <UserCard
+        <IndividualCard
           variant="closed"
           favoritBtn={true}
           navigation={props.navigation}
           navigationPath="Individual"
         />
-        <UserCard
+        <IndividualCard
           variant="broadcasted"
           favoritBtn={true}
           navigation={props.navigation}
           navigationPath="Individual"
         />
-        <UserCard
+        <IndividualCard
           variant="open"
           favoritBtn={true}
           navigation={props.navigation}
           navigationPath="Individual"
         />
-        <UserCard
+        <IndividualCard
           variant="closed"
           favoritBtn={true}
           navigation={props.navigation}
           navigationPath="Individual"
         />
-        <UserCard
+        <IndividualCard
           variant="broadcasted"
           favoritBtn={true}
           navigation={props.navigation}
           navigationPath="Individual"
         />
-        <UserCard
+        <IndividualCard
           variant="open"
           favoritBtn={true}
           navigation={props.navigation}

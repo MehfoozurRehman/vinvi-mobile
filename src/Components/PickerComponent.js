@@ -2,28 +2,35 @@ import React, {useState, useRef} from 'react';
 import {View, Text} from 'react-native';
 import {Picker} from '@react-native-picker/picker';
 
-export default function PickerComponent({placeholder, itemValues, itemLabels}) {
+export default function PickerComponent({
+  placeholder,
+  itemValues,
+  itemLabels,
+  inline,
+}) {
   const [selectedLanguage, setSelectedLanguage] = useState();
   const pickerRef = useRef();
 
   return (
     <>
-      <Text>{placeholder}</Text>
+      {inline ? null : <Text>{placeholder}</Text>}
       <View
         style={{
-          height: 40,
+          height: inline ? 45 : 40,
           backgroundColor: '#eeeeee',
           borderRadius: 5,
           marginTop: 5,
         }}>
         <Picker
-          style={{marginTop: -6}}
+          style={{marginTop: -4, fontSize: 13}}
           ref={pickerRef}
           selectedValue={selectedLanguage}
-          onValueChange={(itemValue, itemIndex) =>
-            setSelectedLanguage(itemValue)
-          }>
-          <Picker.Item label={itemLabels} value={itemValues} />
+          onValueChange={itemValue => setSelectedLanguage(itemValue)}>
+          <Picker.Item
+            label={itemLabels}
+            value={itemValues}
+            style={{fontSize: 14}}
+          />
         </Picker>
       </View>
     </>

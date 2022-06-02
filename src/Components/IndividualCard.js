@@ -3,7 +3,7 @@ import {View, Image, TouchableOpacity, Text} from 'react-native';
 import {SECONDARY, WHITE} from '../Constants/Colors';
 import Svg, {Path} from 'react-native-svg';
 
-export default function UserCard({
+export default function IndividualCard({
   cta,
   favoritBtn,
   navigation,

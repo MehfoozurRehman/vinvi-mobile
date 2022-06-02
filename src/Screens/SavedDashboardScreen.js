@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import {ImageBackground, SafeAreaView} from 'react-native';
 import Header from '../Components/Header';
-import UserCard from '../Components/UserCard';
+import IndividualCard from '../Components/IndividualCard';
 import Svg, {Path} from 'react-native-svg';
 import {Height, Width} from '../Constants/Constants';
 import {FlatList} from 'react-native-gesture-handler';
@@ -66,7 +66,7 @@ export default function SavedDashboardScreen(props, navigation) {
             horizontal={false}
             keyExtractor={item => item.id}
             renderItem={({item, index}) => (
-              <UserCard
+              <IndividualCard
                 cta={true}
                 variant="closed"
                 navigation={props.navigation}

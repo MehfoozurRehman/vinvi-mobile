@@ -46,19 +46,6 @@ export default function DashboardStories() {
       unPressedBorderColor={SECONDARY}
       pressedBorderColor={WHITE}
       stories={stories}
-      // footerComponent={
-      //   <TextInput
-      //     placeholder="Send message"
-      //     placeholderTextColor="white"
-      //     style={{
-      //       width: '100%',
-      //       borderWidth: 1,
-      //       borderColor: WHITE,
-      //       borderRadius: 50,
-      //       paddingHorizontal: 20,
-      //     }}
-      //   />
-      // }
     />
   );
 }

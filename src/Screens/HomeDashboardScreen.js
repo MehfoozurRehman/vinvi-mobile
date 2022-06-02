@@ -1,4 +1,15 @@
 import React, {useState, useEffect} from 'react';
+import Header from '../Components/Header';
+import DashboardStories from '../Components/DashboardStories';
+import IndividualCard from '../Components/IndividualCard';
+import {Height, Width} from '../Constants/Constants';
+import AsyncStorage from '@react-native-async-storage/async-storage';
+import {FlatList} from 'react-native-gesture-handler';
+import {launchImageLibrary} from 'react-native-image-picker';
+import BuisnessCard from '../Components/BuisnessCard';
+import {createMaterialTopTabNavigator} from '@react-navigation/material-top-tabs';
+import {useIsFocused} from '@react-navigation/native';
+import {PRIMARY} from '../Constants/Colors';
 import {
   View,
   ImageBackground,
@@ -6,56 +17,14 @@ import {
   TouchableOpacity,
   Text,
 } from 'react-native';
-import Header from '../Components/Header';
-import DashboardStories from '../Components/DashboardStories';
-import UserCard from '../Components/UserCard';
-import {Height, Width} from '../Constants/Constants';
-import AsyncStorage from '@react-native-async-storage/async-storage';
-import {FlatList} from 'react-native-gesture-handler';
-import { launchImageLibrary} from 'react-native-image-picker';
 import {
   getBusinessCardAllActiveApiCall,
   getPersonalCardAllActiveApiCall,
 } from '../Apis/Repo';
 
+const Tab = createMaterialTopTabNavigator();
+
 export default function HomeDashboardScreen(props) {
-  let [userData, setUserData] = useState(null);
-  const [data, setdata] = useState([]);
-
-  useEffect(() => {
-    AsyncStorage.getItem('user_data').then(response => {
-      setUserData((userData = JSON.parse(response)));
-      console.log('userdata', userData);
-    });
-  }, []);
-
-  useEffect(() => {
-    getData();
-    getData2();
-  }, []);
-
-  const getData = () => {
-    getPersonalCardAllActiveApiCall()
-      .then(res => {
-        console.log('res', res);
-        setdata(res.data.result);
-      })
-      .catch(err => {
-        console.log('err', err);
-      });
-  };
-
-  const getData2 = () => {
-    getBusinessCardAllActiveApiCall()
-      .then(res => {
-        console.log('res', res);
-        setdata(res.data.result);
-      })
-      .catch(err => {
-        console.log('err', err);
-      });
-  };
-
   return (
     <SafeAreaView style={{height: Height, width: Width}}>
       <ImageBackground
@@ -68,19 +37,17 @@ export default function HomeDashboardScreen(props) {
             props.navigation.toggleDrawer();
           }}
         />
-
         <View
           style={{
             paddingHorizontal: 20,
             marginTop: -65,
-            marginBottom: 10,
             flexDirection: 'row',
             alignItems: 'center',
             zIndex: 5,
           }}>
           <TouchableOpacity
             style={{
-              width: 55,
+              width: '17%',
               height: 55,
               backgroundColor: '#ffffff',
               justifyContent: 'center',
@@ -89,79 +56,149 @@ export default function HomeDashboardScreen(props) {
               marginTop: 43,
               marginRight: 10,
             }}
-            onPress={()=>{
-              launchImageLibrary({mediaType:"photo"}, ()=>{})
-            }}
-            >
+            onPress={() => {
+              launchImageLibrary({mediaType: 'photo'}, () => {});
+            }}>
             <Text style={{color: '#242424', fontSize: 25}}>+</Text>
           </TouchableOpacity>
-          <DashboardStories />
+          <View style={{width: '81%'}}>
+            <DashboardStories />
+          </View>
         </View>
-        {data != null ? (
-          <FlatList
-            data={data}
-            horizontal={false}
-            keyExtractor={item => item.id}
-            renderItem={({item, index}) => (
-              <UserCard
-                cta={true}
-                variant="closed"
-                navigation={props.navigation}
-                navigationPath="Individual"
-                item={item}
-                key={index}
-              />
-            )}
+        <Tab.Navigator
+          initialRouteName="Individual"
+          tabBarOptions={{
+            indicatorStyle: {backgroundColor: '#ffffff'},
+            labelStyle: {
+              fontSize: 12,
+              color: 'white',
+              fontWeight: 'bold',
+            },
+            style: {
+              backgroundColor: 'transparent',
+              borderWidth: 0,
+              elevation: 0,
+              marginHorizontal: 20,
+              marginTop: 10,
+              marginBottom: 20,
+              color: useIsFocused ? PRIMARY : null,
+            },
+            bounces: true,
+          }}
+          sceneContainerStyle={{backgroundColor: 'transprent'}}>
+          <Tab.Screen
+            name="Individual"
+            component={IndividualDataCardsListing}
           />
-        ) : null}
+          <Tab.Screen name="Buisness" component={BuisnessDataCardsListing} />
+        </Tab.Navigator>
       </ImageBackground>
     </SafeAreaView>
   );
 }
 
-{
-  /* <ScrollView style={{ flex: 1 }}>
-          <UserCard
-            cta={true}
-            variant="closed"
-            navigation={props.navigation}
-            navigationPath="Individual"
-          />
-          <UserCard
-            cta={true}
-            variant="broadcasted"
-            navigation={props.navigation}
-            navigationPath="Individual"
-          />
-          <UserCard
-            cta={true}
-            variant="open"
-            navigation={props.navigation}
-            navigationPath="Individual"
-          />
-          <UserCard
-            cta={true}
-            variant="open"
-            navigation={props.navigation}
-            navigationPath="Individual"
-          />
-          <UserCard
-            cta={true}
-            variant="open"
-            navigation={props.navigation}
-            navigationPath="Individual"
-          />
-          <UserCard
-            cta={true}
-            variant="open"
-            navigation={props.navigation}
-            navigationPath="Individual"
-          />
-          <UserCard
-            cta={true}
-            variant="open"
-            navigation={props.avigation}
-            navigationPath="Individual"
-          />
-        </ScrollView> */
+function IndividualDataCardsListing({navigation}) {
+  const [individualData, setIndividualData] = useState([]);
+
+  useEffect(() => {
+    AsyncStorage.getItem('user_data').then(response => {
+      setUserData((userData = JSON.parse(response)));
+      console.log('userdata', userData);
+    });
+  }, []);
+
+  useEffect(() => {
+    getPersonalCardAllActiveApiCall()
+      .then(res => {
+        console.log('res', res);
+        setIndividualData(res.data.result);
+      })
+      .catch(err => {
+        console.log('err', err);
+      });
+  }, []);
+  return (
+    <>
+      {individualData != null ? (
+        <FlatList
+          data={individualData}
+          horizontal={false}
+          keyExtractor={item => item.id}
+          renderItem={({item, index}) => (
+            <IndividualCard
+              cta={true}
+              variant="closed"
+              navigation={navigation}
+              navigationPath="Individual"
+              item={item}
+              key={index}
+            />
+          )}
+        />
+      ) : (
+        <View
+          style={{
+            justifyContent: 'center',
+            alignItems: 'center',
+            width: '100%',
+            height: 300,
+          }}>
+          <Text style={{color: '#242424'}}>No Cards</Text>
+        </View>
+      )}
+    </>
+  );
+}
+
+function BuisnessDataCardsListing({navigation}) {
+  const [buisnessData, setBuisnessData] = useState([]);
+
+  useEffect(() => {
+    AsyncStorage.getItem('user_data').then(response => {
+      setUserData((userData = JSON.parse(response)));
+      console.log('userdata', userData);
+    });
+  }, []);
+
+  useEffect(() => {
+    getBusinessCardAllActiveApiCall()
+      .then(res => {
+        console.log('res', res);
+        setBuisnessData(res.data.result);
+      })
+      .catch(err => {
+        console.log('err', err);
+      });
+  }, []);
+  return (
+    <>
+      {buisnessData != null ? (
+        <FlatList
+          data={buisnessData}
+          horizontal={false}
+          keyExtractor={item => item.id}
+          renderItem={({item, index}) => (
+            <BuisnessCard
+              cta={true}
+              variant="closed"
+              navigation={navigation}
+              navigationPath="Individual"
+              item={item}
+              key={index}
+            />
+          )}
+        />
+      ) : (
+        <View
+          style={{
+            justifyContent: 'center',
+            alignItems: 'center',
+            width: '100%',
+            height: 300,
+          }}>
+          <Text style={{color: '#242424'}}>No Cards</Text>
+        </View>
+      )}
+    </>
+  );
 }
