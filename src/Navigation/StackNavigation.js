@@ -21,6 +21,7 @@ import BuisnessScreen from '../Screens/BuisnessScreen';
 import IndividualScreen from '../Screens/IndividualScreen';
 import EditProfile from '../Screens/EditProfile';
 import NewBusinessCardScreen2 from '../Screens/NewBusinessCardScreen2';
+import NewBusinessCardScreen3 from '../Screens/NewBusinessCardScreen3';
 
 Stack = createStackNavigator();
 
@@ -29,7 +30,8 @@ export default function StackNavigation() {
     <Stack.Navigator
       screenOptions={{
         header: () => null,
-      }}>
+      }}
+      initialRouteName="NewBusinessCard3">
       <Stack.Screen name="Home" component={HomeScreen} />
       <Stack.Screen name="Register" component={RegisterScreen} />
       <Stack.Screen name="Login" component={LoginScreen} />
@@ -71,6 +73,10 @@ export default function StackNavigation() {
       <Stack.Screen
         name="NewBusinessCard2"
         component={NewBusinessCardScreen2}
+      />
+      <Stack.Screen
+        name="NewBusinessCard3"
+        component={NewBusinessCardScreen3}
       />
     </Stack.Navigator>
   );
