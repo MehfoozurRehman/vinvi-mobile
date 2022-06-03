@@ -6,10 +6,12 @@ import {
   Text,
   Modal,
   Dimensions,
+  Image,
 } from 'react-native';
 import BtnComponent from '../Components/BtnComponent';
 import OutlinedInputBox from '../Components/OutlinedInputBox';
 import Svg, {Path} from 'react-native-svg';
+import UploadBtn from '../Components/UploadBtn';
 
 export function AddProductModal({
   modalVisible,
@@ -60,7 +62,7 @@ export function AddProductModal({
                   fontSize: 16,
                   fontWeight: 'bold',
                 }}>
-                {isEdit ? 'Edit' : 'Add'} Education
+                {isEdit ? 'Edit' : 'Add'} Product
               </Text>
               <TouchableOpacity
                 onPress={() => {
@@ -81,47 +83,61 @@ export function AddProductModal({
               </TouchableOpacity>
             </View>
             <OutlinedInputBox
-              placeholder="Institute"
+              placeholder="Product Name"
               inputType="text"
               onChange={value => {
                 setHobbies(value);
               }}
             />
+            <OutlinedInputBox
+              placeholder="Category"
+              inputType="text"
+              onChange={value => {
+                setHobbies(value);
+              }}
+            />
+            <OutlinedInputBox
+              placeholder="Price"
+              inputType="text"
+              onChange={value => {
+                setHobbies(value);
+              }}
+            />
+            <UploadBtn placeholder="Upload Image" />
             <View
               style={{
-                flexDirection: 'row',
+                width: '100%',
+                justifyContent: 'center',
+                alignItems: 'center',
+                marginTop: 20,
               }}>
-              <OutlinedInputBox
-                placeholder="From"
-                inputType="text"
+              <View
                 style={{
-                  width: '48%',
-                  marginRight: '2%',
-                }}
-                onChange={value => {
-                  setHobbies(value);
-                }}
-              />
-              <OutlinedInputBox
-                placeholder="To"
-                inputType="text"
-                style={{
-                  width: '50%',
-                }}
-                onChange={value => {
-                  setHobbies(value);
-                }}
-              />
+                  position: 'relative',
+                  alignItems: 'flex-end',
+                }}>
+                <TouchableOpacity>
+                  <Svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width={15.849}
+                    height={15.849}
+                    viewBox="0 0 30.849 30.849">
+                    <Path
+                      data-name="Icon metro-cross"
+                      d="M33.138 26.711l-9.358-9.358 9.358-9.358a.966.966 0 000-1.363L28.717 2.21a.967.967 0 00-1.363 0L18 11.568 8.637 2.21a.966.966 0 00-1.363 0L2.852 6.631a.966.966 0 000 1.363l9.358 9.358-9.358 9.359a.966.966 0 000 1.363l4.421 4.421a.966.966 0 001.363 0L18 23.136l9.358 9.358a.966.966 0 001.363 0l4.421-4.421a.966.966 0 000-1.363z"
+                      transform="translate(-2.571 -1.928)"
+                      fill="#242424"
+                    />
+                  </Svg>
+                </TouchableOpacity>
+                <Image
+                  source={require('../Assets/companyPic.png')}
+                  style={{width: 100, height: 100}}
+                />
+              </View>
             </View>
-            <OutlinedInputBox
-              placeholder="Degree"
-              inputType="text"
-              onChange={value => {
-                setHobbies(value);
-              }}
-            />
             <BtnComponent
-              placeholder={isEdit ? 'Edit' : 'Add'}
+              placeholder="Save"
               onPress={() => {
                 setModalVisible(!modalVisible);
               }}

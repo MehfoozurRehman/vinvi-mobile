@@ -60,7 +60,7 @@ export function AddCategoryModal({
                   fontSize: 16,
                   fontWeight: 'bold',
                 }}>
-                {isEdit ? 'Edit' : 'Add'} Education
+                {isEdit ? 'Edit' : 'Add'} Category
               </Text>
               <TouchableOpacity
                 onPress={() => {
@@ -81,47 +81,15 @@ export function AddCategoryModal({
               </TouchableOpacity>
             </View>
             <OutlinedInputBox
-              placeholder="Institute"
+              placeholder="Category Name"
               inputType="text"
               onChange={value => {
                 setHobbies(value);
               }}
-            />
-            <View
-              style={{
-                flexDirection: 'row',
-              }}>
-              <OutlinedInputBox
-                placeholder="From"
-                inputType="text"
-                style={{
-                  width: '48%',
-                  marginRight: '2%',
-                }}
-                onChange={value => {
-                  setHobbies(value);
-                }}
-              />
-              <OutlinedInputBox
-                placeholder="To"
-                inputType="text"
-                style={{
-                  width: '50%',
-                }}
-                onChange={value => {
-                  setHobbies(value);
-                }}
-              />
-            </View>
-            <OutlinedInputBox
-              placeholder="Degree"
-              inputType="text"
-              onChange={value => {
-                setHobbies(value);
-              }}
+              style={{marginBottom: 50}}
             />
             <BtnComponent
-              placeholder={isEdit ? 'Edit' : 'Add'}
+              placeholder="Save"
               onPress={() => {
                 setModalVisible(!modalVisible);
               }}

@@ -26,7 +26,7 @@ const UploadBtn = ({svg, placeholder, onCallBack}) => {
         </Text>
       </TouchableOpacity>
       <Modal
-        animationType="slide"
+        animationType="fade"
         transparent={true}
         visible={modalVisible}
         onRequestClose={() => {
